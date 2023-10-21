@@ -50,6 +50,22 @@ namespace pkgPiggyBank.pkgDomain
             return true;
                 
         }
+
+        public override bool modify(List<object> prmArgs){
+            if (attPiggy != null) return false;
+            clsCoin varObjMemento = new clsCoin();
+            this.copyTo(varObjMemento);
+            try {
+                attValue = (double)prmArgs[0];
+                attCurrency = (clsCurrency)prmArgs[1];
+                attYear = (int)prmArgs[2];
+                return true;
+                }
+            catch (Exception e) {
+                varObjMemento.copyTo(this);
+                return false;
+            }
+        }
         #endregion
 
         #region Utilities
@@ -67,6 +83,18 @@ namespace pkgPiggyBank.pkgDomain
             if (attValue == prmOther.attValue)
                 return 1;
             return -1;
+        }
+
+        public override bool copyTo<T>(T prmObject){
+            
+            clsCoin varObjOther = prmOtherObject as clsCoin;
+            if (varObjOther == null) return false;
+            varObjOther.attOID = attOID;
+            varObjOther.attValue = attValue;
+            varObjOther.attCurrency = attCurrency;
+            varObjOther.attYear = attYear;
+            varObjOther.attPiggy = attPiggy;
+            return true;
         }
         #endregion
 

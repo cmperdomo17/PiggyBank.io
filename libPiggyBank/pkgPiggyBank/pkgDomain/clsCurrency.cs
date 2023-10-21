@@ -18,6 +18,7 @@ namespace pkgPiggyBank.pkgDomain{
         #endregion
 
         #region Constructors
+        private clsCurrency() { }
         public clsCurrency(string prmOID, string prmName, double prmTRM, List<double> prmCoinsValues, List<double> prmBillsValues) :base(prmOID)
         {
             attName = prmName;
@@ -43,6 +44,20 @@ namespace pkgPiggyBank.pkgDomain{
             attTRM = prmTRM;
             return true;    
         }
+
+        public override bool modify(List<object> prmArgs){
+            clsCurrency varObjMemento = new clsCurrency();
+            this.copyTo(varObjMemento);
+            try {
+                attName = (string)prmArgs[0];
+                attTRM = (double)prmArgs[1];
+                return true;
+            }
+            catch (Exception e){
+                varObjMemento.copyTo(this);
+                return false;
+            }
+        }
         #endregion
        
         #region Utilities
@@ -63,6 +78,22 @@ namespace pkgPiggyBank.pkgDomain{
                 return 0;
             return 1;
         }
+        
+        public override bool copyTo<T>(T prmObject)
+        {
+            clsCurrency varObjOther = prmObject as clsCurrency;
+            if (prmObject.GetType() != typeof(clsCurrency)) return false;
+
+            varObjCurrency.attOID = attOID;
+            varObjCurrency.attName = attName;
+            varObjCurrency.attTRM = attTRM;
+            varObjCurrency.attCoins = attCoins;
+            varObjCurrency.attBills = attBills;
+            varObjCurrency.attPiggy = attPiggy;
+            varObjCurrency.attCoinsValues = attCoinsValues;
+            varObjCurrency.attBillsValues = attBillsValues;
+            return true;
+        }   
         #endregion
     }
 }
