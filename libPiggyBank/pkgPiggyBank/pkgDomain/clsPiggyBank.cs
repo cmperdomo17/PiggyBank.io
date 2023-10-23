@@ -29,7 +29,7 @@ namespace pkgPiggyBank.pkgDomain
         private List<clsCoin> attCoins;
         private List<clsBill> attBills;
         #endregion
-        #region Costructor 
+        #region Constructor 
 
         private clsPiggyBank() { }       
         public clsPiggyBank(int prmCoinsMaxCap, int prmBilsMaxCap, List<double> prmCoinsValues, List<double> prmBillValues, clsCurrency prmCurrency) : base("0")

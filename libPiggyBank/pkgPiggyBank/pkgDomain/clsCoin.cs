@@ -13,7 +13,6 @@ namespace pkgPiggyBank.pkgDomain
         protected clsCurrency attCurrency;
         protected clsPiggyBank attPiggy;
         #endregion
-
         #region Constructors
         public clsCoin(string prmOID, double prmValue, clsCurrency prmCurrency, int prmYear):base(prmOID)
         {            
@@ -22,10 +21,6 @@ namespace pkgPiggyBank.pkgDomain
             attYear = prmYear;            
         }
         #endregion
-
-
-        #region Operations
-        
         #region Getters
 
         public double getValue() => attValue; // Return attValue
@@ -37,7 +32,6 @@ namespace pkgPiggyBank.pkgDomain
         public clsPiggyBank getPiggy() => attPiggy; // Return attPiggy
 
         #endregion
-
         #region Setters
 
         public override bool modify(List<object> prmArgs){
@@ -57,7 +51,6 @@ namespace pkgPiggyBank.pkgDomain
             }
         }
         #endregion
-
         #region Utilities
         public override string ToString()
         {
@@ -87,13 +80,12 @@ namespace pkgPiggyBank.pkgDomain
             return true;
         }
         #endregion
-
         #region Destroyer
         public override bool die()
         {
             throw new NotImplementedException();
         }
         #endregion
-        #endregion
+        
     }
 }

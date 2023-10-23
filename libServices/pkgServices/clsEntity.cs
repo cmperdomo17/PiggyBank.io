@@ -11,18 +11,18 @@ namespace libServices.pkgServices
     {
         #region Atributtes
         protected string attOID;
-        #endregion
+        #endregion    
+        #region Constructors
         public clsEntity(string prmOID) => attOID = prmOID;
+        #endregion  
         #region Getters
         public string getOID() => attOID;
-        #endregion
-        
+        #endregion    
         #region Utilities
         public virtual string toString()=> throw new NotImplementedException();
 
         public virtual bool copyTo<T>(T prmOtherObject) => throw new NotImplementedException();
         #endregion
-
         #region Destroyer
         public virtual bool die()
         {

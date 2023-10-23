@@ -13,8 +13,6 @@ namespace pkgPiggyBank.pkgDomain{
         private int attMonth;
         private int attDay;
         #endregion
-        #region Operations
-        
         #region Constructors
         public clsBill(string prmOID, double prmValue, int prmYear, clsCurrency prmCurrency, int prmMonth, int prmDay) : base(prmOID, prmValue, prmCurrency, prmYear){ 
             
@@ -23,14 +21,12 @@ namespace pkgPiggyBank.pkgDomain{
    
         }
         #endregion
-
         #region Getters
         public int getMonth() => attMonth; // Return attMonth
 
         public int getDay() => attDay; // Return attDay
 
         #endregion
-
         #region Setters
 
         public override bool modify(List<object> prmArgs){
@@ -48,7 +44,6 @@ namespace pkgPiggyBank.pkgDomain{
             }
         }
         #endregion
-
         #region Utilities
         public override string ToString(){
             return "{Bill Info}\n" + "{OID}:\t" + attOID + "\n{Value}:\t" + attValue + "\n{Currency}:\t" + attCurrency + "\n{Year}:\t" + attYear + "\n{Month}:\t" + attMonth + "\n{Day}:\t" + attDay + "\n" + attCurrency.ToString();
@@ -75,13 +70,11 @@ namespace pkgPiggyBank.pkgDomain{
             return true;
         }
         #endregion
-
         #region Destroyer
         public override bool die()
         {
             return base.die();
         }
-        #endregion
         #endregion
     }
 }

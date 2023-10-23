@@ -16,7 +16,6 @@ namespace pkgPiggyBank.pkgDomain{
         private List<double> attCoinsValues;
         private List<double> attBillsValues;
         #endregion
-
         #region Constructors
         private clsCurrency() { }
         public clsCurrency(string prmOID, string prmName, double prmTRM, List<double> prmCoinsValues, List<double> prmBillsValues) :base(prmOID)
@@ -27,7 +26,6 @@ namespace pkgPiggyBank.pkgDomain{
             attBillsValues = prmBillsValues;
         }
         #endregion
-
         #region Getters
         public string getName()=>attName;
 
@@ -37,7 +35,6 @@ namespace pkgPiggyBank.pkgDomain{
 
         public List<double> getBillsValues() => attBillsValues;
         #endregion
-
         #region Setters
         public bool modifyThis(string prmName, double prmTRM){
             attName = prmName;
@@ -59,8 +56,7 @@ namespace pkgPiggyBank.pkgDomain{
                 return false;
             }
         }
-        #endregion
-       
+        #endregion   
         #region Utilities
         public override string ToString()
         {
