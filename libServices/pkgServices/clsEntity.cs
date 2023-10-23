@@ -20,7 +20,7 @@ namespace libServices.pkgServices
         #region Utilities
         public virtual string toString()=> throw new NotImplementedException();
 
-        public virtual bool copyTo<T>(T prmObject) => throw new NotImplementedException();
+        public virtual bool copyTo<T>(T prmOtherObject) => throw new NotImplementedException();
         #endregion
 
         #region Destroyer

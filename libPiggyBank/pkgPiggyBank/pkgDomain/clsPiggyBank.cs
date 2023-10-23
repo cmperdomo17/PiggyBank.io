@@ -29,7 +29,9 @@ namespace pkgPiggyBank.pkgDomain
         private List<clsCoin> attCoins;
         private List<clsBill> attBills;
         #endregion
-        #region Costructor        
+        #region Costructor 
+
+        private clsPiggyBank() { }       
         public clsPiggyBank(int prmCoinsMaxCap, int prmBilsMaxCap, List<double> prmCoinsValues, List<double> prmBillValues, clsCurrency prmCurrency) : base("0")
         {
             attCoinsMaxCapacity = prmCoinsMaxCap;
@@ -124,10 +126,28 @@ namespace pkgPiggyBank.pkgDomain
             setBillsAcceptedValues(attCurrency.getBillsValues());
             return true;
         }
-
-        public bool modifyThis(int prmCoinsMaxCap, int prmBilssMaxCap, List<double> prmCoinsValues, List<double> prmBillValues, clsCurrency prmCurency)
+        
+        public override bool modify(List<object> prmArgs)
         {
-            throw new NotImplementedException();
+            if ((string)prmArgs[0] != attOID) return false;
+            clsPiggyBank varObjMemento = new clsPiggyBank();
+            this.copyTo(varObjMemento);
+
+            try {
+                if (setCoinsMaxCapacity((int)prmArgs[1]))
+                    if (setBillsMaxCapacity((int)prmArgs[2]))
+                        if (setCoinsAcceptedValues((List<double>)prmArgs[3]))
+                            if (setBillsAcceptedValues((List<double>)prmArgs[4]))
+                                if (setCurrency((clsCurrency)prmArgs[5]))
+                                    return true;
+                
+                varObjMemento.copyTo(this);
+                return false;
+
+            } catch (Exception e) {
+                varObjMemento.copyTo(this);
+                return false;
+            }
         }
 
         #endregion
@@ -157,6 +177,20 @@ namespace pkgPiggyBank.pkgDomain
         public int CompareTo(clsPiggyBank prmOther)
         {
             throw new NotImplementedException();
+        }
+
+        public override bool copyTo<T>(T prmOtherObject)
+        {
+            clsPiggyBank varObjOther = prmOtherObject as clsPiggyBank;
+            if (varObjOther == null) return false;
+            attOID = varObjOther.attOID;
+            attCoinsMaxCapacity = varObjOther.attCoinsMaxCapacity;
+            attBillsMaxCapacity = varObjOther.attBillsMaxCapacity;
+            attCoinsAcceptedValues = varObjOther.attCoinsAcceptedValues;
+            attCoinsBalanceByValue = varObjOther.attCoinsBalanceByValue;
+            attCurrency = varObjOther.attCurrency;
+
+            return true;
         }
         public override string toString()
         {

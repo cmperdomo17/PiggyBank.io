@@ -39,26 +39,16 @@ namespace pkgPiggyBank.pkgDomain
         #endregion
 
         #region Setters
-        public bool modifyThis(double prmValue, clsCurrency prmCurrency, int prmYear){
-            
-            if (attPiggy != null) return false;
-
-            attValue = prmValue;
-            attYear = prmYear;
-            attCurrency = prmCurrency;
-  
-            return true;
-                
-        }
 
         public override bool modify(List<object> prmArgs){
             if (attPiggy != null) return false;
+            if ((string)prmArgs[0] != attOID) return false;
             clsCoin varObjMemento = new clsCoin();
             this.copyTo(varObjMemento);
             try {
-                attValue = (double)prmArgs[0];
-                attCurrency = (clsCurrency)prmArgs[1];
-                attYear = (int)prmArgs[2];
+                attValue = (double)prmArgs[1];
+                attCurrency = (clsCurrency)prmArgs[2];
+                attYear = (int)prmArgs[3];
                 return true;
                 }
             catch (Exception e) {

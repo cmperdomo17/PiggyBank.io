@@ -46,6 +46,7 @@ namespace pkgPiggyBank.pkgDomain{
         }
 
         public override bool modify(List<object> prmArgs){
+            if ((string)prmArgs[0] != attOID) return false;
             clsCurrency varObjMemento = new clsCurrency();
             this.copyTo(varObjMemento);
             try {

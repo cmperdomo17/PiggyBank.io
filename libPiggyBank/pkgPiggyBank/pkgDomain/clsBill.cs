@@ -32,26 +32,14 @@ namespace pkgPiggyBank.pkgDomain{
         #endregion
 
         #region Setters
-        public bool modifyThis(double prmValue, clsCurrency prmCurrency, int prmYear, int prmMonth, int prmDay){
-            
-            if(!base.modifyThis(prmValue, prmCurrency, prmYear)) return false;
-            attDay = prmDay;
-            attMonth = prmMonth;
-            attYear = prmYear;
-
-            return true;
-
-        }
 
         public override bool modify(List<object> prmArgs){
             clsBill varObjMemento = new clsBill();
             this.copyTo(varObjMemento);
+            if(!base.modify(prmArgs)) return false;
             try {
-                attValue = (double)prmArgs[0];
-                attCurrency = (clsCurrency)prmArgs[1];
-                attYear = (int)prmArgs[2];
-                attMonth = (int)prmArgs[3];
-                attDay = (int)prmArgs[4];
+                attMonth = (int)prmArgs[4];
+                attDay = (int)prmArgs[5];
                 return true;
             }
             catch (Exception e){
