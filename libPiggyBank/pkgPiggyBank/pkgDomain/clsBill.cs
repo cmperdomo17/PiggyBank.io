@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 namespace pkgPiggyBank.pkgDomain{
     public class clsBill : clsCoin, IComparable<clsBill>
     {
-        
         #region Attributes
         private int attMonth;
         private int attDay;

@@ -8,7 +8,7 @@ using pkgServices;
 
 namespace pkgServices
 {
-    public static class clsCollections<T> where T : IComparable<T> 
+    public static class clsCollections<itemType> where itemType : class, iEntity, IComparable<itemType>
     {
         public static bool areEqualsCollections(List<T> prmACollection, List<T> prmOtherCollection)
         {
@@ -20,6 +20,15 @@ namespace pkgServices
                 }
             }
             return true;
+        }
+        /* 
+            Para cada objeto cuyo item es itemType, busque en la lista prmList el objeto cuyo OID sea igual a prmOID
+            Si lo encuentra, lo retorna, de lo contrario retorna null
+        */
+        public static itemType getItemWith(string prmOID, List<itemType> prmList){
+            foreach (itemType varObj in prmList)
+                if (varObj.getOID() == prmOID) return varObj; 
+            return null;
         }
     }
 }

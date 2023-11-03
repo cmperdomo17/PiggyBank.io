@@ -5,66 +5,94 @@ namespace pkgPiggyBank.pkgDomain{
     public class clsController{
 
         #region Attributes
-        private static clsController attInstance;
-        private List<clsCurrency> attCurrencies;
-        private clsPiggyBank attPiggy;
+        private static clsController attInstance; // Singleton
+        private static List<clsCurrency> attCurrencies;
+        private static clsPiggyBank attPiggy;
         #endregion
 
         #region Constructors
-        public static clsController getInstance(){
-            throw new NotImplementedException();
+        private clsController(){
         }
         #endregion
 
         #region Cruds
-        public bool toRegisterCurrency(string prmOID, string prmName, double prmTRM){
+        public static bool toRegisterCurrency(string prmOID, string prmName, double prmTRM, List<double> prmCoinsValues, List<double> prmBillsValues){
+            
+            if (getCurrencyWith(prmOID) != null) return false; // Ya existe una moneda con ese OID
+        
+            attCurrencies.Add(new clsCurrency(prmOID, prmName, prmTRM, prmCoinsValues, prmBillsValues););
+            
+            return true;
+
+        }
+
+        public static bool toRegisterPiggyBank(string prmOIDCurrency, int prmCoinsMaxCap, int prmBillsMaxCap, int prmCoinsCap, int prmBillsCap, int prmCoinsCount, int prmBillsCount){
+
+            if (attPiggy != null) return false; // Ya existe una alcancia
+            clsCurrency varObj = getCurrencyWith(prmOIDCurrency);
+            
+            if (varObj == null) return false; // No existe una moneda con ese OID
+
+            attPiggy = new clsPiggyBank(varObj, prmCoinsMaxCap, prmBillsMaxCap, prmCoinsCap, prmBillsCap, prmCoinsCount, prmBillsCount);
+
+            return true;
+        }
+
+        public static bool toRegisterCoin(string prmOID, double prmValue, string prmCurrencyOID, int prmYear){
+            clsCurrency varObj = getCurrencyWith(prmCurrencyOID);
+            if (varObj == null) return false; // No existe una moneda con ese OID
+        }
+
+        public static bool toRegisterBill(string prmOID, double prmValue, string prmCurrencyOID, int prmYear, int prmMonth, int prmDay){
             throw new NotImplementedException();
         }
 
-        public bool toRegisterPiggyBank(string prmOID, string prmName){
+        public static bool toUpdateCurrency(string prmOID, string prmName, double prmTRM){
             throw new NotImplementedException();
         }
 
-        public bool toRegisterCoin(string prmOID, double prmValue, string prmCurrencyOID, int prmYear){
+        public static bool toUpdatePiggyBank(string prmOID, string prmName){
             throw new NotImplementedException();
         }
 
-        public bool toRegisterBill(string prmOID, double prmValue, string prmCurrencyOID, int prmYear, int prmMonth, int prmDay){
+        public static bool toUpdateCoin(string prmOID, double prmValue, string prmCurrencyOID, int prmYear){
             throw new NotImplementedException();
         }
 
-        public bool toUpdateCurrency(string prmOID, string prmName, double prmTRM){
+        public static bool toUpdateBill(string prmOID, double prmValue, string prmCurrencyOID, int prmYear, int prmMonth, int prmDay){
             throw new NotImplementedException();
         }
 
-        public bool toUpdatePiggyBank(string prmOID, string prmName){
+        public static bool toDeleteCurrency(string prmOID){
             throw new NotImplementedException();
         }
 
-        public bool toUpdateCoin(string prmOID, double prmValue, string prmCurrencyOID, int prmYear){
+        public static bool toDeletePiggyBank(string prmOID){
             throw new NotImplementedException();
         }
 
-        public bool toUpdateBill(string prmOID, double prmValue, string prmCurrencyOID, int prmYear, int prmMonth, int prmDay){
+        public static bool toDeleteCoin(string prmOID){
             throw new NotImplementedException();
         }
 
-        public bool toDeleteCurrency(string prmOID){
-            throw new NotImplementedException();
-        }
-
-        public bool toDeletePiggyBank(string prmOID){
-            throw new NotImplementedException();
-        }
-
-        public bool toDeleteCoin(string prmOID){
-            throw new NotImplementedException();
-        }
-
-        public bool toDeleteBill(string prmOID){
+        public static bool toDeleteBill(string prmOID){
             throw new NotImplementedException();
         }
         #endregion
+
+        #region Getters
+        public static clsController getInstance(){ // Singleton: Unicamente se puede instanciar una vez
+            if (attInstance == null)
+                attInstance = new clsController();
+            return attInstance;
+        }
+
+        public static clsCurrency getCurrencyWith(string prmOID){
+   
+            return clsCollections<clsCurrency>.getItemWith(prmOID, attCurrencies);
+
+        }
+        
 
         #region Transaction
 

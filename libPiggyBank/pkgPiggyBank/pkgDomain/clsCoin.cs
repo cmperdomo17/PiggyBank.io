@@ -6,7 +6,6 @@ namespace pkgPiggyBank.pkgDomain
 {
     public class clsCoin : clsEntity, IComparable<clsCoin>
     {
-        
         #region Attributes
         protected double attValue;
         protected int attYear;
