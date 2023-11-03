@@ -38,9 +38,11 @@ namespace pkgPiggyBank.pkgDomain{
             return true;
         }
 
-        public static bool toRegisterCoin(string prmOID, double prmValue, string prmCurrencyOID, int prmYear){
+        public static bool toRegisterCoin(string prmOIDCurrency, string prmOID, double prmValue, string prmCurrencyOID, int prmYear){
             clsCurrency varObj = getCurrencyWith(prmCurrencyOID);
             if (varObj == null) return false; // No existe una moneda con ese OID
+            //* Patrón creador, patrón experto
+            return varObj.toRegisterCoin(prmOID, prmValue, prmYear);
         }
 
         public static bool toRegisterBill(string prmOID, double prmValue, string prmCurrencyOID, int prmYear, int prmMonth, int prmDay){
