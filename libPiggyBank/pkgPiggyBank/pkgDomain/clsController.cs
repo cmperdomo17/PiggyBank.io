@@ -26,14 +26,14 @@ namespace pkgPiggyBank.pkgDomain{
 
         }
 
-        public static bool toRegisterPiggyBank(string prmOIDCurrency, int prmCoinsMaxCap, int prmBillsMaxCap, int prmCoinsCap, int prmBillsCap, int prmCoinsCount, int prmBillsCount){
+        public static bool toRegisterPiggyBank(string prmOIDCurrency, int prmCoinsMaxCap, int prmBillsMaxCap, List<double> prmCoinsCap, List<double> prmBillsCap, List<double> prmCoinsCount, List<double> prmBillsCount){
 
             if (attPiggy != null) return false; // Ya existe una alcancia
             clsCurrency varObj = getCurrencyWith(prmOIDCurrency);
             
             if (varObj == null) return false; // No existe una moneda con ese OID
 
-            attPiggy = new clsPiggyBank(varObj, prmCoinsMaxCap, prmBillsMaxCap, prmCoinsCap, prmBillsCap, prmCoinsCount, prmBillsCount);
+            attPiggy = new clsPiggyBank(prmCoinsMaxCap, prmBillsMaxCap, prmCoinsValues, prmBillsValues, varObj);
 
             return true;
         }

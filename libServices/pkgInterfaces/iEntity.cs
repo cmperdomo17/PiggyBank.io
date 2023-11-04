@@ -9,7 +9,7 @@ namespace pkgServices.pkgInterfaces
     public interface iEntity
     {
         #region Getters
-        string getOID();
+        oidType getOID();
         
         #endregion
         #region Destroyer

@@ -62,16 +62,17 @@ namespace pkgPiggyBank.pkgDomain{
         {
             return "{OID]}:\t + attOID + \n{Name}:\t + attName + \n{TRM}:\t + attTRM + \n";
         }
-        public int CompareTo(clsCurrency prmOther)
+        public int CompareTo(clsCurrency <oidType> prmOther)
         {
             if (attOID == prmOther.attOID
                 && attName == prmOther.attName
                 && attTRM == prmOther.attTRM
-                && clsCollections<clsCoin>.areEqualCollections(attCoins, prmOther.attCoins)
-                && clsCollections<clsBill>.areEqualCollections(attBills, prmOther.attBills)
+                && ClsCollections<string, clsCoin>.areEqualsCollections(attCoins, prmOther.attCoins)
+                && ClsCollections<string, clsBill>.areEqualsCollections(attBills, prmOther.attBills)
                 && attPiggy.CompareTo(prmOther.attPiggy) == 0
-                && clsCollections<double>.areEqualCollections(attCoinsValues, prmOther.attCoinsValues)
-                && clsCollections<double>.areEqualCollections(attBillsValues, prmOther.attBillsValues))
+                && ClsCollections<double>.areEqualsCollections(attCoinsValues, prmOther.attCoinsValues)
+                && ClsCollections<double>.areEqualsCollections(attBillsValues, prmOther.attBillsValues)
+                )
                 return 0;
             return 1;
         }

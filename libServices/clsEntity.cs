@@ -7,16 +7,16 @@ using System.Threading.Tasks;
 
 namespace pkgServices
 {
-    public class clsEntity :iEntity
+    public class clsEntity <oidType> :iEntity <oidType> 
     {
         #region Attributes
-        protected string attOID;
+        protected oidType attOID;
         #endregion
         #region Constructors
-        public clsEntity(string prmOID) => attOID = prmOID; 
+        public clsEntity(oidType prmOID) => attOID = prmOID; 
         #endregion
         #region Getters
-        public string getOID() => attOID;
+        public oidType getOID() => attOID;
         #endregion
         #region Destroyer
         public virtual bool die()
