@@ -48,7 +48,17 @@ namespace pkgPiggyBank.pkgDomain{
         }
 
         public static bool toUpdateCurrency(string prmOID, string prmName, double prmTRM){
-            throw new NotImplementedException();
+            clsCurrency varObj = clsCollections.getItemWith(prmOID, attCurrencies);
+            // 1. No se puede modificar la divisa si no existe
+            if (varObj == null) return false;
+            // 2. No se puede modificar la divisa si ya existe una alcancia
+            if (attPiggy != null) return false;
+            // 3. No se puede modificar la divisa si ya existen monedas o billetes
+            if (varObj.getMoneyItemsCount() != 0) return false;
+
+            // Actualizar la divisa, mandando una lista de argumentos
+            varObj.modify(new List<object> { prmOID, prmName, prmTRM });
+            return true;
         }
 
         public static bool toUpdatePiggyBank(string prmOID, string prmName){
