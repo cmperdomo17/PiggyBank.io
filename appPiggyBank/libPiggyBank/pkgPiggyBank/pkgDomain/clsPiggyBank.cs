@@ -67,6 +67,10 @@ namespace pkgPiggyBank.pkgDomain
         public List<int> getBillsCountByValue() => attCoinsCountByValue;
 
         public double getTotalBalance() => attTotalBalance;
+
+        public int getMoneyItemsCount() => attCoinsCount + attBillsCount;
+
+        public clsCurrency getCurrency() => attCurrency;
         #endregion
         #region Setters
 

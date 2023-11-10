@@ -56,22 +56,30 @@ namespace pkgPiggyBank.pkgDomain{
                 return false;
             }
         }
+        public bool setPiggyBank(clsPiggyBank prmObj){
+            if (prmObj == null) return false;
+            if (attPiggy != null && attPiggy.getMoneyItemsCount() != 0) return false;
+            if (prmObj.getCurrency().CompareTo(this) != 0) return false;
+            attPiggy = prmObj;
+            return true;
+        }
         #endregion   
         #region Utilities
         public override string ToString()
         {
             return "{OID]}:\t + attOID + \n{Name}:\t + attName + \n{TRM}:\t + attTRM + \n";
         }
-        public int CompareTo(clsCurrency prmOther)
+        public int CompareTo(clsCurrency <oidType> prmOther)
         {
             if (attOID == prmOther.attOID
                 && attName == prmOther.attName
                 && attTRM == prmOther.attTRM
-                && clsCollections<clsCoin>.areEqualCollections(attCoins, prmOther.attCoins)
-                && clsCollections<clsBill>.areEqualCollections(attBills, prmOther.attBills)
+                && ClsCollections<string, clsCoin>.areEqualsCollections(attCoins, prmOther.attCoins)
+                && ClsCollections<string, clsBill>.areEqualsCollections(attBills, prmOther.attBills)
                 && attPiggy.CompareTo(prmOther.attPiggy) == 0
-                && clsCollections<double>.areEqualCollections(attCoinsValues, prmOther.attCoinsValues)
-                && clsCollections<double>.areEqualCollections(attBillsValues, prmOther.attBillsValues))
+                && ClsCollections<double>.areEqualsCollections(attCoinsValues, prmOther.attCoinsValues)
+                && ClsCollections<double>.areEqualsCollections(attBillsValues, prmOther.attBillsValues)
+                )
                 return 0;
             return 1;
         }
@@ -91,6 +99,15 @@ namespace pkgPiggyBank.pkgDomain{
             varObjCurrency.attBillsValues = attBillsValues;
             return true;
         }   
+        #endregion
+        #region CRUDS
+        public bool toRegisterCoin(string prmOID, double prmValue, int prmYear){
+            return clsCollections.toRegisterEntity(new clsCoin(prmOID, prmValue, this, prmYear), attCoins);
+        }
+
+        public bool toRegisterBill(string prmOID, double prmValue, int prmDay, int prmMonth, int prmYear){
+            return clsCollections.toRegisterEntity(new clsBill(prmOID, prmValue, this, prmDay, prmMonth, prmYear), attBills);
+        }
         #endregion
     }
 }

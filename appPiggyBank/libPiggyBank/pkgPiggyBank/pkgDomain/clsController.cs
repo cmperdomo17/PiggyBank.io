@@ -17,25 +17,35 @@ namespace pkgPiggyBank.pkgDomain{
 
         #region Cruds
         public static bool toRegisterCurrency(string prmOID, string prmName, double prmTRM, List<double> prmCoinsValues, List<double> prmBillsValues){
-            
-            if (getCurrencyWith(prmOID) != null) return false; // Ya existe una moneda con ese OID
-        
-            attCurrencies.Add(new clsCurrency(prmOID, prmName, prmTRM, prmCoinsValues, prmBillsValues););
-            
+            return clsCollections.toRegisterEntity(new clsCurrency(prmOID, prmName, prmTRM, prmCoinsValues, prmBillsValues), attCurrencies);
+        }
+
+        public static bool toRegisterPiggyBank(string prmOIDCurrency, int prmCoinsMaxCap, int prmBillsMaxCap, List<double> prmCoinsCap, List<double> prmBillsCap, List<double> prmCoinsCount, List<double> prmBillsCount){
+            if (attPiggy != null) return false;
+            clsCurrency varObj = clsCollections.getItemWith(prmOIDCurrency, attCurrencies);
+            if (varObj == null) return false;
+            attPiggy = new clsPiggyBank(varObj, prmCoinsMaxCap, prmBillsMaxCap, prmCoinsValues, prmBillsValues, varObj);
+            varObj.setPiggyBank(attPiggy);
             return true;
 
         }
 
-        public static bool toRegisterPiggyBank(string prmOID, string prmName){
-            throw new NotImplementedException();
+        public static bool toRegisterCoin(string prmOIDCurrency, string prmOID, double prmValue, int prmYear){
+            try{
+                return clsCollections.getItemWith(prmOIDCurrency, attCurrencies).toRegisterCoin(prmOID, prmValue, prmYear);
+            }
+            catch (Exception e){
+                return false;
+            }
         }
 
-        public static bool toRegisterCoin(string prmOID, double prmValue, string prmCurrencyOID, int prmYear){
-            throw new NotImplementedException();
-        }
-
-        public static bool toRegisterBill(string prmOID, double prmValue, string prmCurrencyOID, int prmYear, int prmMonth, int prmDay){
-            throw new NotImplementedException();
+        public static bool toRegisterBill(string prmOIDCurrency, string prmOID, double prmValue, int prmDay, int prmMonth, int prmYear){
+            try{
+                return clsCollections.getItemWith(prmOID, attCurrencies).toRegisterBill(prmOID, prmValue, prmDay, prmMonth, prmYear);
+            }
+            catch (Exception e){
+                return false;
+            }
         }
 
         public static bool toUpdateCurrency(string prmOID, string prmName, double prmTRM){
@@ -80,7 +90,8 @@ namespace pkgPiggyBank.pkgDomain{
 
         public static clsCurrency getCurrencyWith(string prmOID){
    
-            return clsCollections.getItemWith<clsCurrency, string>(prmOID, attCurrencies);
+            return clsCollections<clsCurrency>.getItemWith(prmOID, attCurrencies);
+
         }
         
 

@@ -12,11 +12,18 @@ namespace pkgServices.pkgInterfaces
         oidType getOID();
         
         #endregion
+
+        #region Setters
+        
+        #endregion
+
         #region Destroyer
         bool die();
         #endregion
+
         #region Utilities
         string toString(); 
+        bool copyTo<T>(T prmOtherObject);
         #endregion
     }
 }

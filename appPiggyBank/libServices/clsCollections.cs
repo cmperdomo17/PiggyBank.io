@@ -12,6 +12,8 @@ namespace pkgServices
     {
         public static bool areEqualsCollections<itemType>(List<itemType> prmACollection, List<itemType> prmOtherCollection) where itemType : IComparable<itemType>
         {
+            where itemType : IComparable<itemType>
+
             if (prmACollection.Count != prmOtherCollection.Count) return false;
             for (int varIdx = 0; varIdx < prmACollection.Count; varIdx++)
             {
@@ -21,14 +23,21 @@ namespace pkgServices
             }
             return true;
         }
-        /* 
-            Para cada objeto cuyo item es itemType, busque en la lista prmList el objeto cuyo OID sea igual a prmOID
-            Si lo encuentra, lo retorna, de lo contrario retorna null
-        */
-        public static itemType getItemWith <oidType, itemType> (oidType prmOID, List<itemType> prmList) where itemType : class, iEntity, IComparable<itemType> where oidType : IComparable<oidType>
-            foreach (itemType varObj in prmList)
-                if (varObj.getOID() == prmOID) return varObj; 
+        // Método de busqueda secuencial
+        public static itemType getItemWith <itemType> (string prmOID, List<itemType> prmCollection) 
+        where itemType : iEntity
+        {
+            foreach (itemType varObj in prmCollection)
+                if (varObj.getOID().CompareTo(prmOID) == 0) return varObj; 
             return default;
+        }
+
+        public static bool toRegisterEntity <entityType> (entityType prmEntity, List<entityType> prmCollection) 
+        where entityType : iEntity
+        {
+            if (getItemWith(prmEntity.getOID(), prmCollection) != null) return false;
+            prmCollection.Add(prmEntity);
+            return true;
         }
     }
 }
