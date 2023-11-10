@@ -8,7 +8,8 @@ namespace libServices.pkgServices.pkgCollections
 {
     public static class clsCollections<T> where T : IComparable<T>
     {
-        public static bool areEqualCollections(List<T> prmThisCollection, List<T> prmOtherCollection)
+        public static bool areEqualCollections<itemType>(List<itemType> prmACollection, List<itemType> prmOtherCollection) 
+        where itemType : IComparable<itemType>
         {
             if (prmThisCollection.Count != prmOtherCollection.Count) { return false; }
             for (int varIdx = 0; varIdx < prmThisCollection.Count;  varIdx++)

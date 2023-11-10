@@ -17,17 +17,16 @@ namespace pkgPiggyBank.pkgDomain{
 
         #region Cruds
         public static bool toRegisterCurrency(string prmOID, string prmName, double prmTRM, List<double> prmCoinsValues, List<double> prmBillsValues){
-            return clsCollections.toRegisterEntity(new clsCurrency(prmOID, prmName, prmTRM, prmCoinsValues, prmBillsValues), attCurrencies);
+            return clsBrokerCrud.toRegisterEntity(new clsCurrency(prmOID, prmName, prmTRM, prmCoinsValues, prmBillsValues), attCurrencies);
         }
 
         public static bool toRegisterPiggyBank(string prmOIDCurrency, int prmCoinsMaxCap, int prmBillsMaxCap, List<double> prmCoinsCap, List<double> prmBillsCap, List<double> prmCoinsCount, List<double> prmBillsCount){
             if (attPiggy != null) return false;
             clsCurrency varObj = clsCollections.getItemWith(prmOIDCurrency, attCurrencies);
             if (varObj == null) return false;
-            attPiggy = new clsPiggyBank(varObj, prmCoinsMaxCap, prmBillsMaxCap, prmCoinsValues, prmBillsValues, varObj);
+            attPiggy = new clsPiggyBank(prmCoinsMaxCap, prmBillsMaxCap, prmCoinsValues, prmBillsValues, varObj);
             varObj.setPiggyBank(attPiggy);
             return true;
-
         }
 
         public static bool toRegisterCoin(string prmOIDCurrency, string prmOID, double prmValue, int prmYear){

@@ -102,11 +102,11 @@ namespace pkgPiggyBank.pkgDomain{
         #endregion
         #region CRUDS
         public bool toRegisterCoin(string prmOID, double prmValue, int prmYear){
-            return clsCollections.toRegisterEntity(new clsCoin(prmOID, prmValue, this, prmYear), attCoins);
+            return clsBrokerCrud.toRegisterEntity(new clsCoin(prmOID, prmValue, this, prmYear), attCoins);
         }
 
         public bool toRegisterBill(string prmOID, double prmValue, int prmDay, int prmMonth, int prmYear){
-            return clsCollections.toRegisterEntity(new clsBill(prmOID, prmValue, this, prmDay, prmMonth, prmYear), attBills);
+            return clsBrokerCrud.toRegisterEntity(new clsBill(prmOID, prmValue, this, prmDay, prmMonth, prmYear), attBills);
         }
         #endregion
     }
