@@ -1,26 +1,45 @@
 {
   "version": 3,
   "targets": {
-    "net7.0": {}
+    "net7.0": {
+      "libServices/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/libServices.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/libServices.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "libServices/1.0.0": {
+      "type": "project",
+      "path": "../libServices/libServices.csproj",
+      "msbuildProject": "../libServices/libServices.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net7.0": []
+    "net7.0": [
+      "libServices >= 1.0.0"
+    ]
   },
   "packageFolders": {
-    "C:\\Users\\Usuario\\.nuget\\packages\\": {}
+    "C:\\Users\\Mario\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Programming\\PiggyBank\\libPiggyBank\\libPiggyBank.csproj",
+      "projectUniqueName": "D:\\Programación\\PiggyBank\\appPiggyBank\\libPiggyBank\\libPiggyBank.csproj",
       "projectName": "libPiggyBank",
-      "projectPath": "D:\\Programming\\PiggyBank\\libPiggyBank\\libPiggyBank.csproj",
-      "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-      "outputPath": "D:\\Programming\\PiggyBank\\libPiggyBank\\obj\\",
+      "projectPath": "D:\\Programación\\PiggyBank\\appPiggyBank\\libPiggyBank\\libPiggyBank.csproj",
+      "packagesPath": "C:\\Users\\Mario\\.nuget\\packages\\",
+      "outputPath": "D:\\Programación\\PiggyBank\\appPiggyBank\\libPiggyBank\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Mario\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -31,7 +50,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Programación\\PiggyBank\\appPiggyBank\\libServices\\libServices.csproj": {
+              "projectPath": "D:\\Programación\\PiggyBank\\appPiggyBank\\libServices\\libServices.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -59,7 +82,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

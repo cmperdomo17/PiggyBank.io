@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "N2qNxcVKa1QRwKtAG7/oSTJaJ327TsXqB7WNeYQPde0UAUD/Eo6vaDVw3eeFlZzh7+zgaee25XuhJeZ1Q2XgSw==",
+  "dgSpecHash": "BC5hQNyEiKn+15XN1MYhONrGO3+6EFSRRyOZnlIXfhM1jwYuH4oQOAgAZwmxpAQDiiQ2YWWmhnALNkRs3CD5pg==",
   "success": true,
-  "projectFilePath": "D:\\Programming\\PiggyBank\\libServices\\libServices.csproj",
+  "projectFilePath": "D:\\Programación\\PiggyBank\\appPiggyBank\\libServices\\libServices.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

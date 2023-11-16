@@ -8,22 +8,18 @@ namespace pkgServices.pkgInterfaces
 {
     public interface iEntity
     {
-        #region Getters
-        oidType getOID();
-        
-        #endregion
-
         #region Setters
-        
+        bool modify(List<object> prmArgs);
         #endregion
-
+        #region Getters
+        string getOID();
+        #endregion
         #region Destroyer
         bool die();
         #endregion
-
         #region Utilities
-        string toString(); 
-        bool copyTo<T>(T prmOtherObject);
+        string toString();
+        bool copyTo<T>(T prmObject);
         #endregion
     }
 }

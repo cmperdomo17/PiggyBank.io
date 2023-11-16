@@ -13,6 +13,7 @@ namespace pkgPiggyBank.pkgDomain{
         private int attDay;
         #endregion
         #region Constructors
+        public clsBill() { }
         public clsBill(string prmOID, double prmValue, int prmYear, clsCurrency prmCurrency, int prmMonth, int prmDay) : base(prmOID, prmValue, prmCurrency, prmYear){ 
             
             attDay = prmDay; 
@@ -58,7 +59,7 @@ namespace pkgPiggyBank.pkgDomain{
 
         public override bool copyTo<T>(T prmOtherObject)
         {
-            clsBill varObjOther = prmOtherObject as clsBill;
+            clsBill? varObjOther = prmOtherObject as clsBill;
             if (varObjOther == null) return false;
             varObjOther.attOID = attOID;
             varObjOther.attValue = attValue;

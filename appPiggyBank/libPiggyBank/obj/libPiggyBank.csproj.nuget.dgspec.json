@@ -1,20 +1,77 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Programming\\PiggyBank\\libPiggyBank\\libPiggyBank.csproj": {}
+    "D:\\Programación\\PiggyBank\\appPiggyBank\\libPiggyBank\\libPiggyBank.csproj": {}
   },
   "projects": {
-    "D:\\Programming\\PiggyBank\\libPiggyBank\\libPiggyBank.csproj": {
+    "D:\\Programación\\PiggyBank\\appPiggyBank\\libPiggyBank\\libPiggyBank.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Programming\\PiggyBank\\libPiggyBank\\libPiggyBank.csproj",
+        "projectUniqueName": "D:\\Programación\\PiggyBank\\appPiggyBank\\libPiggyBank\\libPiggyBank.csproj",
         "projectName": "libPiggyBank",
-        "projectPath": "D:\\Programming\\PiggyBank\\libPiggyBank\\libPiggyBank.csproj",
-        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "D:\\Programming\\PiggyBank\\libPiggyBank\\obj\\",
+        "projectPath": "D:\\Programación\\PiggyBank\\appPiggyBank\\libPiggyBank\\libPiggyBank.csproj",
+        "packagesPath": "C:\\Users\\Mario\\.nuget\\packages\\",
+        "outputPath": "D:\\Programación\\PiggyBank\\appPiggyBank\\libPiggyBank\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Mario\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\Programación\\PiggyBank\\appPiggyBank\\libServices\\libServices.csproj": {
+                "projectPath": "D:\\Programación\\PiggyBank\\appPiggyBank\\libServices\\libServices.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Programación\\PiggyBank\\appPiggyBank\\libServices\\libServices.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Programación\\PiggyBank\\appPiggyBank\\libServices\\libServices.csproj",
+        "projectName": "libServices",
+        "projectPath": "D:\\Programación\\PiggyBank\\appPiggyBank\\libServices\\libServices.csproj",
+        "packagesPath": "C:\\Users\\Mario\\.nuget\\packages\\",
+        "outputPath": "D:\\Programación\\PiggyBank\\appPiggyBank\\libServices\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Mario\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -53,7 +110,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

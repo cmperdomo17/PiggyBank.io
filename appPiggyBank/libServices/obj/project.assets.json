@@ -8,19 +8,19 @@
     "net7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Usuario\\.nuget\\packages\\": {}
+    "C:\\Users\\Mario\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Programming\\PiggyBank\\libServices\\libServices.csproj",
+      "projectUniqueName": "D:\\Programación\\PiggyBank\\appPiggyBank\\libServices\\libServices.csproj",
       "projectName": "libServices",
-      "projectPath": "D:\\Programming\\PiggyBank\\libServices\\libServices.csproj",
-      "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-      "outputPath": "D:\\Programming\\PiggyBank\\libServices\\obj\\",
+      "projectPath": "D:\\Programación\\PiggyBank\\appPiggyBank\\libServices\\libServices.csproj",
+      "packagesPath": "C:\\Users\\Mario\\.nuget\\packages\\",
+      "outputPath": "D:\\Programación\\PiggyBank\\appPiggyBank\\libServices\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Mario\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -59,7 +59,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

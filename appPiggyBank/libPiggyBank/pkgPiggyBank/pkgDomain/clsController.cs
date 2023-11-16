@@ -1,13 +1,15 @@
 using System;
 using System.Collections.Generic;
+using pkgServices.pkgCollections;
+using pkgServices;
 
 namespace pkgPiggyBank.pkgDomain{
     public class clsController{
 
         #region Attributes
-        private static clsController attInstance; // Singleton
+        private static clsController? attInstance; // Singleton
         private static List<clsCurrency> attCurrencies;
-        private static clsPiggyBank attPiggy;
+        private static clsPiggyBank? attPiggy;
         #endregion
 
         #region Constructors
@@ -22,9 +24,9 @@ namespace pkgPiggyBank.pkgDomain{
 
         public static bool toRegisterPiggyBank(string prmOIDCurrency, int prmCoinsMaxCap, int prmBillsMaxCap, List<double> prmCoinsCap, List<double> prmBillsCap, List<double> prmCoinsCount, List<double> prmBillsCount){
             if (attPiggy != null) return false;
-            clsCurrency varObj = clsCollections.getItemWith(prmOIDCurrency, attCurrencies);
+            clsCurrency? varObj = clsCollections.getItemWith(prmOIDCurrency, attCurrencies);
             if (varObj == null) return false;
-            attPiggy = new clsPiggyBank(prmCoinsMaxCap, prmBillsMaxCap, prmCoinsValues, prmBillsValues, varObj);
+            attPiggy = new clsPiggyBank(prmCoinsMaxCap, prmBillsMaxCap, prmCoinsCap, prmBillsCap, varObj);
             varObj.setPiggyBank(attPiggy);
             return true;
         }
@@ -48,13 +50,13 @@ namespace pkgPiggyBank.pkgDomain{
         }
 
         public static bool toUpdateCurrency(string prmOID, string prmName, double prmTRM){
-            clsCurrency varObj = clsCollections.getItemWith(prmOID, attCurrencies);
+            clsCurrency? varObj = clsCollections.getItemWith(prmOID, attCurrencies);
             // 1. No se puede modificar la divisa si no existe
             if (varObj == null) return false;
             // 2. No se puede modificar la divisa si ya existe una alcancia
             if (attPiggy != null) return false;
             // 3. No se puede modificar la divisa si ya existen monedas o billetes
-            if (varObj.getMoneyItemsCount() != 0) return false;
+            if (varObj.getSizeCoins() != 0) return false;
 
             // Actualizar la divisa, mandando una lista de argumentos
             varObj.modify(new List<object> { prmOID, prmName, prmTRM });
@@ -97,12 +99,11 @@ namespace pkgPiggyBank.pkgDomain{
             return attInstance;
         }
 
-        public static clsCurrency getCurrencyWith(string prmOID){
-   
-            return clsCollections<clsCurrency>.getItemWith(prmOID, attCurrencies);
-
+        public static clsCurrency getCurrencyWith(string prmOID)
+        {
+            return clsCollections.getItemWith(prmOID, attCurrencies);
         }
-        
+
 
         #region Transaction
 
@@ -125,3 +126,4 @@ namespace pkgPiggyBank.pkgDomain{
 
     }
 }
+#endregion

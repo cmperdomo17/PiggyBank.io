@@ -1,3 +1,0 @@
-In terminal cd: \PiggyBank\appPiggyBank
-
-dotnet build appPiggyBank.sln 

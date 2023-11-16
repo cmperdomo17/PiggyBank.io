@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using libServices.pkgServices;
+using pkgServices;
 
 namespace pkgPiggyBank.pkgDomain
 {
@@ -185,7 +185,7 @@ namespace pkgPiggyBank.pkgDomain
 
         public override bool copyTo<T>(T prmOtherObject)
         {
-            clsPiggyBank varObjOther = prmOtherObject as clsPiggyBank;
+            clsPiggyBank? varObjOther = prmOtherObject as clsPiggyBank;
             if (varObjOther == null) return false;
             attOID = varObjOther.attOID;
             attCoinsMaxCapacity = varObjOther.attCoinsMaxCapacity;

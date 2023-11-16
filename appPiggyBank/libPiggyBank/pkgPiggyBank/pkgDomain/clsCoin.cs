@@ -1,6 +1,6 @@
 using System;
 using System.Security.Cryptography.X509Certificates;
-using libServices.pkgServices;
+using pkgServices;
 
 namespace pkgPiggyBank.pkgDomain
 {
@@ -13,6 +13,9 @@ namespace pkgPiggyBank.pkgDomain
         protected clsPiggyBank attPiggy;
         #endregion
         #region Constructors
+        public clsCoin()
+        {
+        }
         public clsCoin(string prmOID, double prmValue, clsCurrency prmCurrency, int prmYear):base(prmOID)
         {            
             attValue = prmValue;
@@ -67,9 +70,9 @@ namespace pkgPiggyBank.pkgDomain
             return -1;
         }
 
-        public override bool copyTo<T>(T prmObject){
-            
-            clsCoin varObjOther = prmOtherObject as clsCoin;
+        public override bool copyTo<T>(T prmOtherObject)
+        {            
+            clsCoin? varObjOther = prmOtherObject as clsCoin;
             if (varObjOther == null) return false;
             varObjOther.attOID = attOID;
             varObjOther.attValue = attValue;

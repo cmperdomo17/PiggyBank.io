@@ -1,23 +1,25 @@
 using System;
 using System.Collections.Generic;
-using libServices.pkgServices;
-using libServices.pkgServices.pkgInterfaces;
-using libServices.pkgServices.pkgCollections;
+using pkgServices;
+using pkgServices.pkgInterfaces;
+using pkgServices.pkgCollections;
 
 namespace pkgPiggyBank.pkgDomain{
     public class clsCurrency : clsEntity, IComparable<clsCurrency>
     {
         #region Attributes
-        private string attName;
-        private double attTRM;
-        private List<clsCoin> attCoins;
-        private List<clsBill> attBills;
-        private clsPiggyBank attPiggy;   
-        private List<double> attCoinsValues;
-        private List<double> attBillsValues;
+        private string? attName;
+        private double attTRM = 0;
+        private List<clsCoin>? attCoins;
+        private List<clsBill>? attBills;
+        private clsPiggyBank? attPiggy;
+        private List<double>? attCoinsValues;
+        private List<double>? attBillsValues;
         #endregion
         #region Constructors
-        private clsCurrency() { }
+        public clsCurrency()
+        {
+        }
         public clsCurrency(string prmOID, string prmName, double prmTRM, List<double> prmCoinsValues, List<double> prmBillsValues) :base(prmOID)
         {
             attName = prmName;
@@ -27,13 +29,15 @@ namespace pkgPiggyBank.pkgDomain{
         }
         #endregion
         #region Getters
-        public string getName()=>attName;
+        public string getName() => attName;
 
         public double getTRM()=>attTRM;
 
         public List<double> getCoinsValues() => attCoinsValues;
 
         public List<double> getBillsValues() => attBillsValues;
+        public int getSizeCoins() => attCoins.Count;
+        public int getSizeBills() => attBills.Count;
         #endregion
         #region Setters
         public bool modifyThis(string prmName, double prmTRM){
@@ -69,16 +73,16 @@ namespace pkgPiggyBank.pkgDomain{
         {
             return "{OID]}:\t + attOID + \n{Name}:\t + attName + \n{TRM}:\t + attTRM + \n";
         }
-        public int CompareTo(clsCurrency <oidType> prmOther)
+        public int CompareTo(clsCurrency prmOther)
         {
             if (attOID == prmOther.attOID
                 && attName == prmOther.attName
                 && attTRM == prmOther.attTRM
-                && ClsCollections<string, clsCoin>.areEqualsCollections(attCoins, prmOther.attCoins)
-                && ClsCollections<string, clsBill>.areEqualsCollections(attBills, prmOther.attBills)
+                && clsCollections.areEqualsCollections(attCoins, prmOther.attCoins)
+                && clsCollections.areEqualsCollections(attBills, prmOther.attBills)
                 && attPiggy.CompareTo(prmOther.attPiggy) == 0
-                && ClsCollections<double>.areEqualsCollections(attCoinsValues, prmOther.attCoinsValues)
-                && ClsCollections<double>.areEqualsCollections(attBillsValues, prmOther.attBillsValues)
+                && clsCollections.areEqualsCollections(attCoinsValues, prmOther.attCoinsValues)
+                && clsCollections.areEqualsCollections(attBillsValues, prmOther.attBillsValues)
                 )
                 return 0;
             return 1;
@@ -86,17 +90,17 @@ namespace pkgPiggyBank.pkgDomain{
         
         public override bool copyTo<T>(T prmObject)
         {
-            clsCurrency varObjOther = prmObject as clsCurrency;
+            clsCurrency? varObjOther = prmObject as clsCurrency;
             if (prmObject.GetType() != typeof(clsCurrency)) return false;
 
-            varObjCurrency.attOID = attOID;
-            varObjCurrency.attName = attName;
-            varObjCurrency.attTRM = attTRM;
-            varObjCurrency.attCoins = attCoins;
-            varObjCurrency.attBills = attBills;
-            varObjCurrency.attPiggy = attPiggy;
-            varObjCurrency.attCoinsValues = attCoinsValues;
-            varObjCurrency.attBillsValues = attBillsValues;
+            varObjOther.attOID = attOID;
+            varObjOther.attName = attName;
+            varObjOther.attTRM = attTRM;
+            varObjOther.attCoins = attCoins;
+            varObjOther.attBills = attBills;
+            varObjOther.attPiggy = attPiggy;
+            varObjOther.attCoinsValues = attCoinsValues;
+            varObjOther.attBillsValues = attBillsValues;
             return true;
         }   
         #endregion
@@ -106,7 +110,7 @@ namespace pkgPiggyBank.pkgDomain{
         }
 
         public bool toRegisterBill(string prmOID, double prmValue, int prmDay, int prmMonth, int prmYear){
-            return clsBrokerCrud.toRegisterEntity(new clsBill(prmOID, prmValue, this, prmDay, prmMonth, prmYear), attBills);
+            return clsBrokerCrud.toRegisterEntity(new clsBill(prmOID, prmValue, prmDay, this, prmMonth, prmYear), attBills);
         }
         #endregion
     }

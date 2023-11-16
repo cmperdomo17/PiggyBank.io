@@ -13,7 +13,11 @@ namespace pkgServices
         protected string attOID;
         #endregion
         #region Constructors
-        public clsEntity(oidType prmOID) => attOID = prmOID; 
+        public clsEntity() => attOID = "";
+        public clsEntity(string prmOID) => attOID = prmOID;
+        #endregion
+        #region Setters
+        public virtual bool modify(List<object> prmArgs) => throw new NotImplementedException();
         #endregion
         #region Getters
         public string getOID() => attOID;
@@ -26,6 +30,7 @@ namespace pkgServices
         #endregion
         #region Utilities
         public virtual string toString() => throw new NotImplementedException();
+        public virtual bool copyTo<T>(T prmObject) => throw new NotImplementedException();
         #endregion
     }
 }
