@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data;
 using pkgServices;
+using pkgServices.pkgCollections;
 
 namespace pkgPiggyBank.pkgDomain
 {
@@ -71,6 +73,7 @@ namespace pkgPiggyBank.pkgDomain
         public int getMoneyItemsCount() => attCoinsCount + attBillsCount;
 
         public clsCurrency getCurrency() => attCurrency;
+
         #endregion
         #region Setters
 
@@ -156,26 +159,73 @@ namespace pkgPiggyBank.pkgDomain
 
         #endregion
         #region Transacction
-        public List<clsCoin> coinsIncome(List<clsCoin> prmItems)
+
+        public bool coinsWithdrawal(List<clsCoin> prmItems)
         {
-            throw new NotImplementedException();
+            if (prmItems == null) return false;
+            if (!isValidAmount(prmItems)) return false; // TODO: Implementar
+            foreach (clsCoin varObj in prmItems){
+                attCoins.Remove(varObj);
+                varObj.setPiggy(null); // TODO: Implementar
+                attCoinsCount--;
+                attTotalBalance -= varObj.getValue();
+                attCoinsBalance -= varObj.getValue();
+                updateDownCoinsBalanceByValue(varObj); // TODO: Implementar
+                UpdateDownCoinsCountByValue(varObj); // TODO: Implementar
+            }
+            return true;
         }
 
-        public List<clsCoin> coinsWithdrawal(List<double> prmValues)
+        public bool coinsIncome(List<clsCoin> prmItems)
         {
-            throw new NotImplementedException();
+            if (prmItems==null || prmItems.Count == 0) return false;
+            if (prmItems.Count + attCoinsCount > attCoinsMaxCapacity) return false;
+            if (!areAccepted(prmItems)) return false; // TODO: Implementar
+            
+            foreach (clsCoin varObj in prmItems){
+                attCoins.Add(varObj);
+                varObj.setPiggy(this); // TODO: Implementar
+                attTotalBalance += varObj.getValue();
+                attCoinsBalance += varObj.getValue();
+                attCoinsCount++;
+                updateUpCoinsBalanceByValue(varObj); // TODO: Implementar
+                UpdateUpCoinsCountByValue(varObj); // TODO: Implementar
+            }
+            return true;
         }
 
-        public bool billsIncome(List<clsBill> prmItems)
+        public List<clsCoin> getCoinsByValue(double prmValue)
         {
-            throw new NotImplementedException();
+            List<clsCoin> varCoins = new List<clsCoin>();
+            foreach (clsCoin varCoin in attCoins)
+            {
+                if (varCoin.getValue() == prmValue)
+                {
+                    varCoins.Add(varCoin);
+                }
+            }
+            return varCoins;
         }
 
-        public List<clsBill> billsWithdeawal(List<double> prmValues)
+        public List<clsBill> billsWithdrawal(List<double> prmValues)
         {
             throw new NotImplementedException();
         }
         #endregion
+
+        public void removeCoin(string prmOID)
+        {
+            clsCoin? varObj = clsCollections.getItemWith(prmOID, attCoins);
+            if (varObj == null) return;
+            attCoins.Remove(varObj);
+            attCoinsCount--;
+            attCoinsBalance -= varObj.getValue();
+            int varIdx = attCoinsAcceptedValues.IndexOf(varObj.getValue());
+            attCoinsCountByValue[varIdx]--;
+            attCoinsBalanceByValue[varIdx] -= varObj.getValue();
+            attTotalBalance -= varObj.getValue();
+        }
+
         #region Utilities
 
         public int CompareTo(clsPiggyBank prmOther)
