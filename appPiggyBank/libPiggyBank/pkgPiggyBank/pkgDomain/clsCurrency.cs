@@ -103,6 +103,45 @@ namespace pkgPiggyBank.pkgDomain{
             varObjOther.attBillsValues = attBillsValues;
             return true;
         }   
+
+        // ! ---------------------------------- METODOS POR REVISAR -------------------------------------//
+
+        public List <clsCoin> RetrieveAsOuterCoins(List<double> prmValues)
+        {
+            List <clsCoin> outerCoins = new List<clsCoin>();
+
+            foreach (clsCoin varObj in attCoins){
+                if (!prmValues.Contains(varObj.getValue())){
+                    outerCoins.Add(varObj);
+                }
+            } 
+            return outerCoins;
+        }
+
+        public List <clsCoin> RetrieveAsInnerCoins(List<double> prmValues)
+        {
+            List <clsCoin> innerCoins = new List<clsCoin>();
+
+            foreach(clsCoin varObj in attCoins){
+                if (prmValues.Contains(varObj.getValue())){
+                    innerCoins.Add(varObj);
+                }
+            }
+            return innerCoins;
+        }
+
+        public bool AreValid(List<double> prmValues)
+        {
+            foreach (double varObj in prmValues){
+                if (!attCoinsValues.Contains(varObj)){
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        // ! ---------------------------------- METODOS POR REVISAR -------------------------------------//
+
         #endregion
         #region CRUDS
         public bool toRegisterCoin(string prmOID, double prmValue, int prmYear){

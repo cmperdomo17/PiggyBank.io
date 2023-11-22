@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using pkgServices.pkgCollections;
 using pkgServices;
+using System.Data.Common;
 
 namespace pkgPiggyBank.pkgDomain{
     public class clsController{
@@ -111,8 +112,8 @@ namespace pkgPiggyBank.pkgDomain{
             if (attPiggy == null) return false;
             clsCurrency varObj = attPiggy.getCurrency();
             if (varObj == null) return false;
-            if (!varObj.areValid(prmValues)) return false; // TODO : implementar areValid
-            List <clsCoin> varCoins = varObj.retrieveAsOuterCoins(prmValues); // TODO : implementar retrieveAsOuterCoins
+            if (!varObj.AreValid(prmValues)) return false; // TODO : implementar areValid
+            List <clsCoin> varCoins = varObj.RetrieveAsOuterCoins(prmValues); // TODO : implementar retrieveAsOuterCoins
             if (varCoins == null) return false;
             if (varCoins.Count != prmValues.Count) return false;
             return attPiggy.coinsIncome(varCoins);
@@ -124,7 +125,7 @@ namespace pkgPiggyBank.pkgDomain{
             clsCurrency varObj = attPiggy.getCurrency();
             if (varObj == null) return false;
 
-            List <clsCoin> varCoins = varObj.retrieveAsInnerCoins(prmValues); // TODO : implementar retrieveAsInnerCoins
+            List <clsCoin> varCoins = varObj.RetrieveAsInnerCoins(prmValues); // TODO : implementar retrieveAsInnerCoins
             if (varCoins == null) return false;
             if (varCoins.Count != prmValues.Count) return false;
             return attPiggy.coinsWithdrawal(varCoins);

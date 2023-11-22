@@ -170,7 +170,7 @@ namespace pkgPiggyBank.pkgDomain
                 attCoinsCount--;
                 attTotalBalance -= varObj.getValue();
                 attCoinsBalance -= varObj.getValue();
-                updateDownCoinsBalanceByValue(varObj); // TODO: Implementar
+                UpdateDownCoinsBalanceByValue(varObj); // TODO: Implementar
                 UpdateDownCoinsCountByValue(varObj); // TODO: Implementar
             }
             return true;
@@ -180,20 +180,137 @@ namespace pkgPiggyBank.pkgDomain
         {
             if (prmItems==null || prmItems.Count == 0) return false;
             if (prmItems.Count + attCoinsCount > attCoinsMaxCapacity) return false;
-            if (!areAccepted(prmItems)) return false; // TODO: Implementar
+            if (!AreAccepted(prmItems)) return false; // ? REVISAR
             
             foreach (clsCoin varObj in prmItems){
                 attCoins.Add(varObj);
-                varObj.setPiggy(this); // TODO: Implementar
+                varObj.setPiggy(this); // ? REVISAR
                 attTotalBalance += varObj.getValue();
                 attCoinsBalance += varObj.getValue();
                 attCoinsCount++;
-                updateUpCoinsBalanceByValue(varObj); // TODO: Implementar
+                UpdateUpCoinsBalanceByValue(varObj); // TODO: Implementar
                 UpdateUpCoinsCountByValue(varObj); // TODO: Implementar
             }
             return true;
         }
 
+
+// ! --------------------------------METODOS POR REVISAR ---------------------------------------------------
+
+        // ? REVISAR
+        private void UpdateDownCoinsBalanceByValue(clsCoin prmItem)
+        {
+            // validar que el valor de la moneda este en la lista de valores aceptados
+            if (attCoinsAcceptedValues.Contains(prmItem.getValue()))
+            {
+                // Obtener el indice del valor de la moneda en la lista de valores aceptados
+                int varIdx = attCoinsAcceptedValues.IndexOf(prmItem.getValue());
+                // Disminuir el balance de la moneda en la lista de balances por valor
+                attCoinsBalanceByValue[varIdx] -= prmItem.getValue();
+            }
+            else {
+                // Si el valor de la moneda no esta en la lista de valores aceptados se agrega a la lista de valores aceptados
+                attCoinsAcceptedValues.Add(prmItem.getValue());
+                // Se agrega el valor de la moneda a la lista de balances por valor
+                attCoinsBalanceByValue.Add(prmItem.getValue());
+                // Añade 1 al conteo de monedas por valor
+                attCoinsCountByValue.Add(1);
+            }
+        }
+        
+        // ? REVISAR
+        private void UpdateDownCoinsCountByValue(clsCoin prmItem)
+        {
+            // validar que el valor de la moneda este en la lista de valores aceptados
+            if (attCoinsAcceptedValues.Contains(prmItem.getValue()))
+            {
+                // Obtener el indice del valor de la moneda en la lista de valores aceptados
+                int varIdx = attCoinsAcceptedValues.IndexOf(prmItem.getValue());
+                // Disminuir el conteo de la moneda en la lista de conteos por valor
+                attCoinsCountByValue[varIdx]--;
+            }
+            else {
+                // Si el valor de la moneda no esta en la lista de valores aceptados se agrega a la lista de valores aceptados
+                attCoinsAcceptedValues.Add(prmItem.getValue());
+                // Se agrega el valor de la moneda a la lista de balances por valor
+                attCoinsBalanceByValue.Add(prmItem.getValue());
+                // Añade 1 al conteo de monedas por valor
+                attCoinsCountByValue.Add(1);
+            }
+        }
+
+        // ? REVISAR
+        private bool isValidAmount(List<clsCoin> prmItems)
+        {
+            double varAmount = 0;
+            // Recorre la lista de monedas
+            foreach (clsCoin varObj in prmItems)
+            {
+                // Suma el valor de la moneda al monto
+                varAmount += varObj.getValue();
+            }
+            // Retorna verdadero si el monto es menor o igual al balance de monedas
+            if (varAmount <= attCoinsBalance) return true;
+            // En caso contrario retorna falso
+            return false;
+        }
+
+        // ? REVISAR
+        private bool AreAccepted(List<clsCoin> prmItems)
+        {
+            // Recorre la lista de monedas 
+            foreach (clsCoin varObj in prmItems)
+            {
+                // Si el valor de la moneda no esta en la lista de valores aceptados retorna falso
+                if (!attCoinsAcceptedValues.Contains(varObj.getValue())) return false;
+            }
+            // En caso contrario retorna verdadero y la moneda es aceptada
+            return true;
+        }
+
+        // ? REVISAR
+        private void UpdateUpCoinsBalanceByValue(clsCoin prmItem)
+        {
+            // validar que el valor de la moneda este en la lista de valores aceptados
+            if (attCoinsAcceptedValues.Contains(prmItem.getValue()))
+            {
+                // Obtener el indice del valor de la moneda en la lista de valores aceptados
+                int varIdx = attCoinsAcceptedValues.IndexOf(prmItem.getValue());
+                // Aumentar el balance de la moneda en la lista de balances por valor
+                attCoinsBalanceByValue[varIdx] += prmItem.getValue();
+            }
+            else {
+                // Si el valor de la moneda no esta en la lista de valores aceptados se agrega a la lista de valores aceptados
+                attCoinsAcceptedValues.Add(prmItem.getValue());
+                // Se agrega el valor de la moneda a la lista de balances por valor
+                attCoinsBalanceByValue.Add(prmItem.getValue());
+                // Añade 1 al conteo de monedas por valor
+                attCoinsCountByValue.Add(1);
+            }
+        }
+
+        // ? REVISAR
+        private void UpdateUpCoinsCountByValue(clsCoin prmItem)
+        {
+            // validar que el valor de la moneda este en la lista de valores aceptados
+            if (attCoinsAcceptedValues.Contains(prmItem.getValue()))
+            {
+                // Obtener el indice del valor de la moneda en la lista de valores aceptados
+                int varIdx = attCoinsAcceptedValues.IndexOf(prmItem.getValue());
+                // Aumentar el conteo de la moneda en la lista de conteos por valor
+                attCoinsCountByValue[varIdx]++;
+            }
+            else {
+                // Si el valor de la moneda no esta en la lista de valores aceptados se agrega a la lista de valores aceptados
+                attCoinsAcceptedValues.Add(prmItem.getValue());
+                // Se agrega el valor de la moneda a la lista de balances por valor
+                attCoinsBalanceByValue.Add(prmItem.getValue());
+                // Añade 1 al conteo de monedas por valor
+                attCoinsCountByValue.Add(1);
+            }
+        }
+
+// ! --------------------------------METODOS POR REVISAR ---------------------------------------------------
         public List<clsCoin> getCoinsByValue(double prmValue)
         {
             List<clsCoin> varCoins = new List<clsCoin>();
