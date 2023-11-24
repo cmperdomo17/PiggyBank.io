@@ -42,42 +42,80 @@ namespace pkgPiggyBank.pkgDomain{
 
         // ! ---------------------------------- METODOS POR REVISAR -------------------------------------//
 
-        public List <clsCoin> RetrieveAsOuterCoins(List<double> prmValues)
+
+        public List <clsCoin> RetrieveAsInsideCoins(List<double> prmValues)
         {
             List <clsCoin> varResult = new List<clsCoin>();
-
+            int varToFoundItems = prmValues.Count;
             foreach (clsCoin varObj in attCoins){
-                if (!prmValues.Contains(varObj.getValue())){
+                if (varObj.getPiggy() != null && clsCollections.getIndexOf(varObj.getValue(), prmValues) != -1){
                     varResult.Add(varObj);
+                    prmValues.Remove(varObj.getValue());
+                    varToFoundItems--;
                 }
             }
+            if (varToFoundItems != 0) return null;
             return varResult;
         }
 
-        public List <clsBill> RetrieveAsOuterBills(List<double> prmValues)
+        public List <clsBill> RetrieveAsInsideBills(List<double> prmValues)
         {
-            List <clsBill> outerBills = new List<clsBill>();
-
+            List <clsBill> varResult = new List<clsBill>();
+            int varToFoundItems = prmValues.Count;
             foreach (clsBill varObj in attBills){
-                if (!prmValues.Contains(varObj.getValue())){
-                    outerBills.Add(varObj);
-                }
-            } 
-            return outerBills;
-        }
-
-        public List <clsCoin> RetrieveAsInnerCoins(List<double> prmValues)
-        {
-            List <clsCoin> innerCoins = new List<clsCoin>();
-
-            foreach(clsCoin varObj in attCoins){
-                if (prmValues.Contains(varObj.getValue())){
-                    innerCoins.Add(varObj);
+                if (varObj.getPiggy() != null && clsCollections.getIndexOf(varObj.getValue(), prmValues) != -1){
+                    varResult.Add(varObj);
+                    prmValues.Remove(varObj.getValue());
+                    varToFoundItems--;
                 }
             }
-            return innerCoins;
+            if (varToFoundItems != 0) return null;
+            return varResult;
+        }
+        public List <clsCoin> RetrieveAsOutsideCoins(List<double> prmValues)
+        {
+            List <clsCoin> varResult = new List<clsCoin>();
+            int varToFoundItems = prmValues.Count;
+            foreach (clsCoin varObj in attCoins){
+                if (varObj.getPiggy() == null && clsCollections.getIndexOf(varObj.getValue(), prmValues) != -1){
+                    varResult.Add(varObj);
+                    prmValues.Remove(varObj.getValue());
+                    varToFoundItems--;
+                }
+            }
+            if (varToFoundItems != 0) return null;
+            return varResult;
         }
 
+        public List <clsBill> RetrieveAsOutsideBills(List<double> prmValues)
+        {
+            List <clsBill> varResult = new List<clsBill>();
+            int varToFoundItems = prmValues.Count;
+            foreach (clsBill varObj in attBills){
+                if (!prmValues.Contains(varObj.getValue())){
+                    varResult.Add(varObj);
+                    prmValues.Remove(varObj.getValue());
+                    varToFoundItems--;
+                }
+            }
+            if (varToFoundItems != 0) return null;
+            return varResult;
+        }
+
+        //! NO USAR 
+        public List <clsBill> RetriveAsInsideOutsideBills(List <double> prmValues, bool prmInside){
+            List <clsBill> varResult = new List<clsBill>();
+            int varToFoundItems = prmValues.Count;
+            foreach (clsBill varObj in attBills){
+                if ((prmInside? varObj.getPiggy() != null : varObj.getPiggy() == null) && clsCollections.getIndexOf(varObj.getValue(), prmValues) != -1){
+                    varResult.Add(varObj);
+                    prmValues.Remove(varObj.getValue());
+                    varToFoundItems--;
+                }
+            }
+            if (varToFoundItems != 0) return null;
+            return varResult;
+        }
         
         // ! ---------------------------------- METODOS POR REVISAR -------------------------------------//
 

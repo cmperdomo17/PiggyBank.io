@@ -113,21 +113,9 @@ namespace pkgPiggyBank.pkgDomain{
             clsCurrency varObj = attPiggy.getCurrency();
             if (varObj == null) return false;
             if (!varObj.AreValidCoins(prmValues)) return false; 
-            List <clsCoin> varCoins = varObj.RetrieveAsOuterCoins(prmValues); 
+            List <clsCoin> varCoins = varObj.RetrieveAsOutsideCoins(prmValues); 
             if (varCoins == null) return false;
-            if (varCoins.Count != prmValues.Count) return false;
             return attPiggy.coinsIncome(varCoins);
-        }
-
-        public bool billsIncome(List<double> prmValues){
-            if (attPiggy == null) return false;
-            clsCurrency varObj = attPiggy.getCurrency();
-            if (varObj == null) return false;
-            if (!varObj.AreValidBills(prmValues)) return false; 
-            List <clsBill> varBills = varObj.RetrieveAsOuterBills(prmValues); 
-            if (varBills == null) return false;
-            if (varBills.Count != prmValues.Count) return false;
-            return attPiggy.billsIncome(varBills);
         }
 
         public bool coinsWithdrawal(List<double> prmValues)
@@ -135,16 +123,31 @@ namespace pkgPiggyBank.pkgDomain{
             if (attPiggy == null) return false;
             clsCurrency varObj = attPiggy.getCurrency();
             if (varObj == null) return false;
-
-            List <clsCoin> varCoins = varObj.RetrieveAsInnerCoins(prmValues); 
+            List <clsCoin> varCoins = varObj.RetrieveAsInsideCoins(prmValues); 
             if (varCoins == null) return false;
-            if (varCoins.Count != prmValues.Count) return false;
             return attPiggy.coinsWithdrawal(varCoins);
         }
 
-        public List<clsBill> billsWhithdrawal(List<double> prmValues){
-            throw new NotImplementedException();
-        }   
+        public bool billsIncome(List<double> prmValues){
+            if (attPiggy == null) return false;
+            clsCurrency varObj = attPiggy.getCurrency();
+            if (varObj == null) return false;
+            if (!varObj.AreValidBills(prmValues)) return false; 
+            List <clsBill> varBills = varObj.RetrieveAsOutsideBills(prmValues); 
+            if (varBills == null) return false;
+            return attPiggy.billsIncome(varBills);
+        } 
+
+        public bool billsWithdrawal(List<double> prmValues)
+        {
+            if (attPiggy == null) return false;
+            clsCurrency varObj = attPiggy.getCurrency();
+            if (varObj == null) return false;
+            List <clsBill> varBills = varObj.RetrieveAsInsideBills(prmValues);
+            if (varBills == null) return false;
+            return attPiggy.billsWithdrawal(varBills);
+        }
+
         #endregion
 
     }
