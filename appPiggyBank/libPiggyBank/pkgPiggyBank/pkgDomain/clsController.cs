@@ -112,11 +112,22 @@ namespace pkgPiggyBank.pkgDomain{
             if (attPiggy == null) return false;
             clsCurrency varObj = attPiggy.getCurrency();
             if (varObj == null) return false;
-            if (!varObj.AreValid(prmValues)) return false; // TODO : implementar areValid
-            List <clsCoin> varCoins = varObj.RetrieveAsOuterCoins(prmValues); // TODO : implementar retrieveAsOuterCoins
+            if (!varObj.AreValidCoins(prmValues)) return false; 
+            List <clsCoin> varCoins = varObj.RetrieveAsOuterCoins(prmValues); 
             if (varCoins == null) return false;
             if (varCoins.Count != prmValues.Count) return false;
             return attPiggy.coinsIncome(varCoins);
+        }
+
+        public bool billsIncome(List<double> prmValues){
+            if (attPiggy == null) return false;
+            clsCurrency varObj = attPiggy.getCurrency();
+            if (varObj == null) return false;
+            if (!varObj.AreValidBills(prmValues)) return false; 
+            List <clsBill> varBills = varObj.RetrieveAsOuterBills(prmValues); 
+            if (varBills == null) return false;
+            if (varBills.Count != prmValues.Count) return false;
+            return attPiggy.billsIncome(varBills);
         }
 
         public bool coinsWithdrawal(List<double> prmValues)
@@ -125,7 +136,7 @@ namespace pkgPiggyBank.pkgDomain{
             clsCurrency varObj = attPiggy.getCurrency();
             if (varObj == null) return false;
 
-            List <clsCoin> varCoins = varObj.RetrieveAsInnerCoins(prmValues); // TODO : implementar retrieveAsInnerCoins
+            List <clsCoin> varCoins = varObj.RetrieveAsInnerCoins(prmValues); 
             if (varCoins == null) return false;
             if (varCoins.Count != prmValues.Count) return false;
             return attPiggy.coinsWithdrawal(varCoins);

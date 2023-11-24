@@ -38,6 +38,50 @@ namespace pkgPiggyBank.pkgDomain{
         public List<double> getBillsValues() => attBillsValues;
         public int getSizeCoins() => attCoins.Count;
         public int getSizeBills() => attBills.Count;
+        
+
+        // ! ---------------------------------- METODOS POR REVISAR -------------------------------------//
+
+        public List <clsCoin> RetrieveAsOuterCoins(List<double> prmValues)
+        {
+            List <clsCoin> varResult = new List<clsCoin>();
+
+            foreach (clsCoin varObj in attCoins){
+                if (!prmValues.Contains(varObj.getValue())){
+                    varResult.Add(varObj);
+                }
+            }
+            return varResult;
+        }
+
+        public List <clsBill> RetrieveAsOuterBills(List<double> prmValues)
+        {
+            List <clsBill> outerBills = new List<clsBill>();
+
+            foreach (clsBill varObj in attBills){
+                if (!prmValues.Contains(varObj.getValue())){
+                    outerBills.Add(varObj);
+                }
+            } 
+            return outerBills;
+        }
+
+        public List <clsCoin> RetrieveAsInnerCoins(List<double> prmValues)
+        {
+            List <clsCoin> innerCoins = new List<clsCoin>();
+
+            foreach(clsCoin varObj in attCoins){
+                if (prmValues.Contains(varObj.getValue())){
+                    innerCoins.Add(varObj);
+                }
+            }
+            return innerCoins;
+        }
+
+        
+        // ! ---------------------------------- METODOS POR REVISAR -------------------------------------//
+
+        
         #endregion
         #region Setters
         public bool modifyThis(string prmName, double prmTRM){
@@ -106,39 +150,13 @@ namespace pkgPiggyBank.pkgDomain{
 
         // ! ---------------------------------- METODOS POR REVISAR -------------------------------------//
 
-        public List <clsCoin> RetrieveAsOuterCoins(List<double> prmValues)
-        {
-            List <clsCoin> outerCoins = new List<clsCoin>();
 
-            foreach (clsCoin varObj in attCoins){
-                if (!prmValues.Contains(varObj.getValue())){
-                    outerCoins.Add(varObj);
-                }
-            } 
-            return outerCoins;
-        }
+        #region Query
 
-        public List <clsCoin> RetrieveAsInnerCoins(List<double> prmValues)
-        {
-            List <clsCoin> innerCoins = new List<clsCoin>();
+        public bool AreValidCoins(List<double> prmValues) => clsCollections.isSubSet(prmValues, attCoinsValues);
+        public bool AreValidBills(List<double> prmValues) => clsCollections.isSubSet(prmValues, attBillsValues);
 
-            foreach(clsCoin varObj in attCoins){
-                if (prmValues.Contains(varObj.getValue())){
-                    innerCoins.Add(varObj);
-                }
-            }
-            return innerCoins;
-        }
-
-        public bool AreValid(List<double> prmValues)
-        {
-            foreach (double varObj in prmValues){
-                if (!attCoinsValues.Contains(varObj)){
-                    return false;
-                }
-            }
-            return true;
-        }
+        #endregion
 
         // ! ---------------------------------- METODOS POR REVISAR -------------------------------------//
 

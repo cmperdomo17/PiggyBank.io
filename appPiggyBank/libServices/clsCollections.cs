@@ -31,5 +31,24 @@ namespace pkgServices.pkgCollections
                 if (varObj.getOID().CompareTo(prmOID) == 0) return varObj;
             return default;
         }
+
+        public static int getIndexOf<itemType>(itemType prmItem, List<itemType> prmCollection)
+        where itemType : IComparable<itemType>
+        {
+            int varIdx;
+            for (varIdx = 0; varIdx < prmCollection.Count; varIdx++)
+                if (prmCollection[varIdx].CompareTo(prmItem) == 0)
+                    return varIdx;
+            return -1;
+        } 
+
+        public static bool isSubSet<itemType>(List<itemType> prmCollectionGuest, List<itemType> prmCollectionHost)
+        where itemType : IComparable<itemType>
+        {
+            foreach (itemType varItem in prmCollectionGuest)
+
+                if (getIndexOf(varItem, prmCollectionHost) == -1) return false;
+            return true;
+        }
     }
 }

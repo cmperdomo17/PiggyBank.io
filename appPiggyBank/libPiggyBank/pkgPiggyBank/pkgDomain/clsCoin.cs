@@ -53,14 +53,14 @@ namespace pkgPiggyBank.pkgDomain
             }
         }
 
-        public bool setPiggy(clsPiggyBank prmPiggy){ 
+        public bool setPiggy(clsPiggyBank prmObject){ 
             // Si la Piggy ya tiene una moneda, no se puede asignar otra
             if (attPiggy != null) return false;
+            if (attPiggy.CompareTo(prmObject) != 0) return false;
             // Se asigna la moneda a la alcancia
-            attPiggy = prmPiggy;
+            attPiggy = prmObject;
             return true;
         }
-
 
         #endregion
         #region Utilities
