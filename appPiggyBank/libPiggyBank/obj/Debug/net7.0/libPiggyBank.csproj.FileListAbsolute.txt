@@ -69,3 +69,18 @@ D:\Programación\PiggyBank\appPiggyBank\libPiggyBank\obj\Debug\net7.0\libPiggyBa
 D:\Programación\PiggyBank\appPiggyBank\libPiggyBank\obj\Debug\net7.0\refint\libPiggyBank.dll
 D:\Programación\PiggyBank\appPiggyBank\libPiggyBank\obj\Debug\net7.0\libPiggyBank.pdb
 D:\Programación\PiggyBank\appPiggyBank\libPiggyBank\obj\Debug\net7.0\ref\libPiggyBank.dll
+C:\Users\SebasGX\Documents\U\Semestre 7\Ingenieria Software 2\Trabajos\PiggyBank\appPiggyBank\libPiggyBank\bin\Debug\net7.0\libPiggyBank.deps.json
+C:\Users\SebasGX\Documents\U\Semestre 7\Ingenieria Software 2\Trabajos\PiggyBank\appPiggyBank\libPiggyBank\bin\Debug\net7.0\libPiggyBank.dll
+C:\Users\SebasGX\Documents\U\Semestre 7\Ingenieria Software 2\Trabajos\PiggyBank\appPiggyBank\libPiggyBank\bin\Debug\net7.0\libPiggyBank.pdb
+C:\Users\SebasGX\Documents\U\Semestre 7\Ingenieria Software 2\Trabajos\PiggyBank\appPiggyBank\libPiggyBank\bin\Debug\net7.0\libServices.dll
+C:\Users\SebasGX\Documents\U\Semestre 7\Ingenieria Software 2\Trabajos\PiggyBank\appPiggyBank\libPiggyBank\bin\Debug\net7.0\libServices.pdb
+C:\Users\SebasGX\Documents\U\Semestre 7\Ingenieria Software 2\Trabajos\PiggyBank\appPiggyBank\libPiggyBank\obj\Debug\net7.0\libPiggyBank.csproj.AssemblyReference.cache
+C:\Users\SebasGX\Documents\U\Semestre 7\Ingenieria Software 2\Trabajos\PiggyBank\appPiggyBank\libPiggyBank\obj\Debug\net7.0\libPiggyBank.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SebasGX\Documents\U\Semestre 7\Ingenieria Software 2\Trabajos\PiggyBank\appPiggyBank\libPiggyBank\obj\Debug\net7.0\libPiggyBank.AssemblyInfoInputs.cache
+C:\Users\SebasGX\Documents\U\Semestre 7\Ingenieria Software 2\Trabajos\PiggyBank\appPiggyBank\libPiggyBank\obj\Debug\net7.0\libPiggyBank.AssemblyInfo.cs
+C:\Users\SebasGX\Documents\U\Semestre 7\Ingenieria Software 2\Trabajos\PiggyBank\appPiggyBank\libPiggyBank\obj\Debug\net7.0\libPiggyBank.csproj.CoreCompileInputs.cache
+C:\Users\SebasGX\Documents\U\Semestre 7\Ingenieria Software 2\Trabajos\PiggyBank\appPiggyBank\libPiggyBank\obj\Debug\net7.0\libPiggyBank.csproj.CopyComplete
+C:\Users\SebasGX\Documents\U\Semestre 7\Ingenieria Software 2\Trabajos\PiggyBank\appPiggyBank\libPiggyBank\obj\Debug\net7.0\libPiggyBank.dll
+C:\Users\SebasGX\Documents\U\Semestre 7\Ingenieria Software 2\Trabajos\PiggyBank\appPiggyBank\libPiggyBank\obj\Debug\net7.0\refint\libPiggyBank.dll
+C:\Users\SebasGX\Documents\U\Semestre 7\Ingenieria Software 2\Trabajos\PiggyBank\appPiggyBank\libPiggyBank\obj\Debug\net7.0\libPiggyBank.pdb
+C:\Users\SebasGX\Documents\U\Semestre 7\Ingenieria Software 2\Trabajos\PiggyBank\appPiggyBank\libPiggyBank\obj\Debug\net7.0\ref\libPiggyBank.dll

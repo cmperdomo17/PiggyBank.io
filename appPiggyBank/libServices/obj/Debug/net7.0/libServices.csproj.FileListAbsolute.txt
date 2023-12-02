@@ -42,3 +42,14 @@ D:\Programación\PiggyBank\appPiggyBank\libServices\obj\Debug\net7.0\libServices
 D:\Programación\PiggyBank\appPiggyBank\libServices\obj\Debug\net7.0\refint\libServices.dll
 D:\Programación\PiggyBank\appPiggyBank\libServices\obj\Debug\net7.0\libServices.pdb
 D:\Programación\PiggyBank\appPiggyBank\libServices\obj\Debug\net7.0\ref\libServices.dll
+C:\Users\SebasGX\Documents\U\Semestre 7\Ingenieria Software 2\Trabajos\PiggyBank\appPiggyBank\libServices\bin\Debug\net7.0\libServices.deps.json
+C:\Users\SebasGX\Documents\U\Semestre 7\Ingenieria Software 2\Trabajos\PiggyBank\appPiggyBank\libServices\bin\Debug\net7.0\libServices.dll
+C:\Users\SebasGX\Documents\U\Semestre 7\Ingenieria Software 2\Trabajos\PiggyBank\appPiggyBank\libServices\bin\Debug\net7.0\libServices.pdb
+C:\Users\SebasGX\Documents\U\Semestre 7\Ingenieria Software 2\Trabajos\PiggyBank\appPiggyBank\libServices\obj\Debug\net7.0\libServices.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SebasGX\Documents\U\Semestre 7\Ingenieria Software 2\Trabajos\PiggyBank\appPiggyBank\libServices\obj\Debug\net7.0\libServices.AssemblyInfoInputs.cache
+C:\Users\SebasGX\Documents\U\Semestre 7\Ingenieria Software 2\Trabajos\PiggyBank\appPiggyBank\libServices\obj\Debug\net7.0\libServices.AssemblyInfo.cs
+C:\Users\SebasGX\Documents\U\Semestre 7\Ingenieria Software 2\Trabajos\PiggyBank\appPiggyBank\libServices\obj\Debug\net7.0\libServices.csproj.CoreCompileInputs.cache
+C:\Users\SebasGX\Documents\U\Semestre 7\Ingenieria Software 2\Trabajos\PiggyBank\appPiggyBank\libServices\obj\Debug\net7.0\libServices.dll
+C:\Users\SebasGX\Documents\U\Semestre 7\Ingenieria Software 2\Trabajos\PiggyBank\appPiggyBank\libServices\obj\Debug\net7.0\refint\libServices.dll
+C:\Users\SebasGX\Documents\U\Semestre 7\Ingenieria Software 2\Trabajos\PiggyBank\appPiggyBank\libServices\obj\Debug\net7.0\libServices.pdb
+C:\Users\SebasGX\Documents\U\Semestre 7\Ingenieria Software 2\Trabajos\PiggyBank\appPiggyBank\libServices\obj\Debug\net7.0\ref\libServices.dll
