@@ -1,31 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\SebasGX\\Documents\\U\\Semestre 7\\Ingenieria Software 2\\Trabajos\\PiggyBank\\appPiggyBank\\libServices\\libServices.csproj": {}
+    "D:\\Programación\\PiggyBank\\appPiggyBank\\libServices\\libServices.csproj": {}
   },
   "projects": {
-    "C:\\Users\\SebasGX\\Documents\\U\\Semestre 7\\Ingenieria Software 2\\Trabajos\\PiggyBank\\appPiggyBank\\libServices\\libServices.csproj": {
+    "D:\\Programación\\PiggyBank\\appPiggyBank\\libServices\\libServices.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\SebasGX\\Documents\\U\\Semestre 7\\Ingenieria Software 2\\Trabajos\\PiggyBank\\appPiggyBank\\libServices\\libServices.csproj",
+        "projectUniqueName": "D:\\Programación\\PiggyBank\\appPiggyBank\\libServices\\libServices.csproj",
         "projectName": "libServices",
-        "projectPath": "C:\\Users\\SebasGX\\Documents\\U\\Semestre 7\\Ingenieria Software 2\\Trabajos\\PiggyBank\\appPiggyBank\\libServices\\libServices.csproj",
-        "packagesPath": "C:\\Users\\SebasGX\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\SebasGX\\Documents\\U\\Semestre 7\\Ingenieria Software 2\\Trabajos\\PiggyBank\\appPiggyBank\\libServices\\obj\\",
+        "projectPath": "D:\\Programación\\PiggyBank\\appPiggyBank\\libServices\\libServices.csproj",
+        "packagesPath": "C:\\Users\\Mario\\.nuget\\packages\\",
+        "outputPath": "D:\\Programación\\PiggyBank\\appPiggyBank\\libServices\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\SebasGX\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Mario\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -59,7 +53,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.404\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
