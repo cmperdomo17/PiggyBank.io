@@ -9,7 +9,7 @@ using pkgServices.pkgInterfaces;
 namespace pkgServices.pkgCollections
 {
     /// <summary>
-    /// Clase estática que proporciona métodos para operaciones comunes con colecciones.
+    /// Clase estatica que proporciona metodos para operaciones comunes con colecciones.
     /// </summary>
     public static class clsCollections
     {
@@ -17,8 +17,8 @@ namespace pkgServices.pkgCollections
         /// Compara dos colecciones para determinar si son iguales.
         /// </summary>
         /// <typeparam name="itemType">Tipo de elementos en las colecciones.</typeparam>
-        /// <param name="prmACollection">Primera colección a comparar.</param>
-        /// <param name="prmOtherCollection">Segunda colección a comparar.</param>
+        /// <param name="prmACollection">Primera coleccion a comparar.</param>
+        /// <param name="prmOtherCollection">Segunda coleccion a comparar.</param>
         /// <returns>Devuelve true si las colecciones son iguales; de lo contrario, false.</returns>
         public static bool areEqualsCollections<itemType>(List<itemType> prmACollection, List<itemType> prmOtherCollection)
         where itemType : IComparable<itemType>
@@ -35,11 +35,11 @@ namespace pkgServices.pkgCollections
         }
 
         /// <summary>
-        /// Obtiene un elemento de una colección basándose en su identificador único.
+        /// Obtiene un elemento de una coleccion basandose en su identificador unico.
         /// </summary>
-        /// <typeparam name="itemType">Tipo de elementos en la colección.</typeparam>
-        /// <param name="prmOID">Identificador único del elemento a buscar.</param>
-        /// <param name="prmCollection">Colección en la que buscar el elemento.</param>
+        /// <typeparam name="itemType">Tipo de elementos en la coleccion.</typeparam>
+        /// <param name="prmOID">Identificador unico del elemento a buscar.</param>
+        /// <param name="prmCollection">Coleccion en la que buscar el elemento.</param>
         /// <returns>Devuelve el elemento encontrado o null si no se encuentra.</returns>
         public static itemType? getItemWith<itemType>(string prmOID, List<itemType> prmCollection)
         where itemType : iEntity
@@ -50,12 +50,12 @@ namespace pkgServices.pkgCollections
         }
 
         /// <summary>
-        /// Obtiene el índice de un elemento en una colección.
+        /// Obtiene el indice de un elemento en una coleccion.
         /// </summary>
-        /// <typeparam name="itemType">Tipo de elementos en la colección.</typeparam>
-        /// <param name="prmItem">Elemento cuyo índice se va a buscar.</param>
-        /// <param name="prmCollection">Colección en la que buscar el índice.</param>
-        /// <returns>Devuelve el índice del elemento encontrado o -1 si no se encuentra.</returns>
+        /// <typeparam name="itemType">Tipo de elementos en la coleccion.</typeparam>
+        /// <param name="prmItem">Elemento cuyo indice se va a buscar.</param>
+        /// <param name="prmCollection">Coleccion en la que buscar el indice.</param>
+        /// <returns>Devuelve el indice del elemento encontrado o -1 si no se encuentra.</returns>
         public static int getIndexOf<itemType>(itemType prmItem, List<itemType> prmCollection)
         where itemType : IComparable<itemType>
         {
@@ -67,11 +67,11 @@ namespace pkgServices.pkgCollections
         }
 
         /// <summary>
-        /// Comprueba si una colección es un subconjunto de otra colección.
+        /// Comprueba si una coleccion es un subconjunto de otra coleccion.
         /// </summary>
         /// <typeparam name="itemType">Tipo de elementos en las colecciones.</typeparam>
-        /// <param name="prmCollectionGuest">Colección que se verifica como subconjunto.</param>
-        /// <param name="prmCollectionHost">Colección en la que se verifica la existencia del subconjunto.</param>
+        /// <param name="prmCollectionGuest">Coleccion que se verifica como subconjunto.</param>
+        /// <param name="prmCollectionHost">Coleccion en la que se verifica la existencia del subconjunto.</param>
         /// <returns>Devuelve true si prmCollectionGuest es un subconjunto de prmCollectionHost; de lo contrario, false.</returns>
         public static bool isSubSet<itemType>(List<itemType> prmCollectionGuest, List<itemType> prmCollectionHost)
         where itemType : IComparable<itemType>

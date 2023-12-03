@@ -6,13 +6,13 @@ using pkgServices.pkgCollections;
 
 namespace pkgPiggyBank.pkgDomain{
     /// <summary>
-    /// Representa una clase que define una moneda utilizada en la alcancía.
+    /// Representa una clase que define una moneda utilizada en la alcancia.
     /// </summary>
     public class clsCurrency : clsEntity, IComparable<clsCurrency>
     {
         #region Attributes
         /// <summary>
-        /// Identificador único de la moneda.
+        /// Identificador unico de la moneda.
         /// </summary>
         private string OID;
 
@@ -37,7 +37,7 @@ namespace pkgPiggyBank.pkgDomain{
         private List<clsCoin> attCoins;
 
         /// <summary>
-        /// Alcancía asociada a la moneda.
+        /// Alcancia asociada a la moneda.
         /// </summary>
         private clsPiggyBank attPiggy;
 
@@ -54,13 +54,13 @@ namespace pkgPiggyBank.pkgDomain{
         #region Operations
         #region Constructors
         /// <summary>
-        /// Constructor privado para prevenir la creación de instancias sin parámetros.
+        /// Constructor privado para prevenir la creacion de instancias sin parametros.
         /// </summary>
         private clsCurrency() { }
         /// <summary>
         /// Constructor para crear una instancia de la clase clsCurrency con valores iniciales.
         /// </summary>
-        /// <param name="prmOID">Identificador único de la moneda.</param>
+        /// <param name="prmOID">Identificador unico de la moneda.</param>
         /// <param name="prmName">Nombre de la moneda.</param>
         /// <param name="prmTRM">Tasa de cambio de la moneda.</param>
         /// <param name="prmCoinsValues">Lista de valores de monedas permitidos.</param>
@@ -195,7 +195,7 @@ namespace pkgPiggyBank.pkgDomain{
         /// <param name="prmTRM">Nueva tasa de cambio de la moneda.</param>
         /// <param name="prmCoinsValues">Nueva lista de valores de monedas permitidos.</param>
         /// <param name="prmBillsValues">Nueva lista de valores de billetes permitidos.</param>
-        /// <returns>Devuelve true si la modificación fue exitosa; de lo contrario, false.</returns>
+        /// <returns>Devuelve true si la modificacion fue exitosa; de lo contrario, false.</returns>
         public bool modify(string prmName, double prmTRM, List<double> prmCoinsValues, List<double> prmBillsValues) 
         {
             if (attCoins.Count != 0) return false;
@@ -208,10 +208,10 @@ namespace pkgPiggyBank.pkgDomain{
         }
 
         /// <summary>
-        /// Asigna una alcancía a la instancia de la clase clsCurrency.
+        /// Asigna una alcancia a la instancia de la clase clsCurrency.
         /// </summary>
         /// <param name="prmObj">Objeto de tipo clsPiggyBank a asignar.</param>
-        /// <returns>Devuelve true si la asignación fue exitosa; de lo contrario, false.</returns>
+        /// <returns>Devuelve true si la asignacion fue exitosa; de lo contrario, false.</returns>
         public bool setPiggyBank(clsPiggyBank prmObj)
         {
             if (prmObj == null) return false;
@@ -224,10 +224,10 @@ namespace pkgPiggyBank.pkgDomain{
         #endregion
         #region CRUD
         /// <summary>
-        /// Asigna una alcancía a la instancia de la clase clsCurrency.
+        /// Asigna una alcancia a la instancia de la clase clsCurrency.
         /// </summary>
         /// <param name="prmObj">Objeto de tipo clsPiggyBank a asignar.</param>
-        /// <returns>Devuelve true si la asignación fue exitosa; de lo contrario, false.</returns>
+        /// <returns>Devuelve true si la asignacion fue exitosa; de lo contrario, false.</returns>
         public bool toRegisterCoin(string prmOID, double prmValue, int prmYear)
         {
             return clsBrokerCrud.toRegisterEntity(new clsCoin(prmOID, prmValue, this, prmYear), attCoins);
@@ -236,11 +236,11 @@ namespace pkgPiggyBank.pkgDomain{
         /// <summary>
         /// Registra un nuevo billete en la lista de billetes asociados a la moneda.
         /// </summary>
-        /// <param name="prmOID">Identificador único del billete.</param>
+        /// <param name="prmOID">Identificador unico del billete.</param>
         /// <param name="prmValue">Valor del billete.</param>
-        /// <param name="prmDay">Día en que se creó el billete.</param>
-        /// <param name="prmMonth">Mes en que se creó el billete.</param>
-        /// <param name="prmYear">Año en que se creó el billete.</param>
+        /// <param name="prmDay">Dia en que se creo el billete.</param>
+        /// <param name="prmMonth">Mes en que se creo el billete.</param>
+        /// <param name="prmYear">Año en que se creo el billete.</param>
         /// <returns>Devuelve true si el registro fue exitoso; de lo contrario, false.</returns>
         public bool toRegisterBill(string prmOID, double prmValue, int prmDay, int prmMonth, int prmYear)
         {
@@ -250,10 +250,10 @@ namespace pkgPiggyBank.pkgDomain{
         /// <summary>
         /// Actualiza el valor y el año de una moneda en la lista de monedas asociadas a la moneda.
         /// </summary>
-        /// <param name="prmOID">Identificador único de la moneda a actualizar.</param>
+        /// <param name="prmOID">Identificador unico de la moneda a actualizar.</param>
         /// <param name="prmValue">Nuevo valor de la moneda.</param>
         /// <param name="prmYear">Nuevo año de la moneda.</param>
-        /// <returns>Devuelve true si la actualización fue exitosa; de lo contrario, false.</returns>
+        /// <returns>Devuelve true si la actualizacion fue exitosa; de lo contrario, false.</returns>
         public bool toUpdateCoin(string prmOID, double prmValue, int prmYear)
         {
             clsCoin varObj = clsCollections.getItemWith(prmOID, attCoins);
@@ -264,10 +264,10 @@ namespace pkgPiggyBank.pkgDomain{
         /// <summary>
         /// Actualiza un billete existente en la lista de billetes de la moneda.
         /// </summary>
-        /// <param name="prmOID">Identificador único del billete a actualizar.</param>
+        /// <param name="prmOID">Identificador unico del billete a actualizar.</param>
         /// <param name="prmValue">Nuevo valor del billete.</param>
         /// <param name="prmYear">Nuevo año del billete.</param>
-        /// <returns>Devuelve true si la actualización fue exitosa; de lo contrario, false.</returns>
+        /// <returns>Devuelve true si la actualizacion fue exitosa; de lo contrario, false.</returns>
         public bool toUpdateBill(string prmOID, double prmValue, int prmYear)
         {
             clsBill varObj = clsCollections.getItemWith(prmOID, attBills);
@@ -278,8 +278,8 @@ namespace pkgPiggyBank.pkgDomain{
         /// <summary>
         /// Elimina una moneda de la lista de monedas asociadas a la moneda actual.
         /// </summary>
-        /// <param name="prmOID">Identificador único de la moneda a eliminar.</param>
-        /// <returns>Devuelve true si la eliminación fue exitosa; de lo contrario, false.</returns>
+        /// <param name="prmOID">Identificador unico de la moneda a eliminar.</param>
+        /// <returns>Devuelve true si la eliminacion fue exitosa; de lo contrario, false.</returns>
         public bool toDeleteCoin(string prmOID)
         {
             clsCoin varObj = clsCollections.getItemWith(prmOID, attCoins);
@@ -290,8 +290,8 @@ namespace pkgPiggyBank.pkgDomain{
         /// <summary>
         /// Elimina un billete de la lista de billetes asociados a la moneda actual.
         /// </summary>
-        /// <param name="prmOID">Identificador único del billete a eliminar.</param>
-        /// <returns>Devuelve true si la eliminación fue exitosa; de lo contrario, false.</returns>
+        /// <param name="prmOID">Identificador unico del billete a eliminar.</param>
+        /// <returns>Devuelve true si la eliminacion fue exitosa; de lo contrario, false.</returns>
         public bool toDeleteBill(string prmOID)
         {
             clsBill varObj = clsCollections.getItemWith(prmOID, attBills);
@@ -302,9 +302,9 @@ namespace pkgPiggyBank.pkgDomain{
         #endregion
         #region Utilities
         /// <summary>
-        /// Devuelve una representación en cadena de la información de la moneda.
+        /// Devuelve una representacion en cadena de la informacion de la moneda.
         /// </summary>
-        /// <returns>Una cadena que representa la información de la moneda.</returns>
+        /// <returns>Una cadena que representa la informacion de la moneda.</returns>
         public override string toString()
         {
             return "{Currency Info}\n" + 
@@ -375,9 +375,9 @@ namespace pkgPiggyBank.pkgDomain{
         #endregion
         #region Destroyer
         /// <summary>
-        /// Realiza la operación de eliminación de la instancia de la clase clsCurrency.
+        /// Realiza la operacion de eliminacion de la instancia de la clase clsCurrency.
         /// </summary>
-        /// <returns>Devuelve true si la eliminación fue exitosa; de lo contrario, false.</returns>
+        /// <returns>Devuelve true si la eliminacion fue exitosa; de lo contrario, false.</returns>
         public override bool die()
         {
             if (attCoins.Count!=0) return false;

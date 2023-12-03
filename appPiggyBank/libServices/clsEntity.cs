@@ -14,7 +14,7 @@ namespace pkgServices
     {
         #region Attributes
         /// <summary>
-        /// Almacena el identificador único de la entidad.
+        /// Almacena el identificador unico de la entidad.
         /// </summary>
         protected string attOID;
         #endregion
@@ -25,31 +25,31 @@ namespace pkgServices
         public clsEntity() => attOID = "";
 
         /// <summary>
-        /// Constructor de la clase clsEntity con un identificador único inicial.
+        /// Constructor de la clase clsEntity con un identificador unico inicial.
         /// </summary>
-        /// <param name="prmOID">Identificador único de la entidad.</param>
+        /// <param name="prmOID">Identificador unico de la entidad.</param>
         public clsEntity(string prmOID) => attOID = prmOID;
         #endregion
         #region Setters
         /// <summary>
         /// Modifica los atributos de la instancia de la clase clsEntity.
         /// </summary>
-        /// <param name="prmArgs">Lista de argumentos para la modificación.</param>
-        /// <returns>Devuelve true si la modificación fue exitosa; de lo contrario, false.</returns>
+        /// <param name="prmArgs">Lista de argumentos para la modificacion.</param>
+        /// <returns>Devuelve true si la modificacion fue exitosa; de lo contrario, false.</returns>
         public virtual bool modify(List<object> prmArgs) => throw new NotImplementedException();
         #endregion
         #region Getters
         /// <summary>
-        /// Obtiene el identificador único de la entidad.
+        /// Obtiene el identificador unico de la entidad.
         /// </summary>
-        /// <returns>El identificador único de la entidad.</returns>
+        /// <returns>El identificador unico de la entidad.</returns>
         public string getOID() => attOID;
         #endregion
         #region Destroyer
         /// <summary>
-        /// Realiza la operación de eliminación de la instancia de la clase clsEntity.
+        /// Realiza la operacion de eliminacion de la instancia de la clase clsEntity.
         /// </summary>
-        /// <returns>Devuelve true si la eliminación fue exitosa; de lo contrario, false.</returns>
+        /// <returns>Devuelve true si la eliminacion fue exitosa; de lo contrario, false.</returns>
         public virtual bool die()
         {
             throw new NotImplementedException();
@@ -57,9 +57,9 @@ namespace pkgServices
         #endregion
         #region Utilities
         /// <summary>
-        /// Devuelve una representación en cadena de la instancia de clsEntity.
+        /// Devuelve una representacion en cadena de la instancia de clsEntity.
         /// </summary>
-        /// <returns>Una cadena que representa la información de la entidad.</returns>
+        /// <returns>Una cadena que representa la informacion de la entidad.</returns>
         public virtual string toString() => throw new NotImplementedException();
 
         /// <summary>

@@ -5,7 +5,7 @@ using pkgServices;
 namespace pkgPiggyBank.pkgDomain
 {
     /// <summary>
-    /// Representa una clase base para definir una moneda en la alcancía.
+    /// Representa una clase base para definir una moneda en la alcancia.
     /// </summary>
     public class clsCoin : clsEntity, IComparable<clsCoin>
     {
@@ -17,7 +17,7 @@ namespace pkgPiggyBank.pkgDomain
         protected double attValue;
 
         /// <summary>
-        /// Almacena el año en que se creó la moneda.
+        /// Almacena el año en que se creo la moneda.
         /// </summary>
         protected int attYear;
 
@@ -27,7 +27,7 @@ namespace pkgPiggyBank.pkgDomain
         protected clsCurrency attCurrency;
 
         /// <summary>
-        /// Almacena la alcancía asociada a la instancia de la clase clsCoin.
+        /// Almacena la alcancia asociada a la instancia de la clase clsCoin.
         /// </summary>
         protected clsPiggyBank attPiggy;
 
@@ -45,10 +45,10 @@ namespace pkgPiggyBank.pkgDomain
         /// <summary>
         /// Constructor para crear una instancia de la clase clsCoin con valores iniciales.
         /// </summary>
-        /// <param name="prmOID">Identificador único de la moneda.</param>
+        /// <param name="prmOID">Identificador unico de la moneda.</param>
         /// <param name="prmValue">Valor de la moneda.</param>
         /// <param name="prmCurrency">Moneda de la instancia clsCoin.</param>
-        /// <param name="prmYear">Año en que se creó la moneda.</param>
+        /// <param name="prmYear">Año en que se creo la moneda.</param>
         public clsCoin(string prmOID, double prmValue, clsCurrency prmCurrency, int prmYear) : base(prmOID)
         {
             attValue = prmValue;
@@ -66,9 +66,9 @@ namespace pkgPiggyBank.pkgDomain
         public double getValue() => attValue;
 
         /// <summary>
-        /// Obtiene el año en que se creó la moneda.
+        /// Obtiene el año en que se creo la moneda.
         /// </summary>
-        /// <returns>El año en que se creó la moneda.</returns>
+        /// <returns>El año en que se creo la moneda.</returns>
         public int getYear() => attYear;
 
         /// <summary>
@@ -78,9 +78,9 @@ namespace pkgPiggyBank.pkgDomain
         public clsCurrency GetCurrency() => attCurrency;
 
         /// <summary>
-        /// Obtiene la alcancía asociada a la instancia de la clase clsCoin.
+        /// Obtiene la alcancia asociada a la instancia de la clase clsCoin.
         /// </summary>
-        /// <returns>La alcancía asociada a la instancia de la clase clsCoin.</returns>
+        /// <returns>La alcancia asociada a la instancia de la clase clsCoin.</returns>
         public clsPiggyBank getPiggy() => attPiggy;
 
         #endregion
@@ -89,8 +89,8 @@ namespace pkgPiggyBank.pkgDomain
         /// <summary>
         /// Modifica los atributos de la instancia de la clase clsCoin.
         /// </summary>
-        /// <param name="prmArgs">Lista de argumentos para la modificación.</param>
-        /// <returns>Devuelve true si la modificación fue exitosa; de lo contrario, false.</returns>
+        /// <param name="prmArgs">Lista de argumentos para la modificacion.</param>
+        /// <returns>Devuelve true si la modificacion fue exitosa; de lo contrario, false.</returns>
         public bool modify(List<object> prmArgs)
         {
             if (attPiggy != null) return false;
@@ -106,7 +106,7 @@ namespace pkgPiggyBank.pkgDomain
         /// </summary>
         /// <param name="prmValue">Nuevo valor de la moneda.</param>
         /// <param name="prmYear">Nuevo año de la moneda.</param>
-        /// <returns>Devuelve true si la modificación fue exitosa; de lo contrario, false.</returns>
+        /// <returns>Devuelve true si la modificacion fue exitosa; de lo contrario, false.</returns>
         public bool modify(double prmValue, int prmYear)
         {
             if (attPiggy != null) return false;
@@ -116,10 +116,10 @@ namespace pkgPiggyBank.pkgDomain
         }
 
         /// <summary>
-        /// Asigna una alcancía a la instancia de la clase clsCoin.
+        /// Asigna una alcancia a la instancia de la clase clsCoin.
         /// </summary>
         /// <param name="prmObject">Objeto de tipo clsPiggyBank a asignar.</param>
-        /// <returns>Devuelve true si la asignación fue exitosa; de lo contrario, false.</returns>
+        /// <returns>Devuelve true si la asignacion fue exitosa; de lo contrario, false.</returns>
         public bool setPiggy(clsPiggyBank prmObject)
         {
             if (attPiggy != null) return false;
@@ -132,9 +132,9 @@ namespace pkgPiggyBank.pkgDomain
         #region Utilities
 
         /// <summary>
-        /// Devuelve una representación en cadena de la instancia de clsCoin.
+        /// Devuelve una representacion en cadena de la instancia de clsCoin.
         /// </summary>
-        /// <returns>Una cadena que representa la información de la moneda.</returns>
+        /// <returns>Una cadena que representa la informacion de la moneda.</returns>
         public override string ToString()
         {
             return "{Coin Info}\n" + "{OID}:\t" + attOID + "\n{Value}:\t" + attValue + "\n{Currency}:\t" + attCurrency + "\n{Year}:\t" + attYear + "\n" + attCurrency.ToString();
@@ -182,9 +182,9 @@ namespace pkgPiggyBank.pkgDomain
         #region Destroyer
 
         /// <summary>
-        /// Realiza la operación de eliminación de la instancia de la clase clsCoin.
+        /// Realiza la operacion de eliminacion de la instancia de la clase clsCoin.
         /// </summary>
-        /// <returns>Devuelve true si la eliminación fue exitosa; de lo contrario, false.</returns>
+        /// <returns>Devuelve true si la eliminacion fue exitosa; de lo contrario, false.</returns>
         public override bool die()
         {
             throw new NotImplementedException();

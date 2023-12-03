@@ -18,26 +18,26 @@ namespace pkgPiggyBank.pkgDomain{
         private int attMonth;
 
         /// <summary>
-        /// Almacena el día en que se creó el billete.
+        /// Almacena el dia en que se creo el billete.
         /// </summary>
         private int attDay;
         #endregion
         #region Operations
         #region Constructors
         /// <summary>
-        /// Constructor privado para prevenir la creación de instancias sin parámetros.
+        /// Constructor privado para prevenir la creacion de instancias sin parametros.
         /// </summary>
         private clsBill() { }
 
         /// <summary>
         /// Constructor para crear una instancia de la clase clsBill con valores iniciales.
         /// </summary>
-        /// <param name="prmOID">Identificador único del billete.</param>
+        /// <param name="prmOID">Identificador unico del billete.</param>
         /// <param name="prmValue">Valor del billete.</param>
         /// <param name="prmCurrency">Moneda del billete.</param>
-        /// <param name="prmDay">Día en que se creó el billete.</param>
-        /// <param name="prmMonth">Mes en que se creó el billete.</param>
-        /// <param name="prmYear">Año en que se creó el billete.</param>
+        /// <param name="prmDay">Dia en que se creo el billete.</param>
+        /// <param name="prmMonth">Mes en que se creo el billete.</param>
+        /// <param name="prmYear">Año en que se creo el billete.</param>
         public clsBill(string prmOID, double prmValue, clsCurrency prmCurrency, int prmDay, int prmMonth, int prmYear) :
         base(prmOID, prmValue, prmCurrency, prmYear)
         {
@@ -47,23 +47,23 @@ namespace pkgPiggyBank.pkgDomain{
         #endregion
         #region Getters
         /// <summary>
-        /// Obtiene el mes en que se creó el billete.
+        /// Obtiene el mes en que se creo el billete.
         /// </summary>
-        /// <returns>El mes en que se creó el billete.</returns>
+        /// <returns>El mes en que se creo el billete.</returns>
         public int getMonth() => attMonth;
 
         /// <summary>
-        /// Obtiene el día en que se creó el billete.
+        /// Obtiene el dia en que se creo el billete.
         /// </summary>
-        /// <returns>El día en que se creó el billete.</returns>
+        /// <returns>El dia en que se creo el billete.</returns>
         public int getDay() => attDay;
         #endregion
         #region Setters
         /// <summary>
         /// Modifica los atributos de la instancia de la clase clsBill.
         /// </summary>
-        /// <param name="prmArgs">Lista de argumentos para la modificación.</param>
-        /// <returns>Devuelve true si la modificación fue exitosa; de lo contrario, false.</returns>
+        /// <param name="prmArgs">Lista de argumentos para la modificacion.</param>
+        /// <returns>Devuelve true si la modificacion fue exitosa; de lo contrario, false.</returns>
         public bool modify(List<object> prmArgs)
         {
             if (!base.modify(prmArgs)) return false;
@@ -74,9 +74,9 @@ namespace pkgPiggyBank.pkgDomain{
         #endregion
         #region Destroyer
         /// <summary>
-        /// Realiza la operación de eliminación de la instancia de la clase clsBill.
+        /// Realiza la operacion de eliminacion de la instancia de la clase clsBill.
         /// </summary>
-        /// <returns>Devuelve true si la eliminación fue exitosa; de lo contrario, false.</returns>
+        /// <returns>Devuelve true si la eliminacion fue exitosa; de lo contrario, false.</returns>
         public override bool die()
         {
             return base.die();
@@ -104,9 +104,9 @@ namespace pkgPiggyBank.pkgDomain{
         }
 
         /// <summary>
-        /// Devuelve una representación en cadena de la instancia de clsBill.
+        /// Devuelve una representacion en cadena de la instancia de clsBill.
         /// </summary>
-        /// <returns>Una cadena que representa la información del billete.</returns>
+        /// <returns>Una cadena que representa la informacion del billete.</returns>
         public override string toString() { 
             return "{Bill Info}\n"+
                    "{OID}\t" + attOID + "\n" + 

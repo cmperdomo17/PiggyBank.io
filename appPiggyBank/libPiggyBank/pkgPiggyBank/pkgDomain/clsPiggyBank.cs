@@ -4,91 +4,91 @@ using pkgServices.pkgCollections;
 namespace pkgPiggyBank.pkgDomain
 {
     /// <summary>
-    /// Representa una alcancía que puede contener monedas y billetes.
+    /// Representa una alcancia que puede contener monedas y billetes.
     /// </summary>
     public class clsPiggyBank : clsEntity, IComparable<clsPiggyBank> 
    {
         #region Attributes
         #region Owns
         /// <summary>
-        /// Capacidad máxima de monedas que puede contener la alcancía.
+        /// Capacidad maxima de monedas que puede contener la alcancia.
         /// </summary>
         private int attCoinsMaxCapacity;
 
         /// <summary>
-        /// Valores de monedas aceptados por la alcancía.
+        /// Valores de monedas aceptados por la alcancia.
         /// </summary>
         private List<double> attCoinsAcceptedValues;
 
         /// <summary>
-        /// Valores de billetes aceptados por la alcancía.
+        /// Valores de billetes aceptados por la alcancia.
         /// </summary>
         private List<double> attBillsAcceptedValues;
 
         /// <summary>
-        /// Capacidad máxima de billetes que puede contener la alcancía.
+        /// Capacidad maxima de billetes que puede contener la alcancia.
         /// </summary>
         private int attBillsMaxCapacity;
 
         /// <summary>
-        /// Moneda de la alcancía.
+        /// Moneda de la alcancia.
         /// </summary>
         private clsCurrency attCurrency;
         #endregion
         #region Derivables
         /// <summary>
-        /// Saldo total de la alcancía.
+        /// Saldo total de la alcancia.
         /// </summary>
         private double attTotalBalance;
 
         /// <summary>
-        /// Saldo de monedas de la alcancía.
+        /// Saldo de monedas de la alcancia.
         /// </summary>
         private double attCoinsBalance;
 
         /// <summary>
-        /// Saldo de billetes de la alcancía.
+        /// Saldo de billetes de la alcancia.
         /// </summary>
         private double attBillsBalance;
 
         /// <summary>
-        /// Cantidad de monedas en la alcancía.
+        /// Cantidad de monedas en la alcancia.
         /// </summary>
         private int attCoinsCount;
 
         /// <summary>
-        /// Cantidad de billetes en la alcancía.
+        /// Cantidad de billetes en la alcancia.
         /// </summary>
         private int attBillsCount;
 
         /// <summary>
-        /// Saldo de monedas por valor en la alcancía.
+        /// Saldo de monedas por valor en la alcancia.
         /// </summary>
         private List<double> attCoinsBalanceByValue;
 
         /// <summary>
-        /// Saldo de billetes por valor en la alcancía.
+        /// Saldo de billetes por valor en la alcancia.
         /// </summary>
         private List<double> attBillsBalanceByValue;
 
         /// <summary>
-        /// Cantidad de monedas por valor en la alcancía.
+        /// Cantidad de monedas por valor en la alcancia.
         /// </summary>
         private List<int> attCoinsCountByValue;
 
         /// <summary>
-        /// Cantidad de billetes por valor en la alcancía.
+        /// Cantidad de billetes por valor en la alcancia.
         /// </summary>
         private List<int> attBillsCountByValue;
         #endregion
         #region Associatives
         /// <summary>
-        /// Lista de monedas en la alcancía.
+        /// Lista de monedas en la alcancia.
         /// </summary>
         private List<clsCoin> attCoins;
 
         /// <summary>
-        /// Lista de billetes en la alcancía.
+        /// Lista de billetes en la alcancia.
         /// </summary>
         private List<clsBill> attBills;
         #endregion
@@ -98,11 +98,11 @@ namespace pkgPiggyBank.pkgDomain
         /// <summary>
         /// Constructor que inicializa una instancia de la clase clsPiggyBank con valores iniciales.
         /// </summary>
-        /// <param name="prmCoinsMaxCap">Capacidad máxima de monedas en la alcancía.</param>
-        /// <param name="prmBillsMaxCap">Capacidad máxima de billetes en la alcancía.</param>
-        /// <param name="prmCoinsValues">Valores de monedas aceptados por la alcancía.</param>
-        /// <param name="prmBillsValues">Valores de billetes aceptados por la alcancía.</param>
-        /// <param name="prmCurrency">Moneda de la alcancía.</param>
+        /// <param name="prmCoinsMaxCap">Capacidad maxima de monedas en la alcancia.</param>
+        /// <param name="prmBillsMaxCap">Capacidad maxima de billetes en la alcancia.</param>
+        /// <param name="prmCoinsValues">Valores de monedas aceptados por la alcancia.</param>
+        /// <param name="prmBillsValues">Valores de billetes aceptados por la alcancia.</param>
+        /// <param name="prmCurrency">Moneda de la alcancia.</param>
         public clsPiggyBank(int prmCoinsMaxCap, int prmBillsMaxCap, List<double> prmCoinsValues, List<double> prmBillsValues, clsCurrency prmCurrency)
             :base(default)
         {
@@ -120,101 +120,101 @@ namespace pkgPiggyBank.pkgDomain
         #endregion
         #region Getters
         /// <summary>
-        /// Obtiene la capacidad máxima de monedas en la alcancía.
+        /// Obtiene la capacidad maxima de monedas en la alcancia.
         /// </summary>
-        /// <returns>La capacidad máxima de monedas en la alcancía.</returns>
+        /// <returns>La capacidad maxima de monedas en la alcancia.</returns>
         public int getCoinsMaxCapacity() => attCoinsMaxCapacity;
 
         /// <summary>
-        /// Obtiene los valores de monedas aceptados por la alcancía.
+        /// Obtiene los valores de monedas aceptados por la alcancia.
         /// </summary>
-        /// <returns>Los valores de monedas aceptados por la alcancía.</returns>
+        /// <returns>Los valores de monedas aceptados por la alcancia.</returns>
         public List<double> getCoinsAcceptedValues() => attCoinsAcceptedValues;
 
         /// <summary>
-        /// Obtiene el saldo de monedas en la alcancía.
+        /// Obtiene el saldo de monedas en la alcancia.
         /// </summary>
-        /// <returns>El saldo de monedas en la alcancía.</returns>
+        /// <returns>El saldo de monedas en la alcancia.</returns>
         public double getCoinsBalance() => attCoinsBalance;
 
         /// <summary>
-        /// Obtiene la cantidad de monedas en la alcancía.
+        /// Obtiene la cantidad de monedas en la alcancia.
         /// </summary>
-        /// <returns>La cantidad de monedas en la alcancía.</returns>
+        /// <returns>La cantidad de monedas en la alcancia.</returns>
         public int getCoinsCount()=> attCoinsCount;
 
         /// <summary>
-        /// Obtiene el saldo de monedas por valor en la alcancía.
+        /// Obtiene el saldo de monedas por valor en la alcancia.
         /// </summary>
-        /// <returns>El saldo de monedas por valor en la alcancía.</returns>
+        /// <returns>El saldo de monedas por valor en la alcancia.</returns>
         public List<double> getCoinsBalanceByValue() => attCoinsBalanceByValue;
 
         /// <summary>
-        /// Obtiene la cantidad de monedas por valor en la alcancía.
+        /// Obtiene la cantidad de monedas por valor en la alcancia.
         /// </summary>
-        /// <returns>La cantidad de monedas por valor en la alcancía.</returns>
+        /// <returns>La cantidad de monedas por valor en la alcancia.</returns>
         public List<int> getCoinsCountByValue() => attCoinsCountByValue;
 
         /// <summary>
-        /// Obtiene la capacidad máxima de billetes en la alcancía.
+        /// Obtiene la capacidad maxima de billetes en la alcancia.
         /// </summary>
-        /// <returns>La capacidad máxima de billetes en la alcancía.</returns>
+        /// <returns>La capacidad maxima de billetes en la alcancia.</returns>
         public int getBillsMaxCapacity() => attBillsMaxCapacity;
 
         /// <summary>
-        /// Obtiene los valores de billetes aceptados por la alcancía.
+        /// Obtiene los valores de billetes aceptados por la alcancia.
         /// </summary>
-        /// <returns>Los valores de billetes aceptados por la alcancía.</returns>
+        /// <returns>Los valores de billetes aceptados por la alcancia.</returns>
         public List<double> getBillsAcceptedValues() => attBillsAcceptedValues;
 
         /// <summary>
-        /// Obtiene el saldo de billetes en la alcancía.
+        /// Obtiene el saldo de billetes en la alcancia.
         /// </summary>
-        /// <returns>El saldo de billetes en la alcancía.</returns>
+        /// <returns>El saldo de billetes en la alcancia.</returns>
         public double getBillsBalance() => attBillsBalance;
 
         /// <summary>
-        /// Obtiene el saldo de billetes por valor en la alcancía.
+        /// Obtiene el saldo de billetes por valor en la alcancia.
         /// </summary>
-        /// <returns>El saldo de billetes por valor en la alcancía.</returns>
+        /// <returns>El saldo de billetes por valor en la alcancia.</returns>
         public List<double> getBillsBalanceByValue()=> attBillsBalanceByValue;
 
         /// <summary>
-        /// Obtiene la cantidad de billetes en la alcancía.
+        /// Obtiene la cantidad de billetes en la alcancia.
         /// </summary>
-        /// <returns>La cantidad de billetes en la alcancía.</returns>
+        /// <returns>La cantidad de billetes en la alcancia.</returns>
         public int getBillsCount()=> attBillsCount;
 
         /// <summary>
-        /// Obtiene la cantidad de billetes por valor en la alcancía.
+        /// Obtiene la cantidad de billetes por valor en la alcancia.
         /// </summary>
-        /// <returns>La cantidad de billetes por valor en la alcancía.</returns>
+        /// <returns>La cantidad de billetes por valor en la alcancia.</returns>
         public List<int> getBillsCountByValue() => attBillsCountByValue;
 
         /// <summary>
-        /// Obtiene el saldo total de la alcancía.
+        /// Obtiene el saldo total de la alcancia.
         /// </summary>
-        /// <returns>El saldo total de la alcancía.</returns>
+        /// <returns>El saldo total de la alcancia.</returns>
         public double getTotalBalance()=> attTotalBalance;
 
         /// <summary>
-        /// Obtiene la cantidad total de elementos de dinero en la alcancía (monedas y billetes).
+        /// Obtiene la cantidad total de elementos de dinero en la alcancia (monedas y billetes).
         /// </summary>
-        /// <returns>La cantidad total de elementos de dinero en la alcancía.</returns>
+        /// <returns>La cantidad total de elementos de dinero en la alcancia.</returns>
         public int getMoneyItemsCount() => attCoinsCount + attBillsCount;
 
         /// <summary>
-        /// Obtiene la moneda de la alcancía.
+        /// Obtiene la moneda de la alcancia.
         /// </summary>
-        /// <returns>La moneda de la alcancía.</returns>
+        /// <returns>La moneda de la alcancia.</returns>
         public clsCurrency getCurrency() => attCurrency;
         #endregion
         #region Setters
         /// <summary>
-        /// Establece la capacidad máxima de monedas en la alcancía.
+        /// Establece la capacidad maxima de monedas en la alcancia.
         /// </summary>
-        /// <param name="prmValue">La nueva capacidad máxima de monedas.</param>
-        /// <returns>True si se estableció correctamente; de lo contrario, false.</returns>
+        /// <param name="prmValue">La nueva capacidad maxima de monedas.</param>
+        /// <returns>True si se establecio correctamente; de lo contrario, false.</returns>
         private bool setCoinsMaxCapacity(int prmValue)
         {
             if (prmValue < 0) return false; 
@@ -224,7 +224,7 @@ namespace pkgPiggyBank.pkgDomain
         }
 
         /// <summary>
-        /// Establece los valores de monedas aceptados por la alcancía.
+        /// Establece los valores de monedas aceptados por la alcancia.
         /// </summary>
         /// <param name="prmValues">La lista de valores de monedas aceptados.</param>
         /// <returns>True si se establecieron correctamente; de lo contrario, false.</returns>
@@ -244,10 +244,10 @@ namespace pkgPiggyBank.pkgDomain
         }
 
         /// <summary>
-        /// Establece la capacidad máxima de billetes en la alcancía.
+        /// Establece la capacidad maxima de billetes en la alcancia.
         /// </summary>
-        /// <param name="prmValue">La nueva capacidad máxima de billetes.</param>
-        /// <returns>True si se estableció correctamente; de lo contrario, false.</returns>
+        /// <param name="prmValue">La nueva capacidad maxima de billetes.</param>
+        /// <returns>True si se establecio correctamente; de lo contrario, false.</returns>
         private bool setBillsMaxCapacity(int prmValue)
         {
             if (prmValue < 0) return false; 
@@ -257,7 +257,7 @@ namespace pkgPiggyBank.pkgDomain
         }
 
         /// <summary>
-        /// Establece los valores de billetes aceptados por la alcancía.
+        /// Establece los valores de billetes aceptados por la alcancia.
         /// </summary>
         /// <param name="prmValues">La lista de valores de billetes aceptados.</param>
         /// <returns>True si se establecieron correctamente; de lo contrario, false.</returns>
@@ -276,10 +276,10 @@ namespace pkgPiggyBank.pkgDomain
         }
 
         /// <summary>
-        /// Establece la moneda de la alcancía y ajusta los valores de monedas y billetes aceptados.
+        /// Establece la moneda de la alcancia y ajusta los valores de monedas y billetes aceptados.
         /// </summary>
-        /// <param name="prmObject">La nueva moneda de la alcancía.</param>
-        /// <returns>True si se estableció correctamente; de lo contrario, false.</returns>
+        /// <param name="prmObject">La nueva moneda de la alcancia.</param>
+        /// <returns>True si se establecio correctamente; de lo contrario, false.</returns>
         private bool setCurrency(clsCurrency prmObject)
         {
             if (prmObject==null) return false;
@@ -292,14 +292,14 @@ namespace pkgPiggyBank.pkgDomain
             return true;
         }
         /// <summary>
-        /// Modifica los parámetros de la alcancía.
+        /// Modifica los parametros de la alcancia.
         /// </summary>
-        /// <param name="prmCurrency">Moneda de la alcancía.</param>
-        /// <param name="prmCoinsMaxCap">Capacidad máxima de monedas en la alcancía.</param>
-        /// <param name="prmBillsMaxCap">Capacidad máxima de billetes en la alcancía.</param>
-        /// <param name="prmCoinsValues">Valores de monedas aceptados por la alcancía.</param>
-        /// <param name="prmBillsValues">Valores de billetes aceptados por la alcancía.</param>
-        /// <returns>True si la modificación fue exitosa; de lo contrario, false.</returns>
+        /// <param name="prmCurrency">Moneda de la alcancia.</param>
+        /// <param name="prmCoinsMaxCap">Capacidad maxima de monedas en la alcancia.</param>
+        /// <param name="prmBillsMaxCap">Capacidad maxima de billetes en la alcancia.</param>
+        /// <param name="prmCoinsValues">Valores de monedas aceptados por la alcancia.</param>
+        /// <param name="prmBillsValues">Valores de billetes aceptados por la alcancia.</param>
+        /// <returns>True si la modificacion fue exitosa; de lo contrario, false.</returns>
         public bool modify(clsCurrency prmCurrency,int prmCoinsMaxCap, int prmBillsMaxCap, List<double> prmCoinsValues, List<double> prmBillsValues)
         {
             if (setCoinsMaxCapacity(prmCoinsMaxCap))
@@ -313,7 +313,7 @@ namespace pkgPiggyBank.pkgDomain
         #endregion
         #region Transactions
         /// <summary>
-        /// Actualiza el saldo de la alcancía cuando se añade o retira una moneda.
+        /// Actualiza el saldo de la alcancia cuando se añade o retira una moneda.
         /// </summary>
         /// <param name="prmItem">La moneda que se añade o retira.</param>
         /// <param name="prmUp">True si se añade, False si se retira.</param>
@@ -329,7 +329,7 @@ namespace pkgPiggyBank.pkgDomain
         }
 
         /// <summary>
-        /// Actualiza el saldo de la alcancía cuando se añade o retira un billete.
+        /// Actualiza el saldo de la alcancia cuando se añade o retira un billete.
         /// </summary>
         /// <param name="prmItem">El billete que se añade o retira.</param>
         /// <param name="prmUp">True si se añade, False si se retira.</param>
@@ -345,7 +345,7 @@ namespace pkgPiggyBank.pkgDomain
 
         }
         /// <summary>
-        /// Verifica si una lista de monedas es aceptada por la alcancía.
+        /// Verifica si una lista de monedas es aceptada por la alcancia.
         /// </summary>
         /// <param name="prmItems">La lista de monedas a verificar.</param>
         /// <returns>True si todas las monedas son aceptadas; de lo contrario, false.</returns>
@@ -360,7 +360,7 @@ namespace pkgPiggyBank.pkgDomain
         }
 
         /// <summary>
-        /// Verifica si una lista de billetes es aceptada por la alcancía.
+        /// Verifica si una lista de billetes es aceptada por la alcancia.
         /// </summary>
         /// <param name="prmItems">La lista de billetes a verificar.</param>
         /// <returns>True si todos los billetes son aceptados; de lo contrario, false.</returns>
@@ -374,10 +374,10 @@ namespace pkgPiggyBank.pkgDomain
         }
 
         /// <summary>
-        /// Realiza un depósito de monedas en la alcancía.
+        /// Realiza un deposito de monedas en la alcancia.
         /// </summary>
         /// <param name="prmItems">La lista de monedas a depositar.</param>
-        /// <returns>True si el depósito fue exitoso; de lo contrario, false.</returns>
+        /// <returns>True si el deposito fue exitoso; de lo contrario, false.</returns>
         public bool coinsIncome(List<clsCoin> prmItems)
         {
             if (prmItems == null || prmItems.Count == 0) return false;
@@ -393,7 +393,7 @@ namespace pkgPiggyBank.pkgDomain
         }
 
         /// <summary>
-        /// Retira monedas de la alcancía.
+        /// Retira monedas de la alcancia.
         /// </summary>
         /// <param name="prmItems">La lista de monedas a retirar.</param>
         /// <returns>True si la retirada fue exitosa; de lo contrario, false.</returns>
@@ -410,10 +410,10 @@ namespace pkgPiggyBank.pkgDomain
         }
 
         /// <summary>
-        /// Realiza un depósito de billetes en la alcancía.
+        /// Realiza un deposito de billetes en la alcancia.
         /// </summary>
         /// <param name="prmItems">La lista de billetes a depositar.</param>
-        /// <returns>True si el depósito fue exitoso; de lo contrario, false.</returns>
+        /// <returns>True si el deposito fue exitoso; de lo contrario, false.</returns>
         public bool billsIncome(List<clsBill> prmItems)
         {
             if (prmItems == null || prmItems.Count == 0) return false;
@@ -429,7 +429,7 @@ namespace pkgPiggyBank.pkgDomain
         }
 
         /// <summary>
-        /// Retira billetes de la alcancía.
+        /// Retira billetes de la alcancia.
         /// </summary>
         /// <param name="prmItems">La lista de billetes a retirar.</param>
         /// <returns>True si la retirada fue exitosa; de lo contrario, false.</returns>
@@ -447,17 +447,17 @@ namespace pkgPiggyBank.pkgDomain
         #endregion
         #region Utilities
         /// <summary>
-        /// Compara la alcancía con otra alcancía basándose en el método CompareTo.
+        /// Compara la alcancia con otra alcancia basandose en el metodo CompareTo.
         /// </summary>
-        /// <param name="prmOther">La alcancía con la que se compara.</param>
-        /// <returns>Un valor entero que indica la relación relativa entre las alcancías (0 si son iguales).</returns>
+        /// <param name="prmOther">La alcancia con la que se compara.</param>
+        /// <returns>Un valor entero que indica la relacion relativa entre las alcancias (0 si son iguales).</returns>
         public int CompareTo(clsPiggyBank prmOther)
         {
             throw new NotImplementedException();
         }
 
         /// <summary>
-        /// Copia los atributos de la alcancía a otro objeto del mismo tipo.
+        /// Copia los atributos de la alcancia a otro objeto del mismo tipo.
         /// </summary>
         /// <typeparam name="T">El tipo del objeto al que se copian los atributos.</typeparam>
         /// <param name="prmOtherObject">El objeto al que se copian los atributos.</param>
@@ -476,9 +476,9 @@ namespace pkgPiggyBank.pkgDomain
         }
 
         /// <summary>
-        /// Obtiene una representación en formato de cadena de la información de la alcancía.
+        /// Obtiene una representacion en formato de cadena de la informacion de la alcancia.
         /// </summary>
-        /// <returns>Una cadena que representa la información detallada de la alcancía.</returns>
+        /// <returns>Una cadena que representa la informacion detallada de la alcancia.</returns>
         public override string toString()
         {
             return "{Piggy Info}\n"
@@ -503,9 +503,9 @@ namespace pkgPiggyBank.pkgDomain
         #endregion
         #region Destroyer
         /// <summary>
-        /// Elimina la alcancía, retirando todas las monedas y billetes y desvinculándola de su moneda asociada.
+        /// Elimina la alcancia, retirando todas las monedas y billetes y desvinculandola de su moneda asociada.
         /// </summary>
-        /// <returns>True si la eliminación fue exitosa; de lo contrario, false.</returns>
+        /// <returns>True si la eliminacion fue exitosa; de lo contrario, false.</returns>
         public override bool die()
         {
             if (attCoins == null) return false;
