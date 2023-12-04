@@ -1,0 +1,145 @@
+\doxysection{pkg\+Services.\+pkg\+Collections.\+cls\+Collections Class Reference}
+\hypertarget{classpkg_services_1_1pkg_collections_1_1cls_collections}{}\label{classpkg_services_1_1pkg_collections_1_1cls_collections}\index{pkgServices.pkgCollections.clsCollections@{pkgServices.pkgCollections.clsCollections}}
+
+
+Clase estatica que proporciona metodos para operaciones comunes con colecciones.  
+
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{classpkg_services_1_1pkg_collections_1_1cls_collections_a3068ccc201eb681c26cdd2307d2d34dc}{are\+Equals\+Collections$<$ item\+Type $>$}} (List$<$ item\+Type $>$ prm\+ACollection, List$<$ item\+Type $>$ prm\+Other\+Collection)
+\begin{DoxyCompactList}\small\item\em Compara dos colecciones para determinar si son iguales. \end{DoxyCompactList}\item 
+static ? item\+Type \mbox{\hyperlink{classpkg_services_1_1pkg_collections_1_1cls_collections_a3d8ed4c4495543f700cc8e0ed5b1be63}{get\+Item\+With$<$ item\+Type $>$}} (string prm\+OID, List$<$ item\+Type $>$ prm\+Collection)
+\begin{DoxyCompactList}\small\item\em Obtiene un elemento de una coleccion basandose en su identificador unico. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{classpkg_services_1_1pkg_collections_1_1cls_collections_a88be555509c4140b0aab96e024f67b96}{get\+Index\+Of$<$ item\+Type $>$}} (item\+Type prm\+Item, List$<$ item\+Type $>$ prm\+Collection)
+\begin{DoxyCompactList}\small\item\em Obtiene el indice de un elemento en una coleccion. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classpkg_services_1_1pkg_collections_1_1cls_collections_aa98d1a3c361a7d300c442d9be6977c74}{is\+Sub\+Set$<$ item\+Type $>$}} (List$<$ item\+Type $>$ prm\+Collection\+Guest, List$<$ item\+Type $>$ prm\+Collection\+Host)
+\begin{DoxyCompactList}\small\item\em Comprueba si una coleccion es un subconjunto de otra coleccion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase estatica que proporciona metodos para operaciones comunes con colecciones. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classpkg_services_1_1pkg_collections_1_1cls_collections_a3068ccc201eb681c26cdd2307d2d34dc}\label{classpkg_services_1_1pkg_collections_1_1cls_collections_a3068ccc201eb681c26cdd2307d2d34dc} 
+\index{pkgServices.pkgCollections.clsCollections@{pkgServices.pkgCollections.clsCollections}!areEqualsCollections$<$ itemType $>$@{areEqualsCollections$<$ itemType $>$}}
+\index{areEqualsCollections$<$ itemType $>$@{areEqualsCollections$<$ itemType $>$}!pkgServices.pkgCollections.clsCollections@{pkgServices.pkgCollections.clsCollections}}
+\doxysubsubsection{\texorpdfstring{areEqualsCollections$<$ itemType $>$()}{areEqualsCollections< itemType >()}}
+{\footnotesize\ttfamily static bool pkg\+Services.\+pkg\+Collections.\+cls\+Collections.\+are\+Equals\+Collections$<$ item\+Type $>$ (\begin{DoxyParamCaption}\item[{List$<$ item\+Type $>$}]{prm\+ACollection,  }\item[{List$<$ item\+Type $>$}]{prm\+Other\+Collection }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Compara dos colecciones para determinar si son iguales. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em item\+Type} & Tipo de elementos en las colecciones.\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em prm\+ACollection} & Primera coleccion a comparar.\\
+\hline
+{\em prm\+Other\+Collection} & Segunda coleccion a comparar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Devuelve true si las colecciones son iguales; de lo contrario, false.
+\end{DoxyReturn}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em item\+Type} : {\em IComparable$<$item\+Type$>$}]\end{description}
+\end{Desc}
+\Hypertarget{classpkg_services_1_1pkg_collections_1_1cls_collections_a88be555509c4140b0aab96e024f67b96}\label{classpkg_services_1_1pkg_collections_1_1cls_collections_a88be555509c4140b0aab96e024f67b96} 
+\index{pkgServices.pkgCollections.clsCollections@{pkgServices.pkgCollections.clsCollections}!getIndexOf$<$ itemType $>$@{getIndexOf$<$ itemType $>$}}
+\index{getIndexOf$<$ itemType $>$@{getIndexOf$<$ itemType $>$}!pkgServices.pkgCollections.clsCollections@{pkgServices.pkgCollections.clsCollections}}
+\doxysubsubsection{\texorpdfstring{getIndexOf$<$ itemType $>$()}{getIndexOf< itemType >()}}
+{\footnotesize\ttfamily static int pkg\+Services.\+pkg\+Collections.\+cls\+Collections.\+get\+Index\+Of$<$ item\+Type $>$ (\begin{DoxyParamCaption}\item[{item\+Type}]{prm\+Item,  }\item[{List$<$ item\+Type $>$}]{prm\+Collection }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Obtiene el indice de un elemento en una coleccion. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em item\+Type} & Tipo de elementos en la coleccion.\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em prm\+Item} & Elemento cuyo indice se va a buscar.\\
+\hline
+{\em prm\+Collection} & Coleccion en la que buscar el indice.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Devuelve el indice del elemento encontrado o -\/1 si no se encuentra.
+\end{DoxyReturn}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em item\+Type} : {\em IComparable$<$item\+Type$>$}]\end{description}
+\end{Desc}
+\Hypertarget{classpkg_services_1_1pkg_collections_1_1cls_collections_a3d8ed4c4495543f700cc8e0ed5b1be63}\label{classpkg_services_1_1pkg_collections_1_1cls_collections_a3d8ed4c4495543f700cc8e0ed5b1be63} 
+\index{pkgServices.pkgCollections.clsCollections@{pkgServices.pkgCollections.clsCollections}!getItemWith$<$ itemType $>$@{getItemWith$<$ itemType $>$}}
+\index{getItemWith$<$ itemType $>$@{getItemWith$<$ itemType $>$}!pkgServices.pkgCollections.clsCollections@{pkgServices.pkgCollections.clsCollections}}
+\doxysubsubsection{\texorpdfstring{getItemWith$<$ itemType $>$()}{getItemWith< itemType >()}}
+{\footnotesize\ttfamily static ? item\+Type pkg\+Services.\+pkg\+Collections.\+cls\+Collections.\+get\+Item\+With$<$ item\+Type $>$ (\begin{DoxyParamCaption}\item[{string}]{prm\+OID,  }\item[{List$<$ item\+Type $>$}]{prm\+Collection }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Obtiene un elemento de una coleccion basandose en su identificador unico. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em item\+Type} & Tipo de elementos en la coleccion.\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em prm\+OID} & Identificador unico del elemento a buscar.\\
+\hline
+{\em prm\+Collection} & Coleccion en la que buscar el elemento.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Devuelve el elemento encontrado o null si no se encuentra.
+\end{DoxyReturn}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em item\+Type} : {\em i\+Entity}]\end{description}
+\end{Desc}
+\Hypertarget{classpkg_services_1_1pkg_collections_1_1cls_collections_aa98d1a3c361a7d300c442d9be6977c74}\label{classpkg_services_1_1pkg_collections_1_1cls_collections_aa98d1a3c361a7d300c442d9be6977c74} 
+\index{pkgServices.pkgCollections.clsCollections@{pkgServices.pkgCollections.clsCollections}!isSubSet$<$ itemType $>$@{isSubSet$<$ itemType $>$}}
+\index{isSubSet$<$ itemType $>$@{isSubSet$<$ itemType $>$}!pkgServices.pkgCollections.clsCollections@{pkgServices.pkgCollections.clsCollections}}
+\doxysubsubsection{\texorpdfstring{isSubSet$<$ itemType $>$()}{isSubSet< itemType >()}}
+{\footnotesize\ttfamily static bool pkg\+Services.\+pkg\+Collections.\+cls\+Collections.\+is\+Sub\+Set$<$ item\+Type $>$ (\begin{DoxyParamCaption}\item[{List$<$ item\+Type $>$}]{prm\+Collection\+Guest,  }\item[{List$<$ item\+Type $>$}]{prm\+Collection\+Host }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Comprueba si una coleccion es un subconjunto de otra coleccion. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em item\+Type} & Tipo de elementos en las colecciones.\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em prm\+Collection\+Guest} & Coleccion que se verifica como subconjunto.\\
+\hline
+{\em prm\+Collection\+Host} & Coleccion en la que se verifica la existencia del subconjunto.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Devuelve true si prm\+Collection\+Guest es un subconjunto de prm\+Collection\+Host; de lo contrario, false.
+\end{DoxyReturn}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em item\+Type} : {\em IComparable$<$item\+Type$>$}]\end{description}
+\end{Desc}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+lib\+Services/cls\+Collections.\+cs\end{DoxyCompactItemize}

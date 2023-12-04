@@ -1,0 +1,422 @@
+\doxysection{pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Controller Class Reference}
+\hypertarget{classpkg_piggy_bank_1_1pkg_domain_1_1cls_controller}{}\label{classpkg_piggy_bank_1_1pkg_domain_1_1cls_controller}\index{pkgPiggyBank.pkgDomain.clsController@{pkgPiggyBank.pkgDomain.clsController}}
+
+
+Clase que actua como controlador central para la gestion de monedas, alcancias y transacciones.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_controller_ab5e2545c55a138d8c9d9b45cc44ac0ec}{to\+Register\+Currency}} (string prm\+OID, string prm\+Name, double prm\+TRM, List$<$ double $>$ prm\+Coins\+Values, List$<$ double $>$ prm\+Bills\+Values)
+\begin{DoxyCompactList}\small\item\em Registra una nueva moneda con sus valores de monedas y billetes. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_controller_a13c22caa856755e6df521baa87c9ed07}{to\+Register\+Piggy\+Bank}} (string prm\+OIDCurrency, int prm\+Coins\+Max\+Cap, int prm\+Bills\+Max\+Cap, List$<$ double $>$ prm\+Coins\+Values, List$<$ double $>$ prm\+Bills\+Values)
+\begin{DoxyCompactList}\small\item\em Registra una nueva alcancia con sus limites y valores disponibles. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_controller_a6c9e936bf4af0e346cd114ce5b469c42}{to\+Register\+Coin}} (string prm\+OIDCurrency, string prm\+OID, double prm\+Value, int prm\+Year)
+\begin{DoxyCompactList}\small\item\em Registra una nueva moneda en la alcancia. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_controller_a0b3b63b58e982b0e63c8cd785007c110}{to\+Register\+Bill}} (string prm\+OIDCurrency, string prm\+OID, double prm\+Value, int prm\+Day, int prm\+Month, int prm\+Year)
+\begin{DoxyCompactList}\small\item\em Registra un nuevo billete en la alcancia. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_controller_ae4728c9b23146c0aad7605e0e6778f57}{to\+Uptade\+Currency}} (string prm\+OID, string prm\+Name, double prm\+TRM, List$<$ double $>$ prm\+Coins\+Values, List$<$ double $>$ prm\+Bills\+Values)
+\begin{DoxyCompactList}\small\item\em Actualiza los valores de una moneda en la alcancia. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_controller_af739c8aaecba091a4a6d540a7bb127ff}{to\+Update\+Piggy\+Bank}} (string prm\+OIDCurrency, int prm\+Coins\+Max\+Cap, int prm\+Bills\+Max\+Cap, List$<$ double $>$ prm\+Coins\+Values, List$<$ double $>$ prm\+Bills\+Values)
+\begin{DoxyCompactList}\small\item\em Actualiza los valores y limites de la alcancia asociada a una moneda. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_controller_a1245d1ca289210a66ddcf27cc2171a77}{to\+Update\+Coin}} (string prm\+OIDCurrency, string prm\+OID, double prm\+Value, int prm\+Year)
+\begin{DoxyCompactList}\small\item\em Actualiza los valores de una moneda en la alcancia. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_controller_ae59cd5633040cd6f24e6d600757cc2c1}{to\+Update\+Bill}} (string prm\+OIDCurrency, string prm\+OID, double prm\+Value, int prm\+Day, int prm\+Month, int prm\+Year)
+\begin{DoxyCompactList}\small\item\em Actualiza los valores de un billete en la alcancia. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_controller_a8d2e97cd5c9b23f563c1fb9aa63336a1}{to\+Delete\+Currency}} (string prm\+OID)
+\begin{DoxyCompactList}\small\item\em Elimina una moneda de la lista de monedas gestionadas por el controlador. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_controller_a0f76fac54cd6736d7f71cd018218364c}{to\+Delete\+Piggy\+Bank}} ()
+\begin{DoxyCompactList}\small\item\em Elimina la alcancia actual si existe. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_controller_abaa71078b5290107c3f30e0fad910511}{to\+Delete\+Coin}} (string prm\+OIDCurrency, string prm\+OID)
+\begin{DoxyCompactList}\small\item\em Elimina una moneda especifica de una moneda dada. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_controller_a0279bb4e4b7862553fa6ea7663cdfd1e}{to\+Delete\+Bill}} (string prm\+OIDCurrency, string prm\+OID)
+\begin{DoxyCompactList}\small\item\em Elimina un billete especifico de una moneda dada. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_controller_ace90fabe49f2adcccc0fa7ebc51b3cd4}{coins\+Income}} (List$<$ double $>$ prm\+Values)
+\begin{DoxyCompactList}\small\item\em Realiza un ingreso de monedas a la alcancia. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_controller_a47cc2b6f3066d66c324e79d736a47ce0}{coins\+Withdrawal}} (List$<$ double $>$ prm\+Values)
+\begin{DoxyCompactList}\small\item\em Realiza una retirada de monedas de la alcancia. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_controller_ab7310832fff0bdb8a20457dae6f99f34}{bills\+Income}} (List$<$ double $>$ prm\+Values)
+\begin{DoxyCompactList}\small\item\em Realiza un ingreso de billetes a la alcancia. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_controller_afd0d42de07de7aabf1324db85c1d06f0}{bills\+Withdrawal}} (List$<$ double $>$ prm\+Values)
+\begin{DoxyCompactList}\small\item\em Realiza una retirada de billetes de la alcancia. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_controller}{cls\+Controller}} \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_controller_a646c8a1b75f52bd8c5a3131c7f0e07c2}{get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene la instancia unica del controlador (patron Singleton). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase que actua como controlador central para la gestion de monedas, alcancias y transacciones. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classpkg_piggy_bank_1_1pkg_domain_1_1cls_controller_ab7310832fff0bdb8a20457dae6f99f34}\label{classpkg_piggy_bank_1_1pkg_domain_1_1cls_controller_ab7310832fff0bdb8a20457dae6f99f34} 
+\index{pkgPiggyBank.pkgDomain.clsController@{pkgPiggyBank.pkgDomain.clsController}!billsIncome@{billsIncome}}
+\index{billsIncome@{billsIncome}!pkgPiggyBank.pkgDomain.clsController@{pkgPiggyBank.pkgDomain.clsController}}
+\doxysubsubsection{\texorpdfstring{billsIncome()}{billsIncome()}}
+{\footnotesize\ttfamily bool pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Controller.\+bills\+Income (\begin{DoxyParamCaption}\item[{List$<$ double $>$}]{prm\+Values }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Realiza un ingreso de billetes a la alcancia. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prm\+Values} & Lista de valores de los billetes a ingresar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Devuelve true si el ingreso fue exitoso; de lo contrario, false.
+\end{DoxyReturn}
+\Hypertarget{classpkg_piggy_bank_1_1pkg_domain_1_1cls_controller_afd0d42de07de7aabf1324db85c1d06f0}\label{classpkg_piggy_bank_1_1pkg_domain_1_1cls_controller_afd0d42de07de7aabf1324db85c1d06f0} 
+\index{pkgPiggyBank.pkgDomain.clsController@{pkgPiggyBank.pkgDomain.clsController}!billsWithdrawal@{billsWithdrawal}}
+\index{billsWithdrawal@{billsWithdrawal}!pkgPiggyBank.pkgDomain.clsController@{pkgPiggyBank.pkgDomain.clsController}}
+\doxysubsubsection{\texorpdfstring{billsWithdrawal()}{billsWithdrawal()}}
+{\footnotesize\ttfamily bool pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Controller.\+bills\+Withdrawal (\begin{DoxyParamCaption}\item[{List$<$ double $>$}]{prm\+Values }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Realiza una retirada de billetes de la alcancia. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prm\+Values} & Lista de valores de los billetes a retirar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Devuelve true si la retirada fue exitosa; de lo contrario, false.
+\end{DoxyReturn}
+\Hypertarget{classpkg_piggy_bank_1_1pkg_domain_1_1cls_controller_ace90fabe49f2adcccc0fa7ebc51b3cd4}\label{classpkg_piggy_bank_1_1pkg_domain_1_1cls_controller_ace90fabe49f2adcccc0fa7ebc51b3cd4} 
+\index{pkgPiggyBank.pkgDomain.clsController@{pkgPiggyBank.pkgDomain.clsController}!coinsIncome@{coinsIncome}}
+\index{coinsIncome@{coinsIncome}!pkgPiggyBank.pkgDomain.clsController@{pkgPiggyBank.pkgDomain.clsController}}
+\doxysubsubsection{\texorpdfstring{coinsIncome()}{coinsIncome()}}
+{\footnotesize\ttfamily bool pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Controller.\+coins\+Income (\begin{DoxyParamCaption}\item[{List$<$ double $>$}]{prm\+Values }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Realiza un ingreso de monedas a la alcancia. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prm\+Values} & Lista de valores de las monedas a ingresar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Devuelve true si el ingreso fue exitoso; de lo contrario, false.
+\end{DoxyReturn}
+\Hypertarget{classpkg_piggy_bank_1_1pkg_domain_1_1cls_controller_a47cc2b6f3066d66c324e79d736a47ce0}\label{classpkg_piggy_bank_1_1pkg_domain_1_1cls_controller_a47cc2b6f3066d66c324e79d736a47ce0} 
+\index{pkgPiggyBank.pkgDomain.clsController@{pkgPiggyBank.pkgDomain.clsController}!coinsWithdrawal@{coinsWithdrawal}}
+\index{coinsWithdrawal@{coinsWithdrawal}!pkgPiggyBank.pkgDomain.clsController@{pkgPiggyBank.pkgDomain.clsController}}
+\doxysubsubsection{\texorpdfstring{coinsWithdrawal()}{coinsWithdrawal()}}
+{\footnotesize\ttfamily bool pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Controller.\+coins\+Withdrawal (\begin{DoxyParamCaption}\item[{List$<$ double $>$}]{prm\+Values }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Realiza una retirada de monedas de la alcancia. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prm\+Values} & Lista de valores de las monedas a retirar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Devuelve true si la retirada fue exitosa; de lo contrario, false.
+\end{DoxyReturn}
+\Hypertarget{classpkg_piggy_bank_1_1pkg_domain_1_1cls_controller_a646c8a1b75f52bd8c5a3131c7f0e07c2}\label{classpkg_piggy_bank_1_1pkg_domain_1_1cls_controller_a646c8a1b75f52bd8c5a3131c7f0e07c2} 
+\index{pkgPiggyBank.pkgDomain.clsController@{pkgPiggyBank.pkgDomain.clsController}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!pkgPiggyBank.pkgDomain.clsController@{pkgPiggyBank.pkgDomain.clsController}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_controller}{cls\+Controller}} pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Controller.\+get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Obtiene la instancia unica del controlador (patron Singleton). 
+
+\begin{DoxyReturn}{Returns}
+La instancia unica del controlador.
+\end{DoxyReturn}
+\Hypertarget{classpkg_piggy_bank_1_1pkg_domain_1_1cls_controller_a0279bb4e4b7862553fa6ea7663cdfd1e}\label{classpkg_piggy_bank_1_1pkg_domain_1_1cls_controller_a0279bb4e4b7862553fa6ea7663cdfd1e} 
+\index{pkgPiggyBank.pkgDomain.clsController@{pkgPiggyBank.pkgDomain.clsController}!toDeleteBill@{toDeleteBill}}
+\index{toDeleteBill@{toDeleteBill}!pkgPiggyBank.pkgDomain.clsController@{pkgPiggyBank.pkgDomain.clsController}}
+\doxysubsubsection{\texorpdfstring{toDeleteBill()}{toDeleteBill()}}
+{\footnotesize\ttfamily bool pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Controller.\+to\+Delete\+Bill (\begin{DoxyParamCaption}\item[{string}]{prm\+OIDCurrency,  }\item[{string}]{prm\+OID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Elimina un billete especifico de una moneda dada. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prm\+OIDCurrency} & Identificador unico de la moneda asociada al billete a eliminar.\\
+\hline
+{\em prm\+OID} & Identificador unico del billete a eliminar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Devuelve true si la eliminacion fue exitosa; de lo contrario, false.
+\end{DoxyReturn}
+\Hypertarget{classpkg_piggy_bank_1_1pkg_domain_1_1cls_controller_abaa71078b5290107c3f30e0fad910511}\label{classpkg_piggy_bank_1_1pkg_domain_1_1cls_controller_abaa71078b5290107c3f30e0fad910511} 
+\index{pkgPiggyBank.pkgDomain.clsController@{pkgPiggyBank.pkgDomain.clsController}!toDeleteCoin@{toDeleteCoin}}
+\index{toDeleteCoin@{toDeleteCoin}!pkgPiggyBank.pkgDomain.clsController@{pkgPiggyBank.pkgDomain.clsController}}
+\doxysubsubsection{\texorpdfstring{toDeleteCoin()}{toDeleteCoin()}}
+{\footnotesize\ttfamily bool pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Controller.\+to\+Delete\+Coin (\begin{DoxyParamCaption}\item[{string}]{prm\+OIDCurrency,  }\item[{string}]{prm\+OID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Elimina una moneda especifica de una moneda dada. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prm\+OIDCurrency} & Identificador unico de la moneda asociada a la moneda a eliminar.\\
+\hline
+{\em prm\+OID} & Identificador unico de la moneda a eliminar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Devuelve true si la eliminacion fue exitosa; de lo contrario, false.
+\end{DoxyReturn}
+\Hypertarget{classpkg_piggy_bank_1_1pkg_domain_1_1cls_controller_a8d2e97cd5c9b23f563c1fb9aa63336a1}\label{classpkg_piggy_bank_1_1pkg_domain_1_1cls_controller_a8d2e97cd5c9b23f563c1fb9aa63336a1} 
+\index{pkgPiggyBank.pkgDomain.clsController@{pkgPiggyBank.pkgDomain.clsController}!toDeleteCurrency@{toDeleteCurrency}}
+\index{toDeleteCurrency@{toDeleteCurrency}!pkgPiggyBank.pkgDomain.clsController@{pkgPiggyBank.pkgDomain.clsController}}
+\doxysubsubsection{\texorpdfstring{toDeleteCurrency()}{toDeleteCurrency()}}
+{\footnotesize\ttfamily bool pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Controller.\+to\+Delete\+Currency (\begin{DoxyParamCaption}\item[{string}]{prm\+OID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Elimina una moneda de la lista de monedas gestionadas por el controlador. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prm\+OID} & Identificador unico de la moneda a eliminar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Devuelve true si la eliminacion fue exitosa; de lo contrario, false.
+\end{DoxyReturn}
+\Hypertarget{classpkg_piggy_bank_1_1pkg_domain_1_1cls_controller_a0f76fac54cd6736d7f71cd018218364c}\label{classpkg_piggy_bank_1_1pkg_domain_1_1cls_controller_a0f76fac54cd6736d7f71cd018218364c} 
+\index{pkgPiggyBank.pkgDomain.clsController@{pkgPiggyBank.pkgDomain.clsController}!toDeletePiggyBank@{toDeletePiggyBank}}
+\index{toDeletePiggyBank@{toDeletePiggyBank}!pkgPiggyBank.pkgDomain.clsController@{pkgPiggyBank.pkgDomain.clsController}}
+\doxysubsubsection{\texorpdfstring{toDeletePiggyBank()}{toDeletePiggyBank()}}
+{\footnotesize\ttfamily bool pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Controller.\+to\+Delete\+Piggy\+Bank (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Elimina la alcancia actual si existe. 
+
+\begin{DoxyReturn}{Returns}
+Devuelve true si la eliminacion de la alcancia fue exitosa; de lo contrario, false.
+\end{DoxyReturn}
+\Hypertarget{classpkg_piggy_bank_1_1pkg_domain_1_1cls_controller_a0b3b63b58e982b0e63c8cd785007c110}\label{classpkg_piggy_bank_1_1pkg_domain_1_1cls_controller_a0b3b63b58e982b0e63c8cd785007c110} 
+\index{pkgPiggyBank.pkgDomain.clsController@{pkgPiggyBank.pkgDomain.clsController}!toRegisterBill@{toRegisterBill}}
+\index{toRegisterBill@{toRegisterBill}!pkgPiggyBank.pkgDomain.clsController@{pkgPiggyBank.pkgDomain.clsController}}
+\doxysubsubsection{\texorpdfstring{toRegisterBill()}{toRegisterBill()}}
+{\footnotesize\ttfamily bool pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Controller.\+to\+Register\+Bill (\begin{DoxyParamCaption}\item[{string}]{prm\+OIDCurrency,  }\item[{string}]{prm\+OID,  }\item[{double}]{prm\+Value,  }\item[{int}]{prm\+Day,  }\item[{int}]{prm\+Month,  }\item[{int}]{prm\+Year }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Registra un nuevo billete en la alcancia. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prm\+OIDCurrency} & Identificador unico de la moneda en la alcancia.\\
+\hline
+{\em prm\+OID} & Identificador unico del billete a registrar.\\
+\hline
+{\em prm\+Value} & Valor del billete.\\
+\hline
+{\em prm\+Day} & Dia en que se creo el billete.\\
+\hline
+{\em prm\+Month} & Mes en que se creo el billete.\\
+\hline
+{\em prm\+Year} & Año en que se creo el billete.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Devuelve true si el registro fue exitoso; de lo contrario, false.
+\end{DoxyReturn}
+\Hypertarget{classpkg_piggy_bank_1_1pkg_domain_1_1cls_controller_a6c9e936bf4af0e346cd114ce5b469c42}\label{classpkg_piggy_bank_1_1pkg_domain_1_1cls_controller_a6c9e936bf4af0e346cd114ce5b469c42} 
+\index{pkgPiggyBank.pkgDomain.clsController@{pkgPiggyBank.pkgDomain.clsController}!toRegisterCoin@{toRegisterCoin}}
+\index{toRegisterCoin@{toRegisterCoin}!pkgPiggyBank.pkgDomain.clsController@{pkgPiggyBank.pkgDomain.clsController}}
+\doxysubsubsection{\texorpdfstring{toRegisterCoin()}{toRegisterCoin()}}
+{\footnotesize\ttfamily bool pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Controller.\+to\+Register\+Coin (\begin{DoxyParamCaption}\item[{string}]{prm\+OIDCurrency,  }\item[{string}]{prm\+OID,  }\item[{double}]{prm\+Value,  }\item[{int}]{prm\+Year }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Registra una nueva moneda en la alcancia. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prm\+OIDCurrency} & Identificador unico de la moneda en la alcancia.\\
+\hline
+{\em prm\+OID} & Identificador unico de la moneda a registrar.\\
+\hline
+{\em prm\+Value} & Valor de la moneda.\\
+\hline
+{\em prm\+Year} & Año en que se creo la moneda.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Devuelve true si el registro fue exitoso; de lo contrario, false.
+\end{DoxyReturn}
+\Hypertarget{classpkg_piggy_bank_1_1pkg_domain_1_1cls_controller_ab5e2545c55a138d8c9d9b45cc44ac0ec}\label{classpkg_piggy_bank_1_1pkg_domain_1_1cls_controller_ab5e2545c55a138d8c9d9b45cc44ac0ec} 
+\index{pkgPiggyBank.pkgDomain.clsController@{pkgPiggyBank.pkgDomain.clsController}!toRegisterCurrency@{toRegisterCurrency}}
+\index{toRegisterCurrency@{toRegisterCurrency}!pkgPiggyBank.pkgDomain.clsController@{pkgPiggyBank.pkgDomain.clsController}}
+\doxysubsubsection{\texorpdfstring{toRegisterCurrency()}{toRegisterCurrency()}}
+{\footnotesize\ttfamily bool pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Controller.\+to\+Register\+Currency (\begin{DoxyParamCaption}\item[{string}]{prm\+OID,  }\item[{string}]{prm\+Name,  }\item[{double}]{prm\+TRM,  }\item[{List$<$ double $>$}]{prm\+Coins\+Values,  }\item[{List$<$ double $>$}]{prm\+Bills\+Values }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Registra una nueva moneda con sus valores de monedas y billetes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prm\+OID} & Identificador unico de la moneda.\\
+\hline
+{\em prm\+Name} & Nombre de la moneda.\\
+\hline
+{\em prm\+TRM} & Tasa de cambio de la moneda.\\
+\hline
+{\em prm\+Coins\+Values} & Lista de valores de monedas disponibles.\\
+\hline
+{\em prm\+Bills\+Values} & Lista de valores de billetes disponibles.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Devuelve true si el registro fue exitoso; de lo contrario, false.
+\end{DoxyReturn}
+\Hypertarget{classpkg_piggy_bank_1_1pkg_domain_1_1cls_controller_a13c22caa856755e6df521baa87c9ed07}\label{classpkg_piggy_bank_1_1pkg_domain_1_1cls_controller_a13c22caa856755e6df521baa87c9ed07} 
+\index{pkgPiggyBank.pkgDomain.clsController@{pkgPiggyBank.pkgDomain.clsController}!toRegisterPiggyBank@{toRegisterPiggyBank}}
+\index{toRegisterPiggyBank@{toRegisterPiggyBank}!pkgPiggyBank.pkgDomain.clsController@{pkgPiggyBank.pkgDomain.clsController}}
+\doxysubsubsection{\texorpdfstring{toRegisterPiggyBank()}{toRegisterPiggyBank()}}
+{\footnotesize\ttfamily bool pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Controller.\+to\+Register\+Piggy\+Bank (\begin{DoxyParamCaption}\item[{string}]{prm\+OIDCurrency,  }\item[{int}]{prm\+Coins\+Max\+Cap,  }\item[{int}]{prm\+Bills\+Max\+Cap,  }\item[{List$<$ double $>$}]{prm\+Coins\+Values,  }\item[{List$<$ double $>$}]{prm\+Bills\+Values }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Registra una nueva alcancia con sus limites y valores disponibles. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prm\+OIDCurrency} & Identificador unico de la moneda asociada a la alcancia.\\
+\hline
+{\em prm\+Coins\+Max\+Cap} & Limite maximo de monedas en la alcancia.\\
+\hline
+{\em prm\+Bills\+Max\+Cap} & Limite maximo de billetes en la alcancia.\\
+\hline
+{\em prm\+Coins\+Values} & Lista de valores de monedas disponibles en la alcancia.\\
+\hline
+{\em prm\+Bills\+Values} & Lista de valores de billetes disponibles en la alcancia.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Devuelve true si el registro fue exitoso; de lo contrario, false.
+\end{DoxyReturn}
+\Hypertarget{classpkg_piggy_bank_1_1pkg_domain_1_1cls_controller_ae59cd5633040cd6f24e6d600757cc2c1}\label{classpkg_piggy_bank_1_1pkg_domain_1_1cls_controller_ae59cd5633040cd6f24e6d600757cc2c1} 
+\index{pkgPiggyBank.pkgDomain.clsController@{pkgPiggyBank.pkgDomain.clsController}!toUpdateBill@{toUpdateBill}}
+\index{toUpdateBill@{toUpdateBill}!pkgPiggyBank.pkgDomain.clsController@{pkgPiggyBank.pkgDomain.clsController}}
+\doxysubsubsection{\texorpdfstring{toUpdateBill()}{toUpdateBill()}}
+{\footnotesize\ttfamily bool pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Controller.\+to\+Update\+Bill (\begin{DoxyParamCaption}\item[{string}]{prm\+OIDCurrency,  }\item[{string}]{prm\+OID,  }\item[{double}]{prm\+Value,  }\item[{int}]{prm\+Day,  }\item[{int}]{prm\+Month,  }\item[{int}]{prm\+Year }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Actualiza los valores de un billete en la alcancia. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prm\+OIDCurrency} & Identificador unico de la moneda en la alcancia.\\
+\hline
+{\em prm\+OID} & Identificador unico del billete a actualizar.\\
+\hline
+{\em prm\+Value} & Nuevo valor del billete.\\
+\hline
+{\em prm\+Day} & Nuevo dia de creacion del billete.\\
+\hline
+{\em prm\+Month} & Nuevo mes de creacion del billete.\\
+\hline
+{\em prm\+Year} & Nuevo año de creacion del billete.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Devuelve true si la actualizacion fue exitosa; de lo contrario, false.
+\end{DoxyReturn}
+\Hypertarget{classpkg_piggy_bank_1_1pkg_domain_1_1cls_controller_a1245d1ca289210a66ddcf27cc2171a77}\label{classpkg_piggy_bank_1_1pkg_domain_1_1cls_controller_a1245d1ca289210a66ddcf27cc2171a77} 
+\index{pkgPiggyBank.pkgDomain.clsController@{pkgPiggyBank.pkgDomain.clsController}!toUpdateCoin@{toUpdateCoin}}
+\index{toUpdateCoin@{toUpdateCoin}!pkgPiggyBank.pkgDomain.clsController@{pkgPiggyBank.pkgDomain.clsController}}
+\doxysubsubsection{\texorpdfstring{toUpdateCoin()}{toUpdateCoin()}}
+{\footnotesize\ttfamily bool pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Controller.\+to\+Update\+Coin (\begin{DoxyParamCaption}\item[{string}]{prm\+OIDCurrency,  }\item[{string}]{prm\+OID,  }\item[{double}]{prm\+Value,  }\item[{int}]{prm\+Year }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Actualiza los valores de una moneda en la alcancia. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prm\+OIDCurrency} & Identificador unico de la moneda en la alcancia.\\
+\hline
+{\em prm\+OID} & Identificador unico de la moneda a actualizar.\\
+\hline
+{\em prm\+Value} & Nuevo valor de la moneda.\\
+\hline
+{\em prm\+Year} & Nuevo año de la moneda.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Devuelve true si la actualizacion fue exitosa; de lo contrario, false.
+\end{DoxyReturn}
+\Hypertarget{classpkg_piggy_bank_1_1pkg_domain_1_1cls_controller_af739c8aaecba091a4a6d540a7bb127ff}\label{classpkg_piggy_bank_1_1pkg_domain_1_1cls_controller_af739c8aaecba091a4a6d540a7bb127ff} 
+\index{pkgPiggyBank.pkgDomain.clsController@{pkgPiggyBank.pkgDomain.clsController}!toUpdatePiggyBank@{toUpdatePiggyBank}}
+\index{toUpdatePiggyBank@{toUpdatePiggyBank}!pkgPiggyBank.pkgDomain.clsController@{pkgPiggyBank.pkgDomain.clsController}}
+\doxysubsubsection{\texorpdfstring{toUpdatePiggyBank()}{toUpdatePiggyBank()}}
+{\footnotesize\ttfamily bool pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Controller.\+to\+Update\+Piggy\+Bank (\begin{DoxyParamCaption}\item[{string}]{prm\+OIDCurrency,  }\item[{int}]{prm\+Coins\+Max\+Cap,  }\item[{int}]{prm\+Bills\+Max\+Cap,  }\item[{List$<$ double $>$}]{prm\+Coins\+Values,  }\item[{List$<$ double $>$}]{prm\+Bills\+Values }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Actualiza los valores y limites de la alcancia asociada a una moneda. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prm\+OIDCurrency} & Identificador unico de la moneda asociada a la alcancia.\\
+\hline
+{\em prm\+Coins\+Max\+Cap} & Nuevo limite maximo de monedas en la alcancia.\\
+\hline
+{\em prm\+Bills\+Max\+Cap} & Nuevo limite maximo de billetes en la alcancia.\\
+\hline
+{\em prm\+Coins\+Values} & Nuevos valores de monedas disponibles en la alcancia.\\
+\hline
+{\em prm\+Bills\+Values} & Nuevos valores de billetes disponibles en la alcancia.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Devuelve true si la actualizacion fue exitosa; de lo contrario, false.
+\end{DoxyReturn}
+\Hypertarget{classpkg_piggy_bank_1_1pkg_domain_1_1cls_controller_ae4728c9b23146c0aad7605e0e6778f57}\label{classpkg_piggy_bank_1_1pkg_domain_1_1cls_controller_ae4728c9b23146c0aad7605e0e6778f57} 
+\index{pkgPiggyBank.pkgDomain.clsController@{pkgPiggyBank.pkgDomain.clsController}!toUptadeCurrency@{toUptadeCurrency}}
+\index{toUptadeCurrency@{toUptadeCurrency}!pkgPiggyBank.pkgDomain.clsController@{pkgPiggyBank.pkgDomain.clsController}}
+\doxysubsubsection{\texorpdfstring{toUptadeCurrency()}{toUptadeCurrency()}}
+{\footnotesize\ttfamily bool pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Controller.\+to\+Uptade\+Currency (\begin{DoxyParamCaption}\item[{string}]{prm\+OID,  }\item[{string}]{prm\+Name,  }\item[{double}]{prm\+TRM,  }\item[{List$<$ double $>$}]{prm\+Coins\+Values,  }\item[{List$<$ double $>$}]{prm\+Bills\+Values }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Actualiza los valores de una moneda en la alcancia. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prm\+OID} & Identificador unico de la moneda a actualizar.\\
+\hline
+{\em prm\+Name} & Nuevo nombre de la moneda.\\
+\hline
+{\em prm\+TRM} & Nueva tasa de cambio de la moneda.\\
+\hline
+{\em prm\+Coins\+Values} & Nuevos valores de monedas disponibles.\\
+\hline
+{\em prm\+Bills\+Values} & Nuevos valores de billetes disponibles.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Devuelve true si la actualizacion fue exitosa; de lo contrario, false.
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+lib\+Piggy\+Bank/pkg\+Piggy\+Bank/pkg\+Domain/cls\+Controller.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,182 @@
+\doxysection{pkg\+Services.\+cls\+Entity Class Reference}
+\hypertarget{classpkg_services_1_1cls_entity}{}\label{classpkg_services_1_1cls_entity}\index{pkgServices.clsEntity@{pkgServices.clsEntity}}
+
+
+Clase base que implementa la interfaz i\+Entity y proporciona funcionalidades comunes para entidades.  
+
+
+Inheritance diagram for pkg\+Services.\+cls\+Entity\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.035230cm]{classpkg_services_1_1cls_entity}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classpkg_services_1_1cls_entity_a21aeb85a2d8a5c76ac89973b1250a6f0}\label{classpkg_services_1_1cls_entity_a21aeb85a2d8a5c76ac89973b1250a6f0} 
+{\bfseries cls\+Entity} ()
+\begin{DoxyCompactList}\small\item\em Constructor predeterminado de la clase cls\+Entity. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classpkg_services_1_1cls_entity_a6bfc5bdaf5ac00d8f4bbfee748de3fa6}{cls\+Entity}} (string prm\+OID)
+\begin{DoxyCompactList}\small\item\em Constructor de la clase cls\+Entity con un identificador unico inicial. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classpkg_services_1_1cls_entity_a81f803f3a64e948c33f2c64764e0f8f3}{modify}} (List$<$ object $>$ prm\+Args)
+\begin{DoxyCompactList}\small\item\em Modifica los atributos de la instancia de la clase cls\+Entity. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classpkg_services_1_1cls_entity_add316c931c29f4d803dd18cb3cf6d70b}{get\+OID}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene el identificador unico de la entidad. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classpkg_services_1_1cls_entity_ab47f301778bb80440acf350b192e6a06}{die}} ()
+\begin{DoxyCompactList}\small\item\em Realiza la operacion de eliminacion de la instancia de la clase cls\+Entity. \end{DoxyCompactList}\item 
+virtual string \mbox{\hyperlink{classpkg_services_1_1cls_entity_a6ac57f1be1de3e87ff7267e4ad3409f2}{to\+String}} ()
+\begin{DoxyCompactList}\small\item\em Devuelve una representacion en cadena de la instancia de cls\+Entity. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classpkg_services_1_1cls_entity_af3dbfbd88f42243426ae0d04fa1574ba}{copy\+To$<$ T $>$}} (T prm\+Object)
+\begin{DoxyCompactList}\small\item\em Copia los valores de la instancia actual de cls\+Entity a otra instancia de cls\+Entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classpkg_services_1_1cls_entity_ac0ef3acb774684b762b65ac5b784db8b}\label{classpkg_services_1_1cls_entity_ac0ef3acb774684b762b65ac5b784db8b} 
+string {\bfseries att\+OID}
+\begin{DoxyCompactList}\small\item\em Almacena el identificador unico de la entidad. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase base que implementa la interfaz i\+Entity y proporciona funcionalidades comunes para entidades. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classpkg_services_1_1cls_entity_a6bfc5bdaf5ac00d8f4bbfee748de3fa6}\label{classpkg_services_1_1cls_entity_a6bfc5bdaf5ac00d8f4bbfee748de3fa6} 
+\index{pkgServices.clsEntity@{pkgServices.clsEntity}!clsEntity@{clsEntity}}
+\index{clsEntity@{clsEntity}!pkgServices.clsEntity@{pkgServices.clsEntity}}
+\doxysubsubsection{\texorpdfstring{clsEntity()}{clsEntity()}}
+{\footnotesize\ttfamily pkg\+Services.\+cls\+Entity.\+cls\+Entity (\begin{DoxyParamCaption}\item[{string}]{prm\+OID }\end{DoxyParamCaption})}
+
+
+
+Constructor de la clase cls\+Entity con un identificador unico inicial. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prm\+OID} & Identificador unico de la entidad.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classpkg_services_1_1cls_entity_af3dbfbd88f42243426ae0d04fa1574ba}\label{classpkg_services_1_1cls_entity_af3dbfbd88f42243426ae0d04fa1574ba} 
+\index{pkgServices.clsEntity@{pkgServices.clsEntity}!copyTo$<$ T $>$@{copyTo$<$ T $>$}}
+\index{copyTo$<$ T $>$@{copyTo$<$ T $>$}!pkgServices.clsEntity@{pkgServices.clsEntity}}
+\doxysubsubsection{\texorpdfstring{copyTo$<$ T $>$()}{copyTo< T >()}}
+{\footnotesize\ttfamily virtual bool pkg\+Services.\+cls\+Entity.\+copy\+To$<$ T $>$ (\begin{DoxyParamCaption}\item[{T}]{prm\+Object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Copia los valores de la instancia actual de cls\+Entity a otra instancia de cls\+Entity. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Tipo de objeto a copiar.\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em prm\+Object} & Otra instancia de cls\+Entity.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Devuelve true si la copia fue exitosa; de lo contrario, false.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfacepkg_services_1_1pkg_interfaces_1_1i_entity_ac3043d8cad93a13d79551655f7eebd3a}{pkg\+Services.\+pkg\+Interfaces.\+i\+Entity}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_bill_abf09dbdbb881064245bed9ea65479294}{pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Bill}}, \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_coin_aa827b368614b6610cdc2ae8c069e7078}{pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Coin}}, \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_acd4fe82bbebc327e6fec5dc8c9d0c82a}{pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Currency}}, and \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_piggy_bank_a52591fd69dd5ab58bc9f9f97222eeac0}{pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Piggy\+Bank}}.
+
+\Hypertarget{classpkg_services_1_1cls_entity_ab47f301778bb80440acf350b192e6a06}\label{classpkg_services_1_1cls_entity_ab47f301778bb80440acf350b192e6a06} 
+\index{pkgServices.clsEntity@{pkgServices.clsEntity}!die@{die}}
+\index{die@{die}!pkgServices.clsEntity@{pkgServices.clsEntity}}
+\doxysubsubsection{\texorpdfstring{die()}{die()}}
+{\footnotesize\ttfamily virtual bool pkg\+Services.\+cls\+Entity.\+die (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Realiza la operacion de eliminacion de la instancia de la clase cls\+Entity. 
+
+\begin{DoxyReturn}{Returns}
+Devuelve true si la eliminacion fue exitosa; de lo contrario, false.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfacepkg_services_1_1pkg_interfaces_1_1i_entity_ad921b172556442e9193e63f165e0571d}{pkg\+Services.\+pkg\+Interfaces.\+i\+Entity}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_bill_a351eb64d76d34e9a6dbb6744b1edb04a}{pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Bill}}, \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_coin_a53eb829fc8d914d7bc025b928fbc4881}{pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Coin}}, \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_ac1434b67570e66f74405993e6c21bac8}{pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Currency}}, and \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_piggy_bank_a4c302257f0d0dbcda6f057ee8b589daf}{pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Piggy\+Bank}}.
+
+\Hypertarget{classpkg_services_1_1cls_entity_add316c931c29f4d803dd18cb3cf6d70b}\label{classpkg_services_1_1cls_entity_add316c931c29f4d803dd18cb3cf6d70b} 
+\index{pkgServices.clsEntity@{pkgServices.clsEntity}!getOID@{getOID}}
+\index{getOID@{getOID}!pkgServices.clsEntity@{pkgServices.clsEntity}}
+\doxysubsubsection{\texorpdfstring{getOID()}{getOID()}}
+{\footnotesize\ttfamily string pkg\+Services.\+cls\+Entity.\+get\+OID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtiene el identificador unico de la entidad. 
+
+\begin{DoxyReturn}{Returns}
+El identificador unico de la entidad.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfacepkg_services_1_1pkg_interfaces_1_1i_entity_afee09669a1782a5a419947d5a63b2e38}{pkg\+Services.\+pkg\+Interfaces.\+i\+Entity}}.
+
+\Hypertarget{classpkg_services_1_1cls_entity_a81f803f3a64e948c33f2c64764e0f8f3}\label{classpkg_services_1_1cls_entity_a81f803f3a64e948c33f2c64764e0f8f3} 
+\index{pkgServices.clsEntity@{pkgServices.clsEntity}!modify@{modify}}
+\index{modify@{modify}!pkgServices.clsEntity@{pkgServices.clsEntity}}
+\doxysubsubsection{\texorpdfstring{modify()}{modify()}}
+{\footnotesize\ttfamily virtual bool pkg\+Services.\+cls\+Entity.\+modify (\begin{DoxyParamCaption}\item[{List$<$ object $>$}]{prm\+Args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Modifica los atributos de la instancia de la clase cls\+Entity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prm\+Args} & Lista de argumentos para la modificacion.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Devuelve true si la modificacion fue exitosa; de lo contrario, false.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfacepkg_services_1_1pkg_interfaces_1_1i_entity_a9089f63471fc5d4164fec91b7af1f378}{pkg\+Services.\+pkg\+Interfaces.\+i\+Entity}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_bill_a6b0967cde884d24f1a93c86b33ef0380}{pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Bill}}, and \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_coin_a77e1b2efc35aa8a151a90a804ae83b11}{pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Coin}}.
+
+\Hypertarget{classpkg_services_1_1cls_entity_a6ac57f1be1de3e87ff7267e4ad3409f2}\label{classpkg_services_1_1cls_entity_a6ac57f1be1de3e87ff7267e4ad3409f2} 
+\index{pkgServices.clsEntity@{pkgServices.clsEntity}!toString@{toString}}
+\index{toString@{toString}!pkgServices.clsEntity@{pkgServices.clsEntity}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily virtual string pkg\+Services.\+cls\+Entity.\+to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Devuelve una representacion en cadena de la instancia de cls\+Entity. 
+
+\begin{DoxyReturn}{Returns}
+Una cadena que representa la informacion de la entidad.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfacepkg_services_1_1pkg_interfaces_1_1i_entity_afd20cca99503a27808d89d7358af1ecf}{pkg\+Services.\+pkg\+Interfaces.\+i\+Entity}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_bill_accd493341d5bde7355fdb3fce87ff5fe}{pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Bill}}, \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_a858f7ab3ad95b038f6d260125eeb1dc4}{pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Currency}}, and \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_piggy_bank_ace613f5338b35778ad3df89552e34342}{pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Piggy\+Bank}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+lib\+Services/cls\+Entity.\+cs\end{DoxyCompactItemize}

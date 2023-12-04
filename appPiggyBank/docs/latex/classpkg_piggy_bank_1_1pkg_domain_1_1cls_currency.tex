@@ -1,0 +1,521 @@
+\doxysection{pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Currency Class Reference}
+\hypertarget{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency}{}\label{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency}\index{pkgPiggyBank.pkgDomain.clsCurrency@{pkgPiggyBank.pkgDomain.clsCurrency}}
+
+
+Representa una clase que define una moneda utilizada en la alcancia.  
+
+
+Inheritance diagram for pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Currency\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_ab70b166539a70d674add86209b5a4952}{cls\+Currency}} (string prm\+OID, string prm\+Name, double prm\+TRM, List$<$ double $>$ prm\+Coins\+Values, List$<$ double $>$ prm\+Bills\+Values)
+\begin{DoxyCompactList}\small\item\em Constructor para crear una instancia de la clase cls\+Currency con valores iniciales. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_a4c708b1b29982267d421d713ee4af941}{get\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene el nombre de la moneda. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_a49b3e658aac14736ae487f4809f7e2b0}{get\+TRM}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene la tasa de cambio de la moneda. \end{DoxyCompactList}\item 
+List$<$ double $>$ \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_ab4ebb569d48c0c72a8b9cdf20be9eb08}{get\+Coins\+Values}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene la lista de valores de monedas permitidos. \end{DoxyCompactList}\item 
+List$<$ double $>$ \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_af561cc5d7bae15166fcbed75918a9d1c}{get\+Bills\+Values}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene la lista de valores de billetes permitidos. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_coin}{cls\+Coin}} $>$ \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_af4f963d1f419929962fedeaf3d3f2d26}{retrieve\+As\+Outside\+Coins}} (List$<$ double $>$ prm\+Values)
+\begin{DoxyCompactList}\small\item\em Recupera las monedas no asignadas que coinciden con los valores dados. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_bill}{cls\+Bill}} $>$ \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_a5432b1206401a1f43fa653cb3bc79e5a}{retrieve\+As\+Outside\+Bills}} (List$<$ double $>$ prm\+Values)
+\begin{DoxyCompactList}\small\item\em Recupera los billetes no asignados que coinciden con los valores dados. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_coin}{cls\+Coin}} $>$ \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_addeccfdba96b70d96b0e978c3feaa97c}{retrieve\+As\+Inside\+Coins}} (List$<$ double $>$ prm\+Values)
+\begin{DoxyCompactList}\small\item\em Recupera las monedas asignadas que coinciden con los valores dados. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_bill}{cls\+Bill}} $>$ \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_aa6f2d64c1f2c03a692c3a515bbe0ecb0}{retrieve\+As\+Inside\+Bills}} (List$<$ double $>$ prm\+Values)
+\begin{DoxyCompactList}\small\item\em Recupera los billetes asignados que coinciden con los valores dados. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_a80fcedb81bb3e62fa8da6a9c983d20c0}{modify}} (string prm\+Name, double prm\+TRM, List$<$ double $>$ prm\+Coins\+Values, List$<$ double $>$ prm\+Bills\+Values)
+\begin{DoxyCompactList}\small\item\em Modifica los atributos de la instancia de la clase cls\+Currency. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_ac8818f2e4a7d40f43d5589ef84d14f85}{set\+Piggy\+Bank}} (\mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_piggy_bank}{cls\+Piggy\+Bank}} prm\+Obj)
+\begin{DoxyCompactList}\small\item\em Asigna una alcancia a la instancia de la clase cls\+Currency. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_a2ce12c18493c1481db6219c652c8c9ba}{to\+Register\+Coin}} (string prm\+OID, double prm\+Value, int prm\+Year)
+\begin{DoxyCompactList}\small\item\em Asigna una alcancia a la instancia de la clase cls\+Currency. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_aa63c51142d5c008edd5ec49918e19a88}{to\+Register\+Bill}} (string prm\+OID, double prm\+Value, int prm\+Day, int prm\+Month, int prm\+Year)
+\begin{DoxyCompactList}\small\item\em Registra un nuevo billete en la lista de billetes asociados a la moneda. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_a5803c26068fc0ae8e439154117c7569e}{to\+Update\+Coin}} (string prm\+OID, double prm\+Value, int prm\+Year)
+\begin{DoxyCompactList}\small\item\em Actualiza el valor y el año de una moneda en la lista de monedas asociadas a la moneda. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_a0c35d3eb7292b1c37796cdf5b0adefbb}{to\+Update\+Bill}} (string prm\+OID, double prm\+Value, int prm\+Year)
+\begin{DoxyCompactList}\small\item\em Actualiza un billete existente en la lista de billetes de la moneda. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_a9d674b424c242a09a4e9c6c2b934aed8}{to\+Delete\+Coin}} (string prm\+OID)
+\begin{DoxyCompactList}\small\item\em Elimina una moneda de la lista de monedas asociadas a la moneda actual. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_a5f26510dec0e80cd641606f2364b5701}{to\+Delete\+Bill}} (string prm\+OID)
+\begin{DoxyCompactList}\small\item\em Elimina un billete de la lista de billetes asociados a la moneda actual. \end{DoxyCompactList}\item 
+override string \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_a858f7ab3ad95b038f6d260125eeb1dc4}{to\+String}} ()
+\begin{DoxyCompactList}\small\item\em Devuelve una representacion en cadena de la informacion de la moneda. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_ae7eee611c97c022234998e8baa7be1a6}{Compare\+To}} (\mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency}{cls\+Currency}} prm\+Other)
+\begin{DoxyCompactList}\small\item\em Compara la instancia actual de cls\+Currency con otra instancia de cls\+Currency. \end{DoxyCompactList}\item 
+override bool \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_acd4fe82bbebc327e6fec5dc8c9d0c82a}{copy\+To$<$ T $>$}} (T prm\+Other\+Object)
+\begin{DoxyCompactList}\small\item\em Copia los valores de la instancia actual de cls\+Currency a otra instancia de cls\+Currency. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_a7a6d1efec3e934545c4d7c95c51d02ec}{are\+Valid\+Values\+As\+Coins}} (List$<$ double $>$ prm\+Values)
+\begin{DoxyCompactList}\small\item\em Verifica si los valores dados son un subconjunto de los valores de monedas asociados a la moneda actual. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_a7cf56822964f53db66b64cdf629745f6}{are\+Valid\+Values\+As\+Bills}} (List$<$ double $>$ prm\+Values)
+\begin{DoxyCompactList}\small\item\em Verifica si los valores dados son un subconjunto de los valores de billetes asociados a la moneda actual. \end{DoxyCompactList}\item 
+override bool \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_ac1434b67570e66f74405993e6c21bac8}{die}} ()
+\begin{DoxyCompactList}\small\item\em Realiza la operacion de eliminacion de la instancia de la clase cls\+Currency. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classpkg_services_1_1cls_entity}{pkg\+Services.\+cls\+Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries cls\+Entity} ()
+\begin{DoxyCompactList}\small\item\em Constructor predeterminado de la clase cls\+Entity. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classpkg_services_1_1cls_entity_a6bfc5bdaf5ac00d8f4bbfee748de3fa6}{cls\+Entity}} (string prm\+OID)
+\begin{DoxyCompactList}\small\item\em Constructor de la clase cls\+Entity con un identificador unico inicial. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classpkg_services_1_1cls_entity_a81f803f3a64e948c33f2c64764e0f8f3}{modify}} (List$<$ object $>$ prm\+Args)
+\begin{DoxyCompactList}\small\item\em Modifica los atributos de la instancia de la clase cls\+Entity. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classpkg_services_1_1cls_entity_add316c931c29f4d803dd18cb3cf6d70b}{get\+OID}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene el identificador unico de la entidad. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classpkg_services_1_1cls_entity}{pkg\+Services.\+cls\+Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+string {\bfseries att\+OID}
+\begin{DoxyCompactList}\small\item\em Almacena el identificador unico de la entidad. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Representa una clase que define una moneda utilizada en la alcancia. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_ab70b166539a70d674add86209b5a4952}\label{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_ab70b166539a70d674add86209b5a4952} 
+\index{pkgPiggyBank.pkgDomain.clsCurrency@{pkgPiggyBank.pkgDomain.clsCurrency}!clsCurrency@{clsCurrency}}
+\index{clsCurrency@{clsCurrency}!pkgPiggyBank.pkgDomain.clsCurrency@{pkgPiggyBank.pkgDomain.clsCurrency}}
+\doxysubsubsection{\texorpdfstring{clsCurrency()}{clsCurrency()}}
+{\footnotesize\ttfamily pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Currency.\+cls\+Currency (\begin{DoxyParamCaption}\item[{string}]{prm\+OID,  }\item[{string}]{prm\+Name,  }\item[{double}]{prm\+TRM,  }\item[{List$<$ double $>$}]{prm\+Coins\+Values,  }\item[{List$<$ double $>$}]{prm\+Bills\+Values }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor para crear una instancia de la clase cls\+Currency con valores iniciales. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prm\+OID} & Identificador unico de la moneda.\\
+\hline
+{\em prm\+Name} & Nombre de la moneda.\\
+\hline
+{\em prm\+TRM} & Tasa de cambio de la moneda.\\
+\hline
+{\em prm\+Coins\+Values} & Lista de valores de monedas permitidos.\\
+\hline
+{\em prm\+Bills\+Values} & Lista de valores de billetes permitidos.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_a7cf56822964f53db66b64cdf629745f6}\label{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_a7cf56822964f53db66b64cdf629745f6} 
+\index{pkgPiggyBank.pkgDomain.clsCurrency@{pkgPiggyBank.pkgDomain.clsCurrency}!areValidValuesAsBills@{areValidValuesAsBills}}
+\index{areValidValuesAsBills@{areValidValuesAsBills}!pkgPiggyBank.pkgDomain.clsCurrency@{pkgPiggyBank.pkgDomain.clsCurrency}}
+\doxysubsubsection{\texorpdfstring{areValidValuesAsBills()}{areValidValuesAsBills()}}
+{\footnotesize\ttfamily bool pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Currency.\+are\+Valid\+Values\+As\+Bills (\begin{DoxyParamCaption}\item[{List$<$ double $>$}]{prm\+Values }\end{DoxyParamCaption})}
+
+
+
+Verifica si los valores dados son un subconjunto de los valores de billetes asociados a la moneda actual. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prm\+Values} & Lista de valores a verificar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Devuelve true si los valores son un subconjunto; de lo contrario, false.
+\end{DoxyReturn}
+\Hypertarget{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_a7a6d1efec3e934545c4d7c95c51d02ec}\label{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_a7a6d1efec3e934545c4d7c95c51d02ec} 
+\index{pkgPiggyBank.pkgDomain.clsCurrency@{pkgPiggyBank.pkgDomain.clsCurrency}!areValidValuesAsCoins@{areValidValuesAsCoins}}
+\index{areValidValuesAsCoins@{areValidValuesAsCoins}!pkgPiggyBank.pkgDomain.clsCurrency@{pkgPiggyBank.pkgDomain.clsCurrency}}
+\doxysubsubsection{\texorpdfstring{areValidValuesAsCoins()}{areValidValuesAsCoins()}}
+{\footnotesize\ttfamily bool pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Currency.\+are\+Valid\+Values\+As\+Coins (\begin{DoxyParamCaption}\item[{List$<$ double $>$}]{prm\+Values }\end{DoxyParamCaption})}
+
+
+
+Verifica si los valores dados son un subconjunto de los valores de monedas asociados a la moneda actual. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prm\+Values} & Lista de valores a verificar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Devuelve true si los valores son un subconjunto; de lo contrario, false.
+\end{DoxyReturn}
+\Hypertarget{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_ae7eee611c97c022234998e8baa7be1a6}\label{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_ae7eee611c97c022234998e8baa7be1a6} 
+\index{pkgPiggyBank.pkgDomain.clsCurrency@{pkgPiggyBank.pkgDomain.clsCurrency}!CompareTo@{CompareTo}}
+\index{CompareTo@{CompareTo}!pkgPiggyBank.pkgDomain.clsCurrency@{pkgPiggyBank.pkgDomain.clsCurrency}}
+\doxysubsubsection{\texorpdfstring{CompareTo()}{CompareTo()}}
+{\footnotesize\ttfamily int pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Currency.\+Compare\+To (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency}{cls\+Currency}}}]{prm\+Other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compara la instancia actual de cls\+Currency con otra instancia de cls\+Currency. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prm\+Other} & Otra instancia de cls\+Currency a comparar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Devuelve 0 si las instancias son iguales, 1 si la instancia actual es mayor, y -\/1 si la instancia actual es menor. 
+\end{DoxyReturn}
+\Hypertarget{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_acd4fe82bbebc327e6fec5dc8c9d0c82a}\label{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_acd4fe82bbebc327e6fec5dc8c9d0c82a} 
+\index{pkgPiggyBank.pkgDomain.clsCurrency@{pkgPiggyBank.pkgDomain.clsCurrency}!copyTo$<$ T $>$@{copyTo$<$ T $>$}}
+\index{copyTo$<$ T $>$@{copyTo$<$ T $>$}!pkgPiggyBank.pkgDomain.clsCurrency@{pkgPiggyBank.pkgDomain.clsCurrency}}
+\doxysubsubsection{\texorpdfstring{copyTo$<$ T $>$()}{copyTo< T >()}}
+{\footnotesize\ttfamily override bool pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Currency.\+copy\+To$<$ T $>$ (\begin{DoxyParamCaption}\item[{T}]{prm\+Other\+Object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Copia los valores de la instancia actual de cls\+Currency a otra instancia de cls\+Currency. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Tipo de objeto a copiar.\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em prm\+Other\+Object} & Otra instancia de cls\+Currency.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Devuelve true si la copia fue exitosa; de lo contrario, false.
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classpkg_services_1_1cls_entity_af3dbfbd88f42243426ae0d04fa1574ba}{pkg\+Services.\+cls\+Entity}}.
+
+\Hypertarget{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_ac1434b67570e66f74405993e6c21bac8}\label{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_ac1434b67570e66f74405993e6c21bac8} 
+\index{pkgPiggyBank.pkgDomain.clsCurrency@{pkgPiggyBank.pkgDomain.clsCurrency}!die@{die}}
+\index{die@{die}!pkgPiggyBank.pkgDomain.clsCurrency@{pkgPiggyBank.pkgDomain.clsCurrency}}
+\doxysubsubsection{\texorpdfstring{die()}{die()}}
+{\footnotesize\ttfamily override bool pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Currency.\+die (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Realiza la operacion de eliminacion de la instancia de la clase cls\+Currency. 
+
+\begin{DoxyReturn}{Returns}
+Devuelve true si la eliminacion fue exitosa; de lo contrario, false.
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classpkg_services_1_1cls_entity_ab47f301778bb80440acf350b192e6a06}{pkg\+Services.\+cls\+Entity}}.
+
+\Hypertarget{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_af561cc5d7bae15166fcbed75918a9d1c}\label{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_af561cc5d7bae15166fcbed75918a9d1c} 
+\index{pkgPiggyBank.pkgDomain.clsCurrency@{pkgPiggyBank.pkgDomain.clsCurrency}!getBillsValues@{getBillsValues}}
+\index{getBillsValues@{getBillsValues}!pkgPiggyBank.pkgDomain.clsCurrency@{pkgPiggyBank.pkgDomain.clsCurrency}}
+\doxysubsubsection{\texorpdfstring{getBillsValues()}{getBillsValues()}}
+{\footnotesize\ttfamily List$<$ double $>$ pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Currency.\+get\+Bills\+Values (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtiene la lista de valores de billetes permitidos. 
+
+\begin{DoxyReturn}{Returns}
+La lista de valores de billetes permitidos.
+\end{DoxyReturn}
+\Hypertarget{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_ab4ebb569d48c0c72a8b9cdf20be9eb08}\label{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_ab4ebb569d48c0c72a8b9cdf20be9eb08} 
+\index{pkgPiggyBank.pkgDomain.clsCurrency@{pkgPiggyBank.pkgDomain.clsCurrency}!getCoinsValues@{getCoinsValues}}
+\index{getCoinsValues@{getCoinsValues}!pkgPiggyBank.pkgDomain.clsCurrency@{pkgPiggyBank.pkgDomain.clsCurrency}}
+\doxysubsubsection{\texorpdfstring{getCoinsValues()}{getCoinsValues()}}
+{\footnotesize\ttfamily List$<$ double $>$ pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Currency.\+get\+Coins\+Values (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtiene la lista de valores de monedas permitidos. 
+
+\begin{DoxyReturn}{Returns}
+La lista de valores de monedas permitidos.
+\end{DoxyReturn}
+\Hypertarget{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_a4c708b1b29982267d421d713ee4af941}\label{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_a4c708b1b29982267d421d713ee4af941} 
+\index{pkgPiggyBank.pkgDomain.clsCurrency@{pkgPiggyBank.pkgDomain.clsCurrency}!getName@{getName}}
+\index{getName@{getName}!pkgPiggyBank.pkgDomain.clsCurrency@{pkgPiggyBank.pkgDomain.clsCurrency}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily string pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Currency.\+get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtiene el nombre de la moneda. 
+
+\begin{DoxyReturn}{Returns}
+El nombre de la moneda.
+\end{DoxyReturn}
+\Hypertarget{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_a49b3e658aac14736ae487f4809f7e2b0}\label{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_a49b3e658aac14736ae487f4809f7e2b0} 
+\index{pkgPiggyBank.pkgDomain.clsCurrency@{pkgPiggyBank.pkgDomain.clsCurrency}!getTRM@{getTRM}}
+\index{getTRM@{getTRM}!pkgPiggyBank.pkgDomain.clsCurrency@{pkgPiggyBank.pkgDomain.clsCurrency}}
+\doxysubsubsection{\texorpdfstring{getTRM()}{getTRM()}}
+{\footnotesize\ttfamily double pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Currency.\+get\+TRM (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtiene la tasa de cambio de la moneda. 
+
+\begin{DoxyReturn}{Returns}
+La tasa de cambio de la moneda.
+\end{DoxyReturn}
+\Hypertarget{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_a80fcedb81bb3e62fa8da6a9c983d20c0}\label{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_a80fcedb81bb3e62fa8da6a9c983d20c0} 
+\index{pkgPiggyBank.pkgDomain.clsCurrency@{pkgPiggyBank.pkgDomain.clsCurrency}!modify@{modify}}
+\index{modify@{modify}!pkgPiggyBank.pkgDomain.clsCurrency@{pkgPiggyBank.pkgDomain.clsCurrency}}
+\doxysubsubsection{\texorpdfstring{modify()}{modify()}}
+{\footnotesize\ttfamily bool pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Currency.\+modify (\begin{DoxyParamCaption}\item[{string}]{prm\+Name,  }\item[{double}]{prm\+TRM,  }\item[{List$<$ double $>$}]{prm\+Coins\+Values,  }\item[{List$<$ double $>$}]{prm\+Bills\+Values }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Modifica los atributos de la instancia de la clase cls\+Currency. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prm\+Name} & Nuevo nombre de la moneda.\\
+\hline
+{\em prm\+TRM} & Nueva tasa de cambio de la moneda.\\
+\hline
+{\em prm\+Coins\+Values} & Nueva lista de valores de monedas permitidos.\\
+\hline
+{\em prm\+Bills\+Values} & Nueva lista de valores de billetes permitidos.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Devuelve true si la modificacion fue exitosa; de lo contrario, false.
+\end{DoxyReturn}
+\Hypertarget{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_aa6f2d64c1f2c03a692c3a515bbe0ecb0}\label{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_aa6f2d64c1f2c03a692c3a515bbe0ecb0} 
+\index{pkgPiggyBank.pkgDomain.clsCurrency@{pkgPiggyBank.pkgDomain.clsCurrency}!retrieveAsInsideBills@{retrieveAsInsideBills}}
+\index{retrieveAsInsideBills@{retrieveAsInsideBills}!pkgPiggyBank.pkgDomain.clsCurrency@{pkgPiggyBank.pkgDomain.clsCurrency}}
+\doxysubsubsection{\texorpdfstring{retrieveAsInsideBills()}{retrieveAsInsideBills()}}
+{\footnotesize\ttfamily List$<$ \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_bill}{cls\+Bill}} $>$ pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Currency.\+retrieve\+As\+Inside\+Bills (\begin{DoxyParamCaption}\item[{List$<$ double $>$}]{prm\+Values }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Recupera los billetes asignados que coinciden con los valores dados. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prm\+Values} & Lista de valores de billetes a buscar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Una lista de billetes asignados que coinciden con los valores dados.
+\end{DoxyReturn}
+\Hypertarget{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_addeccfdba96b70d96b0e978c3feaa97c}\label{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_addeccfdba96b70d96b0e978c3feaa97c} 
+\index{pkgPiggyBank.pkgDomain.clsCurrency@{pkgPiggyBank.pkgDomain.clsCurrency}!retrieveAsInsideCoins@{retrieveAsInsideCoins}}
+\index{retrieveAsInsideCoins@{retrieveAsInsideCoins}!pkgPiggyBank.pkgDomain.clsCurrency@{pkgPiggyBank.pkgDomain.clsCurrency}}
+\doxysubsubsection{\texorpdfstring{retrieveAsInsideCoins()}{retrieveAsInsideCoins()}}
+{\footnotesize\ttfamily List$<$ \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_coin}{cls\+Coin}} $>$ pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Currency.\+retrieve\+As\+Inside\+Coins (\begin{DoxyParamCaption}\item[{List$<$ double $>$}]{prm\+Values }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Recupera las monedas asignadas que coinciden con los valores dados. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prm\+Values} & Lista de valores de monedas a buscar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Una lista de monedas asignadas que coinciden con los valores dados.
+\end{DoxyReturn}
+\Hypertarget{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_a5432b1206401a1f43fa653cb3bc79e5a}\label{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_a5432b1206401a1f43fa653cb3bc79e5a} 
+\index{pkgPiggyBank.pkgDomain.clsCurrency@{pkgPiggyBank.pkgDomain.clsCurrency}!retrieveAsOutsideBills@{retrieveAsOutsideBills}}
+\index{retrieveAsOutsideBills@{retrieveAsOutsideBills}!pkgPiggyBank.pkgDomain.clsCurrency@{pkgPiggyBank.pkgDomain.clsCurrency}}
+\doxysubsubsection{\texorpdfstring{retrieveAsOutsideBills()}{retrieveAsOutsideBills()}}
+{\footnotesize\ttfamily List$<$ \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_bill}{cls\+Bill}} $>$ pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Currency.\+retrieve\+As\+Outside\+Bills (\begin{DoxyParamCaption}\item[{List$<$ double $>$}]{prm\+Values }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Recupera los billetes no asignados que coinciden con los valores dados. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prm\+Values} & Lista de valores de billetes a buscar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Una lista de billetes no asignados que coinciden con los valores dados.
+\end{DoxyReturn}
+\Hypertarget{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_af4f963d1f419929962fedeaf3d3f2d26}\label{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_af4f963d1f419929962fedeaf3d3f2d26} 
+\index{pkgPiggyBank.pkgDomain.clsCurrency@{pkgPiggyBank.pkgDomain.clsCurrency}!retrieveAsOutsideCoins@{retrieveAsOutsideCoins}}
+\index{retrieveAsOutsideCoins@{retrieveAsOutsideCoins}!pkgPiggyBank.pkgDomain.clsCurrency@{pkgPiggyBank.pkgDomain.clsCurrency}}
+\doxysubsubsection{\texorpdfstring{retrieveAsOutsideCoins()}{retrieveAsOutsideCoins()}}
+{\footnotesize\ttfamily List$<$ \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_coin}{cls\+Coin}} $>$ pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Currency.\+retrieve\+As\+Outside\+Coins (\begin{DoxyParamCaption}\item[{List$<$ double $>$}]{prm\+Values }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Recupera las monedas no asignadas que coinciden con los valores dados. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prm\+Values} & Lista de valores de monedas a buscar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Una lista de monedas no asignadas que coinciden con los valores dados.
+\end{DoxyReturn}
+\Hypertarget{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_ac8818f2e4a7d40f43d5589ef84d14f85}\label{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_ac8818f2e4a7d40f43d5589ef84d14f85} 
+\index{pkgPiggyBank.pkgDomain.clsCurrency@{pkgPiggyBank.pkgDomain.clsCurrency}!setPiggyBank@{setPiggyBank}}
+\index{setPiggyBank@{setPiggyBank}!pkgPiggyBank.pkgDomain.clsCurrency@{pkgPiggyBank.pkgDomain.clsCurrency}}
+\doxysubsubsection{\texorpdfstring{setPiggyBank()}{setPiggyBank()}}
+{\footnotesize\ttfamily bool pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Currency.\+set\+Piggy\+Bank (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_piggy_bank}{cls\+Piggy\+Bank}}}]{prm\+Obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Asigna una alcancia a la instancia de la clase cls\+Currency. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prm\+Obj} & Objeto de tipo cls\+Piggy\+Bank a asignar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Devuelve true si la asignacion fue exitosa; de lo contrario, false.
+\end{DoxyReturn}
+\Hypertarget{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_a5f26510dec0e80cd641606f2364b5701}\label{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_a5f26510dec0e80cd641606f2364b5701} 
+\index{pkgPiggyBank.pkgDomain.clsCurrency@{pkgPiggyBank.pkgDomain.clsCurrency}!toDeleteBill@{toDeleteBill}}
+\index{toDeleteBill@{toDeleteBill}!pkgPiggyBank.pkgDomain.clsCurrency@{pkgPiggyBank.pkgDomain.clsCurrency}}
+\doxysubsubsection{\texorpdfstring{toDeleteBill()}{toDeleteBill()}}
+{\footnotesize\ttfamily bool pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Currency.\+to\+Delete\+Bill (\begin{DoxyParamCaption}\item[{string}]{prm\+OID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Elimina un billete de la lista de billetes asociados a la moneda actual. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prm\+OID} & Identificador unico del billete a eliminar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Devuelve true si la eliminacion fue exitosa; de lo contrario, false.
+\end{DoxyReturn}
+\Hypertarget{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_a9d674b424c242a09a4e9c6c2b934aed8}\label{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_a9d674b424c242a09a4e9c6c2b934aed8} 
+\index{pkgPiggyBank.pkgDomain.clsCurrency@{pkgPiggyBank.pkgDomain.clsCurrency}!toDeleteCoin@{toDeleteCoin}}
+\index{toDeleteCoin@{toDeleteCoin}!pkgPiggyBank.pkgDomain.clsCurrency@{pkgPiggyBank.pkgDomain.clsCurrency}}
+\doxysubsubsection{\texorpdfstring{toDeleteCoin()}{toDeleteCoin()}}
+{\footnotesize\ttfamily bool pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Currency.\+to\+Delete\+Coin (\begin{DoxyParamCaption}\item[{string}]{prm\+OID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Elimina una moneda de la lista de monedas asociadas a la moneda actual. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prm\+OID} & Identificador unico de la moneda a eliminar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Devuelve true si la eliminacion fue exitosa; de lo contrario, false.
+\end{DoxyReturn}
+\Hypertarget{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_aa63c51142d5c008edd5ec49918e19a88}\label{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_aa63c51142d5c008edd5ec49918e19a88} 
+\index{pkgPiggyBank.pkgDomain.clsCurrency@{pkgPiggyBank.pkgDomain.clsCurrency}!toRegisterBill@{toRegisterBill}}
+\index{toRegisterBill@{toRegisterBill}!pkgPiggyBank.pkgDomain.clsCurrency@{pkgPiggyBank.pkgDomain.clsCurrency}}
+\doxysubsubsection{\texorpdfstring{toRegisterBill()}{toRegisterBill()}}
+{\footnotesize\ttfamily bool pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Currency.\+to\+Register\+Bill (\begin{DoxyParamCaption}\item[{string}]{prm\+OID,  }\item[{double}]{prm\+Value,  }\item[{int}]{prm\+Day,  }\item[{int}]{prm\+Month,  }\item[{int}]{prm\+Year }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Registra un nuevo billete en la lista de billetes asociados a la moneda. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prm\+OID} & Identificador unico del billete.\\
+\hline
+{\em prm\+Value} & Valor del billete.\\
+\hline
+{\em prm\+Day} & Dia en que se creo el billete.\\
+\hline
+{\em prm\+Month} & Mes en que se creo el billete.\\
+\hline
+{\em prm\+Year} & Año en que se creo el billete.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Devuelve true si el registro fue exitoso; de lo contrario, false.
+\end{DoxyReturn}
+\Hypertarget{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_a2ce12c18493c1481db6219c652c8c9ba}\label{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_a2ce12c18493c1481db6219c652c8c9ba} 
+\index{pkgPiggyBank.pkgDomain.clsCurrency@{pkgPiggyBank.pkgDomain.clsCurrency}!toRegisterCoin@{toRegisterCoin}}
+\index{toRegisterCoin@{toRegisterCoin}!pkgPiggyBank.pkgDomain.clsCurrency@{pkgPiggyBank.pkgDomain.clsCurrency}}
+\doxysubsubsection{\texorpdfstring{toRegisterCoin()}{toRegisterCoin()}}
+{\footnotesize\ttfamily bool pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Currency.\+to\+Register\+Coin (\begin{DoxyParamCaption}\item[{string}]{prm\+OID,  }\item[{double}]{prm\+Value,  }\item[{int}]{prm\+Year }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Asigna una alcancia a la instancia de la clase cls\+Currency. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prm\+Obj} & Objeto de tipo cls\+Piggy\+Bank a asignar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Devuelve true si la asignacion fue exitosa; de lo contrario, false.
+\end{DoxyReturn}
+\Hypertarget{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_a858f7ab3ad95b038f6d260125eeb1dc4}\label{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_a858f7ab3ad95b038f6d260125eeb1dc4} 
+\index{pkgPiggyBank.pkgDomain.clsCurrency@{pkgPiggyBank.pkgDomain.clsCurrency}!toString@{toString}}
+\index{toString@{toString}!pkgPiggyBank.pkgDomain.clsCurrency@{pkgPiggyBank.pkgDomain.clsCurrency}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily override string pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Currency.\+to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Devuelve una representacion en cadena de la informacion de la moneda. 
+
+\begin{DoxyReturn}{Returns}
+Una cadena que representa la informacion de la moneda.
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classpkg_services_1_1cls_entity_a6ac57f1be1de3e87ff7267e4ad3409f2}{pkg\+Services.\+cls\+Entity}}.
+
+\Hypertarget{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_a0c35d3eb7292b1c37796cdf5b0adefbb}\label{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_a0c35d3eb7292b1c37796cdf5b0adefbb} 
+\index{pkgPiggyBank.pkgDomain.clsCurrency@{pkgPiggyBank.pkgDomain.clsCurrency}!toUpdateBill@{toUpdateBill}}
+\index{toUpdateBill@{toUpdateBill}!pkgPiggyBank.pkgDomain.clsCurrency@{pkgPiggyBank.pkgDomain.clsCurrency}}
+\doxysubsubsection{\texorpdfstring{toUpdateBill()}{toUpdateBill()}}
+{\footnotesize\ttfamily bool pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Currency.\+to\+Update\+Bill (\begin{DoxyParamCaption}\item[{string}]{prm\+OID,  }\item[{double}]{prm\+Value,  }\item[{int}]{prm\+Year }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Actualiza un billete existente en la lista de billetes de la moneda. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prm\+OID} & Identificador unico del billete a actualizar.\\
+\hline
+{\em prm\+Value} & Nuevo valor del billete.\\
+\hline
+{\em prm\+Year} & Nuevo año del billete.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Devuelve true si la actualizacion fue exitosa; de lo contrario, false.
+\end{DoxyReturn}
+\Hypertarget{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_a5803c26068fc0ae8e439154117c7569e}\label{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_a5803c26068fc0ae8e439154117c7569e} 
+\index{pkgPiggyBank.pkgDomain.clsCurrency@{pkgPiggyBank.pkgDomain.clsCurrency}!toUpdateCoin@{toUpdateCoin}}
+\index{toUpdateCoin@{toUpdateCoin}!pkgPiggyBank.pkgDomain.clsCurrency@{pkgPiggyBank.pkgDomain.clsCurrency}}
+\doxysubsubsection{\texorpdfstring{toUpdateCoin()}{toUpdateCoin()}}
+{\footnotesize\ttfamily bool pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Currency.\+to\+Update\+Coin (\begin{DoxyParamCaption}\item[{string}]{prm\+OID,  }\item[{double}]{prm\+Value,  }\item[{int}]{prm\+Year }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Actualiza el valor y el año de una moneda en la lista de monedas asociadas a la moneda. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prm\+OID} & Identificador unico de la moneda a actualizar.\\
+\hline
+{\em prm\+Value} & Nuevo valor de la moneda.\\
+\hline
+{\em prm\+Year} & Nuevo año de la moneda.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Devuelve true si la actualizacion fue exitosa; de lo contrario, false.
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+lib\+Piggy\+Bank/pkg\+Piggy\+Bank/pkg\+Domain/cls\+Currency.\+cs\end{DoxyCompactItemize}

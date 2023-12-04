@@ -1,0 +1,137 @@
+\doxysection{pkg\+Services.\+pkg\+Interfaces.\+i\+Entity Interface Reference}
+\hypertarget{interfacepkg_services_1_1pkg_interfaces_1_1i_entity}{}\label{interfacepkg_services_1_1pkg_interfaces_1_1i_entity}\index{pkgServices.pkgInterfaces.iEntity@{pkgServices.pkgInterfaces.iEntity}}
+
+
+Interfaz que define operaciones comunes para entidades.  
+
+
+Inheritance diagram for pkg\+Services.\+pkg\+Interfaces.\+i\+Entity\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.035230cm]{interfacepkg_services_1_1pkg_interfaces_1_1i_entity}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{interfacepkg_services_1_1pkg_interfaces_1_1i_entity_a9089f63471fc5d4164fec91b7af1f378}{modify}} (List$<$ object $>$ prm\+Args)
+\begin{DoxyCompactList}\small\item\em Modifica los atributos de la entidad. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{interfacepkg_services_1_1pkg_interfaces_1_1i_entity_afee09669a1782a5a419947d5a63b2e38}{get\+OID}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene el identificador unico de la entidad. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{interfacepkg_services_1_1pkg_interfaces_1_1i_entity_ad921b172556442e9193e63f165e0571d}{die}} ()
+\begin{DoxyCompactList}\small\item\em Realiza la operacion de eliminacion de la entidad. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{interfacepkg_services_1_1pkg_interfaces_1_1i_entity_afd20cca99503a27808d89d7358af1ecf}{to\+String}} ()
+\begin{DoxyCompactList}\small\item\em Devuelve una representacion en cadena de la entidad. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{interfacepkg_services_1_1pkg_interfaces_1_1i_entity_ac3043d8cad93a13d79551655f7eebd3a}{copy\+To$<$ T $>$}} (T prm\+Object)
+\begin{DoxyCompactList}\small\item\em Copia los valores de la entidad actual a otro objeto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interfaz que define operaciones comunes para entidades. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{interfacepkg_services_1_1pkg_interfaces_1_1i_entity_ac3043d8cad93a13d79551655f7eebd3a}\label{interfacepkg_services_1_1pkg_interfaces_1_1i_entity_ac3043d8cad93a13d79551655f7eebd3a} 
+\index{pkgServices.pkgInterfaces.iEntity@{pkgServices.pkgInterfaces.iEntity}!copyTo$<$ T $>$@{copyTo$<$ T $>$}}
+\index{copyTo$<$ T $>$@{copyTo$<$ T $>$}!pkgServices.pkgInterfaces.iEntity@{pkgServices.pkgInterfaces.iEntity}}
+\doxysubsubsection{\texorpdfstring{copyTo$<$ T $>$()}{copyTo< T >()}}
+{\footnotesize\ttfamily bool pkg\+Services.\+pkg\+Interfaces.\+i\+Entity.\+copy\+To$<$ T $>$ (\begin{DoxyParamCaption}\item[{T}]{prm\+Object }\end{DoxyParamCaption})}
+
+
+
+Copia los valores de la entidad actual a otro objeto. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Tipo de objeto a copiar.\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em prm\+Object} & Objeto al que se copiaran los valores.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Devuelve true si la copia fue exitosa; de lo contrario, false.
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classpkg_services_1_1cls_entity_af3dbfbd88f42243426ae0d04fa1574ba}{pkg\+Services.\+cls\+Entity}}, \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_bill_abf09dbdbb881064245bed9ea65479294}{pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Bill}}, \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_coin_aa827b368614b6610cdc2ae8c069e7078}{pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Coin}}, \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_acd4fe82bbebc327e6fec5dc8c9d0c82a}{pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Currency}}, and \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_piggy_bank_a52591fd69dd5ab58bc9f9f97222eeac0}{pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Piggy\+Bank}}.
+
+\Hypertarget{interfacepkg_services_1_1pkg_interfaces_1_1i_entity_ad921b172556442e9193e63f165e0571d}\label{interfacepkg_services_1_1pkg_interfaces_1_1i_entity_ad921b172556442e9193e63f165e0571d} 
+\index{pkgServices.pkgInterfaces.iEntity@{pkgServices.pkgInterfaces.iEntity}!die@{die}}
+\index{die@{die}!pkgServices.pkgInterfaces.iEntity@{pkgServices.pkgInterfaces.iEntity}}
+\doxysubsubsection{\texorpdfstring{die()}{die()}}
+{\footnotesize\ttfamily bool pkg\+Services.\+pkg\+Interfaces.\+i\+Entity.\+die (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Realiza la operacion de eliminacion de la entidad. 
+
+\begin{DoxyReturn}{Returns}
+Devuelve true si la eliminacion fue exitosa; de lo contrario, false.
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_bill_a351eb64d76d34e9a6dbb6744b1edb04a}{pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Bill}}, \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_coin_a53eb829fc8d914d7bc025b928fbc4881}{pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Coin}}, \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_ac1434b67570e66f74405993e6c21bac8}{pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Currency}}, \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_piggy_bank_a4c302257f0d0dbcda6f057ee8b589daf}{pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Piggy\+Bank}}, and \mbox{\hyperlink{classpkg_services_1_1cls_entity_ab47f301778bb80440acf350b192e6a06}{pkg\+Services.\+cls\+Entity}}.
+
+\Hypertarget{interfacepkg_services_1_1pkg_interfaces_1_1i_entity_afee09669a1782a5a419947d5a63b2e38}\label{interfacepkg_services_1_1pkg_interfaces_1_1i_entity_afee09669a1782a5a419947d5a63b2e38} 
+\index{pkgServices.pkgInterfaces.iEntity@{pkgServices.pkgInterfaces.iEntity}!getOID@{getOID}}
+\index{getOID@{getOID}!pkgServices.pkgInterfaces.iEntity@{pkgServices.pkgInterfaces.iEntity}}
+\doxysubsubsection{\texorpdfstring{getOID()}{getOID()}}
+{\footnotesize\ttfamily string pkg\+Services.\+pkg\+Interfaces.\+i\+Entity.\+get\+OID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtiene el identificador unico de la entidad. 
+
+\begin{DoxyReturn}{Returns}
+El identificador unico de la entidad.
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classpkg_services_1_1cls_entity_add316c931c29f4d803dd18cb3cf6d70b}{pkg\+Services.\+cls\+Entity}}.
+
+\Hypertarget{interfacepkg_services_1_1pkg_interfaces_1_1i_entity_a9089f63471fc5d4164fec91b7af1f378}\label{interfacepkg_services_1_1pkg_interfaces_1_1i_entity_a9089f63471fc5d4164fec91b7af1f378} 
+\index{pkgServices.pkgInterfaces.iEntity@{pkgServices.pkgInterfaces.iEntity}!modify@{modify}}
+\index{modify@{modify}!pkgServices.pkgInterfaces.iEntity@{pkgServices.pkgInterfaces.iEntity}}
+\doxysubsubsection{\texorpdfstring{modify()}{modify()}}
+{\footnotesize\ttfamily bool pkg\+Services.\+pkg\+Interfaces.\+i\+Entity.\+modify (\begin{DoxyParamCaption}\item[{List$<$ object $>$}]{prm\+Args }\end{DoxyParamCaption})}
+
+
+
+Modifica los atributos de la entidad. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prm\+Args} & Lista de argumentos para la modificacion.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Devuelve true si la modificacion fue exitosa; de lo contrario, false.
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_bill_a6b0967cde884d24f1a93c86b33ef0380}{pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Bill}}, \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_coin_a77e1b2efc35aa8a151a90a804ae83b11}{pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Coin}}, and \mbox{\hyperlink{classpkg_services_1_1cls_entity_a81f803f3a64e948c33f2c64764e0f8f3}{pkg\+Services.\+cls\+Entity}}.
+
+\Hypertarget{interfacepkg_services_1_1pkg_interfaces_1_1i_entity_afd20cca99503a27808d89d7358af1ecf}\label{interfacepkg_services_1_1pkg_interfaces_1_1i_entity_afd20cca99503a27808d89d7358af1ecf} 
+\index{pkgServices.pkgInterfaces.iEntity@{pkgServices.pkgInterfaces.iEntity}!toString@{toString}}
+\index{toString@{toString}!pkgServices.pkgInterfaces.iEntity@{pkgServices.pkgInterfaces.iEntity}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily string pkg\+Services.\+pkg\+Interfaces.\+i\+Entity.\+to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Devuelve una representacion en cadena de la entidad. 
+
+\begin{DoxyReturn}{Returns}
+Una cadena que representa la informacion de la entidad.
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_bill_accd493341d5bde7355fdb3fce87ff5fe}{pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Bill}}, \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_currency_a858f7ab3ad95b038f6d260125eeb1dc4}{pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Currency}}, \mbox{\hyperlink{classpkg_piggy_bank_1_1pkg_domain_1_1cls_piggy_bank_ace613f5338b35778ad3df89552e34342}{pkg\+Piggy\+Bank.\+pkg\+Domain.\+cls\+Piggy\+Bank}}, and \mbox{\hyperlink{classpkg_services_1_1cls_entity_a6ac57f1be1de3e87ff7267e4ad3409f2}{pkg\+Services.\+cls\+Entity}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+lib\+Services/pkg\+Interfaces/i\+Entity.\+cs\end{DoxyCompactItemize}
